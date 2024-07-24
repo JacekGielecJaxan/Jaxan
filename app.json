@@ -1,0 +1,37 @@
+{
+    "id":"c2714156-f340-4fc8-ba5e-efeaf2d57671",
+    "name": "JAXAN.Ext.Basic",
+    "publisher": "JAXAN",
+    "version": "1.0.0.2",
+    "brief": "JAXAN Basic",
+    "description": "All related modyfications for Jaxan",
+    "privacyStatement": "https://www.jaxan.pl/int/en/privacy-policy",
+    "EULA": "https://www.jaxan.pl/int/en/privacy-policy",
+    "help": "",
+    "url": "",
+    "logo": "",
+    "target": "Cloud",
+    "features": [
+        "TranslationFile"
+    ],
+    "dependencies": [
+
+    ],
+    "screenshots": [],
+    "application": "24.0.0.0",
+    "platform": "24.0.0.0",
+    "idRanges": [
+        {
+            "from": 50000,
+            "to": 50999
+        }
+    ],
+    "contextSensitiveHelpUrl": "https://jaxan.pl/help",
+    "resourceExposurePolicy": {
+        "allowDebugging": true,
+        "allowDownloadingSource": false,
+        "includeSourceInSymbolFile": true
+    },
+    "runtime": "11.0"
+ 
+}

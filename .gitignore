@@ -1,0 +1,16 @@
+#Symbols folder
+.alpackages/
+#Extension App-file
+*.app
+#Translation Base-file
+*.g.xlf
+.altestrunner/last.xml
+.vscode/.alcache
+.vscode/.altemplates
+.vscode/rad.json
+.altestrunner/config.json
+#Translations
+#For BC Debugging
+.snapshots
+#For Prettier
+.prettierrc.json
