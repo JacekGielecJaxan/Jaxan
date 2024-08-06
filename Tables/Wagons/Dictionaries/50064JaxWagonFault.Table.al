@@ -3,7 +3,7 @@
 /// </summary>
 table 50064 "Wagon Fault"
 {
-    Caption = 'Wagon Status';
+    Caption = 'Wagon Fault';
     DataCaptionFields = "Code", Anomaly;
     DrillDownPageID = "Wagon Fault List";
     LookupPageID = "Wagon Fault List";
