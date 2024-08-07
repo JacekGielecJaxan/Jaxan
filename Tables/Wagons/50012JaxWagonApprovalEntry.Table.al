@@ -27,7 +27,7 @@ table 50012 "Wagon Approval Entry"
         }
         field(4; "Approval Date"; Date)
         {
-            Caption = 'Certyficate Date';
+            Caption = 'Certificate Date';
         }
         field(6; Description; Text[150])
         {
@@ -38,7 +38,7 @@ table 50012 "Wagon Approval Entry"
         /// </summary>
         field(7; "Approval No."; Text[50])
         {
-            Caption = 'Certyficate No.';
+            Caption = 'Certificate No.';
         }
         /// <summary>
         /// Wazne od
@@ -75,7 +75,7 @@ table 50012 "Wagon Approval Entry"
         /// </summary>
         field(13; "Person Name Iss. The Approval"; text[50])
         {
-            Caption = 'Office Issuing The Approval';
+            Caption = 'Person Issuing The Approval';
 
         }
         /// <summary>

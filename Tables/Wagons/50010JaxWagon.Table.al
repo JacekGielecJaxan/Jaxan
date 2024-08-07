@@ -143,7 +143,7 @@ table 50010 Wagon
         field(14; "Operating Status Group Code"; Code[10])
         {
             DataClassification = ToBeClassified;
-            Caption = 'Status Group Code';
+            Caption = 'Opearting Status Group Code';
             TableRelation = "Wagon Status Group";
             Editable = false;
         }
@@ -153,7 +153,7 @@ table 50010 Wagon
         field(15; "Operating Status Code"; code[10])
         {
             DataClassification = ToBeClassified;
-            Caption = 'Status Code';
+            Caption = 'Operating Status Code';
             TableRelation = "Wagon Status";
             Editable = false;
 

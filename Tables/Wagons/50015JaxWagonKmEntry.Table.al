@@ -60,7 +60,7 @@ table 50015 "Wagon Km Entry"
         }
         field(11; "Status TM Code"; code[10])
         {
-            Caption = 'Status Code';
+            Caption = 'Status TM Code';
             TableRelation = "Wagon Status Group TM";
         }
         field(12; "Train No."; code[10])

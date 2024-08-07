@@ -224,7 +224,7 @@ table 50007 "Wagon Template"
         field(109; "Mh.Loaded"; Decimal)
         {
             DataClassification = ToBeClassified;
-            Caption = 'Mh.Empty';
+            Caption = 'Mh.Loaded';
             BlankNumbers = BlankZero;
 
         }

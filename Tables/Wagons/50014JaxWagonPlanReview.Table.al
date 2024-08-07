@@ -3,7 +3,7 @@
 /// </summary>
 table 50014 "Wagon Plan Review Entry"
 {
-    Caption = 'Wagon Km Entry';
+    Caption = 'Wagon Plan Review Entry';
     DrillDownPageID = "Wagon Plan Review Entries";
     LookupPageID = "Wagon Plan Review Entries";
     DataClassification = CustomerContent;

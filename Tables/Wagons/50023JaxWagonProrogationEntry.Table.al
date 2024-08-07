@@ -70,7 +70,7 @@ table 50023 "Wagon Prorogation Entry"
         /// </summary>
         field(13; "Person Name Iss. The Prorog."; text[100])
         {
-            Caption = 'Office Issuing The Prorogation';
+            Caption = 'Person Issuing The Prorogation';
 
         }
         /// <summary>
