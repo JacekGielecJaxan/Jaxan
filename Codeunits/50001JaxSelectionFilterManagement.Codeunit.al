@@ -13,6 +13,14 @@ codeunit 50001 "Selection Filter Mgt Jax"
         exit(SFM.GetSelectionFilter(RecRef, Wagon.FieldNo("No.")));
     end;
 
+    procedure GetSelectionFilterForVehicle(var Vehicle: Record Vehicle): Text
+    var
+        RecRef: RecordRef;
+    begin
+        RecRef.GetTable(Vehicle);
+        exit(SFM.GetSelectionFilter(RecRef, Vehicle.FieldNo("No.")));
+    end;
+
     procedure GetSelectionFilterForWheelset(var Wheelset: Record Wheelset): Text
     var
         RecRef: RecordRef;

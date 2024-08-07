@@ -1,65 +1,68 @@
-page 50010 "Wagon List"
+page 50311 "Vehicle Card"
 {
-    //AdditionalSearchTerms = 'Product, Finished Good, Component, Raw Material, Assembly Item, Product Details, Merchandise Profile, Item Info, Commodity Info, Product Data, Article Details, Goods Profile, Item Detail';
-    AdditionalSearchTerms = 'Wagon';
+    Caption = 'Vehicle Card';
+    PageType = Card;
+    RefreshOnActivate = true;
+    SourceTable = Vehicle;
+    AdditionalSearchTerms = 'Customer Profile, Client Details, Buyer Information, Customer Data, Customer View, Client Profile, Customer Detail, Client Info';
 
-    ApplicationArea = Basic, Suite;
-    Caption = 'Wagons';
-    CardPageID = "Wagon Card";
-    Editable = false;
-    PageType = List;
-    QueryCategory = 'Wagon List';
-    SourceTable = Wagon;
-    UsageCategory = Lists;
-
-    AboutTitle = 'About wagons';
-    //TODO: poprawic tekst
-    //AboutText = '**Wagons** represent the Vehicles and services you buy and sell. For each item, you can manage the default sales and purchase prices used when creating documents, as well as track inventory numbers. With [Item Templates](?page=1383 "Opens the Item Templates") you can quickly create new items having common details defined by the template.';
+    AboutTitle = 'About Vehicle details';
+    AboutText = 'With the **Vehicle Card** you manage information about a Vehicle. From here you can also drill down on past and ongoing activity.';
 
     layout
     {
         area(content)
         {
-            repeater(Control1)
+            group(General)
             {
-                Caption = 'Wagon';
+                Caption = 'General';
                 field("No."; Rec."No.")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Specifies a number to identify the wagon.';
-                }
-                field(EVN; Rec.EVN)
-                {
-                    ApplicationArea = all;
-                    ToolTip = '';
-                }
-
-                field(Status; Rec.Status)
-                {
-                    ApplicationArea = all;
-                    ToolTip = '';
-                }
-                field("No. 2"; Rec."No. 2")
-                {
-                    ApplicationArea = All;
-                    ToolTip = '';
-                    Visible = false;
+                    Importance = Standard;
+                    ToolTip = 'Specifies the number of the Vehicle.';
                 }
                 field(Name; Rec.Name)
                 {
                     ApplicationArea = All;
+                    Importance = Promoted;
+                    ShowMandatory = true;
+                    ToolTip = 'Specifies the Vehicle''s name. This name will appear on all documents for the Vehicle.';
+
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Update(true);
+                    end;
+                }
+                field("Description"; Rec."Description")
+                {
+                    ApplicationArea = All;
+                    Importance = Additional;
                     ToolTip = '';
                     Visible = false;
                 }
-
-                field(Type; Rec.Type)
+                field("No. 2"; Rec."No. 2")
                 {
                     ApplicationArea = Basic, Suite;
                     ToolTip = '';
+                }
+                field(EVN; Rec.EVN)
+                {
+                    ApplicationArea = Basic, Suite;
+                    StyleExpr = StyleTxt;
+                    ToolTip = '';
+                }
+                field(Type; Rec.Type)
+                {
+                    ApplicationArea = Basic, Suite;
                 }
                 field(Serie; Rec.Serie)
                 {
                     ApplicationArea = Basic, Suite;
+                }
+                field("Resource No."; Rec."Resource No.")
+                {
+                    ApplicationArea = basic, suite;
                 }
                 field("Operating Status Group Code"; Rec."Operating Status Group Code")
                 {
@@ -82,165 +85,182 @@ page 50010 "Wagon List"
                     StyleExpr = StyleTxt;
                     ToolTip = '';
                 }
-                field("Dispatcher Code"; Rec."Dispatcher Code")
-                {
-                    ApplicationArea = all;
-                }
-                field(ECM; Rec.ECM)
-                {
-                    ApplicationArea = all;
-                }
-                field(Cycle; Rec.Cycle)
-                {
-                    ApplicationArea = all;
-                }
-                field("Last Review Date"; Rec."Last Review Date")
-                {
-                    ApplicationArea = all;
-                }
-                field("Next Review Date"; Rec."Next Review Date")
-                {
-                    ApplicationArea = all;
-                }
-                field("Prorogation Code"; Rec."Prorogation Code")
-                {
-                    ApplicationArea = all;
-                }
-
-                field("DSU Code"; Rec."DSU Code")
-                {
-                    ApplicationArea = all;
-                }
-
-                field("Job No."; Rec."Job No.")
-                {
-                    ApplicationArea = all;
-                }
-                field("Job Task No."; Rec."Job Task No.")
-                {
-                    ApplicationArea = all;
-                }
-                field("Leasing Entity No."; Rec."Leasing Entity No.")
-                {
-                    ApplicationArea = all;
-                }
-                field("Leasing Entity Name"; Rec."Leasing Entity Name")
-                {
-                    ApplicationArea = all;
-                }
-                field("Contract No."; Rec."Contract No.")
-                {
-                    ApplicationArea = all;
-                }
-                field("Contract Validity Date"; Rec."Contract Validity Date")
-                {
-                    ApplicationArea = all;
-                }
-                field("Receipt Date"; Rec."Receipt Date")
-                {
-                    ApplicationArea = all;
-                }
-                field("Release Date"; Rec."Release Date")
-                {
-                    ApplicationArea = all;
-                }
-                field("Institute Code"; Rec."Institute Code")
-                {
-                    ApplicationArea = all;
-                }
-                field("Station Code"; Rec."Station Code")
-                {
-                    ApplicationArea = all;
-                }
-                field("Track No."; Rec."Track No.")
-                {
-                    ApplicationArea = all;
-                }
-
-                field("Resource No."; Rec."Resource No.")
-                {
-                    ApplicationArea = basic, suite;
-                    ToolTip = '';
-                }
-                field(Description; Rec.Description)
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies a default text to describe the wagon on related documents.';
-                    Visible = false;
-                }
-                field("Created From Template Code"; Rec."Created From Template Code")
+                field("Status"; Rec."Status")
                 {
                     ApplicationArea = Basic, Suite;
-                    ToolTip = 'Specifies that the item was created from a template.';
-                    Visible = false;
+                    Editable = false;
+                    StyleExpr = StyleTxt;
+                    ToolTip = '';
                 }
                 field(Blocked; Rec.Blocked)
                 {
                     ApplicationArea = Basic, Suite;
-                    ToolTip = 'Specifies that transactions with the item cannot be posted, for example, because the item is in quarantine.';
-                    Visible = true;
+                    ToolTip = '';
                 }
                 field("Last Date Modified"; Rec."Last Date Modified")
                 {
                     ApplicationArea = Basic, Suite;
-                    ToolTip = 'Specifies when the item card was last modified.';
-                    Visible = false;
+                    Importance = Additional;
+                    ToolTip = 'Specifies when the Vehicle card was last modified.';
+                    Editable = false;
                 }
+            }
+            group("Contractor")
+            {
+                Caption = 'Contractor';
+                group(DispatcherDetails)
+                {
+                    Caption = 'Dispatcher Details';
+                    field("Dispatcher Code"; Rec."Dispatcher Code")
+                    {
+                        ApplicationArea = basic, suite;
+                    }
+                }
+                group(ProducerDetails)
+                {
+                    Caption = 'Producer Details';
+                    field("Producer No."; Rec."Producer No.")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        ToolTip = '';
+                    }
+                    field("Producer Name"; Rec."Producer Name")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        ToolTip = '';
+                    }
+                    field("Production Year"; Rec."Production Year")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        ToolTip = '';
+                    }
+                    field("Serial Number"; Rec."Serial Number")
+                    {
+                        ApplicationArea = all;
+                    }
+                }
+
+                group(LeasingDetail)
+                {
+                    ShowCaption = false;
+                    field("Leasing Entity No."; Rec."Leasing Entity No.")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        ToolTip = '';
+                    }
+                    field("Leasing Entity Name"; Rec."Leasing Entity Name")
+                    {
+                        ApplicationArea = Basic, Suite;
+                    }
+                }
+
+            }
+
+
+            group(Invoicing)
+            {
+                Caption = 'Invoicing';
+                AboutTitle = 'Manage the Vehicle''s invoicing';
+                AboutText = '';
+
+
+
+            }
+            group(attributes2)
+            {
+                Caption = 'Attributes';
+
+                field(Length; Rec.Length)
+                {
+                    ApplicationArea = basic, suite;
+                }
+                field("Own Weight"; Rec."Own Weight")
+                {
+                    ApplicationArea = basic, suite;
+                }
+                group(mass)
+                {
+                    field("Mh.P"; Rec."Mh. P")
+                    {
+                        ApplicationArea = basic, suite;
+                    }
+                }
+
+            }
+            group(components)
+            {
+                Caption = 'Components';
+                field("Brake Adjustment System Code"; Rec."Brake Adjustment System Code")
+                {
+                    ApplicationArea = basic, suite;
+                }
+                field("Valve Type Code"; Rec."Valve Type Code")
+                {
+                    ApplicationArea = basic, suite;
+                }
+                field("Inset Code"; Rec."Inset Code")
+                {
+                    ApplicationArea = basic, suite;
+                }
+                field("Trolley Type Code"; Rec."Trolley Type Code")
+                {
+                    ApplicationArea = basic, suite;
+                }
+                field("Wheelset Type Code"; Rec."Wheelset Type Code")
+                {
+                    ApplicationArea = basic, suite;
+                }
+                field("Bumper Type Code"; Rec."Bumper Type Code")
+                {
+                    ApplicationArea = basic, suite;
+                }
+            }
+            group(Planning)
+            {
+                Caption = 'Planning';
+                field("DSU Code"; Rec."DSU Code")
+                {
+                    ApplicationArea = DSU, Planning;
+                    Caption = 'DSU Code';
+                }
+
+                field(Cycle; Rec.Cycle)
+                {
+                    ApplicationArea = basic, suite;
+                }
+            }
+            group(Statistics)
+            {
+                Caption = 'Statistics';
+                Editable = false;
+
             }
         }
         area(factboxes)
         {
-            part(PowerBIEmbeddedReportPart; "Power BI Embedded Report Part")
+            part(Control149; "Vehicle Picture")
             {
                 ApplicationArea = Basic, Suite;
-                Visible = false;
+                SubPageLink = "No." = field("No.");
             }
-            /*
-            part(Control1901314507; "Wagon Invoicing FactBox")
-            {
-                ApplicationArea = Basic, Suite;
-                SubPageLink = "No." = field("No."),
-                              "Date Filter" = field("Date Filter");
-            }
-            */
-            /*
-                        part(Control1903326807; "Wagon Replenishment FactBox")
-                        {
-                            ApplicationArea = Basic, Suite;
-                            SubPageLink = "No." = field("No."),
-                                          "Date Filter" = field("Date Filter");
-                            Visible = false;
-                        }
-                        */
-            /*
-            part(Control1906840407; "Wagon Planning FactBox")
-            {
-                ApplicationArea = Basic, Suite;
-                SubPageLink = "No." = field("No."),
-                              "Date Filter" = field("Date Filter");
-            }
-            */
-            /*
-            part(Control1901796907; "Wagon Warehouse FactBox")
-            {
-                ApplicationArea = Basic, Suite;
-                SubPageLink = "No." = field("No."),
-                              "Date Filter" = field("Date Filter");
-                Visible = false;
-            }
-            */
             part("Attached Documents"; "Document Attachment Factbox")
             {
                 ApplicationArea = All;
                 Caption = 'Attachments';
-                SubPageLink = "Table ID" = const(Database::Wagon), "No." = field("No.");
+                SubPageLink = "Table ID" = const(Database::Vehicle),
+                              "No." = field("No.");
             }
-            /*
-            part(ItemAttributesFactBox; "Wagon Attributes Factbox")
+            part(VehicleStatisticsFactBox; "Vehicle Statistics FactBox")
             {
                 ApplicationArea = Basic, Suite;
+                SubPageLink = "No." = field("No.");
             }
-            */
+            part(Control1905532107; "Dimensions FactBox")
+            {
+                ApplicationArea = Basic, Suite;
+                SubPageLink = "Table ID" = const(18),
+                              "No." = field("No.");
+            }
             systempart(Control1900383207; Links)
             {
                 ApplicationArea = RecordLinks;
@@ -256,9 +276,9 @@ page 50010 "Wagon List"
     {
         area(processing)
         {
-            group(Wagon)
+            group(Vehicle)
             {
-                Caption = 'Wagon';
+                Caption = 'Vehicle';
                 Image = DataEntry;
             }
             group(History)
@@ -274,9 +294,9 @@ page 50010 "Wagon List"
                         ApplicationArea = Suite;
                         Caption = 'Ledger E&ntries';
                         Image = ItemLedger;
-                        RunObject = Page "Wagon Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.")
+                        RunObject = Page "Vehicle Entries";
+                        RunPageLink = "Vehicle No." = field("No.");
+                        RunPageView = sorting("Vehicle No.")
                                       order(descending);
                         Scope = Repeater;
                         ShortCutKey = 'Ctrl+F7';
@@ -287,9 +307,9 @@ page 50010 "Wagon List"
                         ApplicationArea = Suite;
                         Caption = '&Kilometers Entries';
                         Image = PhysicalInventoryLedger;
-                        RunObject = Page "Wagon Km Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.");
+                        RunObject = Page "Vehicle Km Entries";
+                        RunPageLink = "Vehicle No." = field("No.");
+                        RunPageView = sorting("Vehicle No.");
                         Scope = Repeater;
                         ToolTip = '';
                     }
@@ -298,9 +318,9 @@ page 50010 "Wagon List"
                         ApplicationArea = Suite;
                         Caption = '&Review Entries';
                         Image = ReservationLedger;
-                        RunObject = Page "Wagon Review Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.", "Date");
+                        RunObject = Page "Vehicle Review Entries";
+                        RunPageLink = "Vehicle No." = field("No.");
+                        RunPageView = sorting("Vehicle No.", "Date");
                         ToolTip = '';
                     }
                     action("&Status Entries")
@@ -308,9 +328,9 @@ page 50010 "Wagon List"
                         ApplicationArea = Suite;
                         Caption = '&Status Entries';
                         Image = ValueLedger;
-                        RunObject = Page "Wagon Status Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.");
+                        RunObject = Page "Vehicle Status Entries";
+                        RunPageLink = "Vehicle No." = field("No.");
+                        RunPageView = sorting("Vehicle No.");
                         ToolTip = '';
                     }
                     action("Review &Plan Entries")
@@ -318,9 +338,9 @@ page 50010 "Wagon List"
                         ApplicationArea = Suite;
                         Caption = 'Review &Plan Entries';
                         Image = ItemTrackingLedger;
-                        RunObject = Page "Wagon Plan Review Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.", "Planned Date");
+                        RunObject = Page "Vehicle Plan Review Entries";
+                        RunPageLink = "Vehicle No." = field("No.");
+                        RunPageView = sorting("Vehicle No.", "Planned Date");
 
                         ToolTip = '';
                     }
@@ -329,9 +349,9 @@ page 50010 "Wagon List"
                         ApplicationArea = Suite;
                         Caption = '&Prorogation Entries';
                         Image = BinLedger;
-                        RunObject = Page "Wagon Prorogation Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.");
+                        RunObject = Page "Vehicle Prorogation Entries";
+                        RunPageLink = "Vehicle No." = field("No.");
+                        RunPageView = sorting("Vehicle No.");
                         ToolTip = '';
                     }
                     action("&Approval Entries")
@@ -339,9 +359,9 @@ page 50010 "Wagon List"
                         ApplicationArea = Suite;
                         Caption = '&Approval Entries';
                         Image = BinLedger;
-                        RunObject = Page "Wagon Approval Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.");
+                        RunObject = Page "Vehicle Approval Entries";
+                        RunPageLink = "Vehicle No." = field("No.");
+                        RunPageView = sorting("Vehicle No.");
                         ToolTip = '';
                     }
                 }
@@ -355,9 +375,9 @@ page 50010 "Wagon List"
                     ApplicationArea = Basic, Suite;
                     Caption = 'Faults';
                     Image = Price;
-                    RunObject = Page "Wagon Fault Entries";
-                    RunPageLink = "Wagon No." = field("No.");
-                    RunPageView = sorting("Wagon No.");
+                    RunObject = Page "Vehicle Fault Entries";
+                    RunPageLink = "Vehicle No." = field("No.");
+                    RunPageView = sorting("Vehicle No.");
                     ToolTip = '';
                 }
                 action(PostFaults)
@@ -365,9 +385,9 @@ page 50010 "Wagon List"
                     ApplicationArea = Basic, Suite;
                     Caption = 'Faults';
                     Image = Price;
-                    RunObject = Page "Wagon Post Fault Entries";
-                    RunPageLink = "Wagon No." = field("No.");
-                    RunPageView = sorting("Wagon No.");
+                    RunObject = Page "Vehicle Post Fault Entries";
+                    RunPageLink = "Vehicle No." = field("No.");
+                    RunPageView = sorting("Vehicle No.");
                     ToolTip = '';
                 }
             }
@@ -378,26 +398,26 @@ page 50010 "Wagon List"
 
                 action(CopyItem)
                 {
-                    AccessByPermission = TableData Wagon = I;
+                    AccessByPermission = TableData Vehicle = I;
                     ApplicationArea = Basic, Suite;
-                    Caption = 'Copy Wagon';
+                    Caption = 'Copy Vehicle';
                     Image = Copy;
-                    ToolTip = 'Create a copy of the current wagon.';
+                    ToolTip = 'Create a copy of the current Vehicle.';
 
                     trigger OnAction()
                     begin
                         //TODO: Oprogramowac
-                        //       CODEUNIT.Run(CODEUNIT::"Copy Wagon", Rec);
+                        //       CODEUNIT.Run(CODEUNIT::"Copy Vehicle", Rec);
                     end;
                 }
             }
-            action("Wagon Journal")
+            action("Vehicle Journal")
             {
                 ApplicationArea = Basic, Suite;
-                Caption = 'Wagon Journal';
+                Caption = 'Vehicle Journal';
                 Image = Journals;
                 //TODO:Oprogramowac
-                //RunObject = Page "Wagon Journal";
+                //RunObject = Page "Vehicle Journal";
                 ToolTip = 'Open a list of journals.';
             }
             action(ApplyTemplate)
@@ -409,11 +429,11 @@ page 50010 "Wagon List"
 
                 trigger OnAction()
                 var
-                    Wagon: Record Wagon;
-                    WagonTemplMgt: Codeunit "Wagon Templ. Mgt.";
+                    Vehicle: Record Vehicle;
+                    VehicleTemplMgt: Codeunit "Vehicle Templ. Mgt.";
                 begin
-                    CurrPage.SetSelectionFilter(Wagon);
-                    WagonTemplMgt.UpdateItemsFromTemplate(Wagon);
+                    CurrPage.SetSelectionFilter(Vehicle);
+                    VehicleTemplMgt.UpdateItemsFromTemplate(Vehicle);
                 end;
             }
         }
@@ -446,7 +466,7 @@ page 50010 "Wagon List"
 
                 group(Reports)
                 {
-                    Caption = 'Wagon Statistics';
+                    Caption = 'Vehicle Statistics';
                     Image = "Report";
 
                 }
@@ -462,7 +482,7 @@ page 50010 "Wagon List"
         {
             group(Action126)
             {
-                Caption = 'Wagon';
+                Caption = 'Item';
 
                 action(Attributes)
                 {
@@ -659,6 +679,14 @@ page 50010 "Wagon List"
                     RunPageView = sorting("Document Type", Type, "No.");
                     ToolTip = 'View a list of ongoing purchase orders for the item.';
                 }
+                action("Ca&talog Items")
+                {
+                    ApplicationArea = Basic, Suite;
+                    Caption = 'Ca&talog Items';
+                    Image = NonStockItem;
+                    RunObject = Page "Catalog Item List";
+                    ToolTip = 'View the list of items that you do not carry in inventory. ';
+                }
             }
 
             group(Service)
@@ -728,85 +756,116 @@ page 50010 "Wagon List"
     }
 
     trigger OnAfterGetCurrRecord()
+    begin
+        if GuiAllowed() then
+            OnAfterGetCurrRecordFunc()
+        else
+            OnAfterGetCurrRecordFuncBackground();
+    end;
+
+    local procedure OnAfterGetCurrRecordFunc()
     var
-        FilteredItem: Record Wagon;
+        WorkflowStepInstance: Record "Workflow Step Instance";
+        CRMCouplingManagement: Codeunit "CRM Coupling Management";
+        WorkflowWebhookManagement: Codeunit "Workflow Webhook Management";
     begin
-        //SetWorkflowManagementEnabledState();
+        if NewMode then
+            CreateVehicleFromTemplate()
+        else
+            StartBackgroundCalculations();
+        ActivateFields();
 
-        CurrPage.SetSelectionFilter(FilteredItem);
-        CurrPage.PowerBIEmbeddedReportPart.PAGE.SetFilterToMultipleValues(FilteredItem, FilteredItem.FieldNo("No."));
     end;
 
-    procedure GetSelectionFilter(): Text
-    var
-        Wagon: Record Wagon;
-        SelectionFilterManagement: Codeunit "Selection Filter Mgt Jax";
-        SelectionFilterForWagon: Text;
+    local procedure OnAfterGetCurrRecordFuncBackground()
     begin
-        CurrPage.SetSelectionFilter(Wagon);
-        SelectionFilterForWagon := SelectionFilterManagement.GetSelectionFilterForWagon(Wagon);
-
-        //OnAfterGetSelectionFilter(Cust, SelectionFilterForCustomer);
-
-        exit(SelectionFilterForWagon);
-    end;
-
-    procedure SetSelection(var Wagon: Record Wagon)
-    begin
-        CurrPage.SetSelectionFilter(Wagon);
-    end;
-
-    trigger OnAfterGetRecord()
-    begin
-        //EnableControls();
-    end;
-
-    trigger OnFindRecord(Which: Text): Boolean
-    var
-        Found: Boolean;
-    begin
-        if RunOnTempRec then begin
-            TempItemFilteredFromAttributes.Copy(Rec);
-            Found := TempItemFilteredFromAttributes.Find(Which);
-            if Found then
-                Rec := TempItemFilteredFromAttributes;
-            exit(Found);
-        end;
-        exit(Rec.Find(Which));
+        //Rec.CalcFields("Sales (LCY)", "Profit (LCY)", "Inv. Discounts (LCY)", "Payments (LCY)");
+        //CustomerMgt.CalculateStatisticsWithCurrentCustomerValues(Rec, AdjmtCostLCY, AdjCustProfit, AdjProfitPct, CustInvDiscAmountLCY, CustPaymentsLCY, CustSalesLCY, CustProfit);
     end;
 
     trigger OnInit()
     begin
-        CurrPage.PowerBIEmbeddedReportPart.PAGE.InitPageRatio(PowerBIServiceMgt.GetFactboxRatio());
-        CurrPage.PowerBIEmbeddedReportPart.PAGE.SetPageContext(CurrPage.ObjectId(false));
+
     end;
 
-    trigger OnNextRecord(Steps: Integer): Integer
-    var
-        ResultSteps: Integer;
+    trigger OnNewRecord(BelowxRec: Boolean)
     begin
-        if RunOnTempRec then begin
-            TempItemFilteredFromAttributes.Copy(Rec);
-            ResultSteps := TempItemFilteredFromAttributes.Next(Steps);
-            if ResultSteps <> 0 then
-                Rec := TempItemFilteredFromAttributes;
-            exit(ResultSteps);
-        end;
-        exit(Rec.Next(Steps));
     end;
 
     trigger OnOpenPage()
-    var
     begin
+        OnBeforeOnOpenPage(Rec);
+
+        if Rec.GetFilter("Date Filter") = '' then
+            Rec.SetRange("Date Filter", 0D, WorkDate());
+        if GuiAllowed() then
+            OnOpenPageFunc()
+        else
+            OnOpenBackground();
+        OnAfterOnOpenPage(Rec, xRec);
+    end;
+
+    local procedure OnOpenPageFunc()
+    var
+        IntegrationTableMapping: Record "Integration Table Mapping";
+        EnvironmentInfo: Codeunit "Environment Information";
+    begin
+
+        SetNoFieldVisible();
+
+
+        IsSaaS := EnvironmentInfo.IsSaaS();
+
+        //SetWorkFlowEnabled();
+    end;
+
+    local procedure OnOpenBackground()
+    begin
+        //Rec.SetAutoCalcFields("Sales (LCY)", "Profit (LCY)", "Inv. Discounts (LCY)", "Payments (LCY)");
+    end;
+
+    local procedure StartBackgroundCalculations()
+    var
+        //VehicleCardCalculations: Codeunit "Vehicle Card Calculations";
+        Args: Dictionary of [Text, Text];
+    begin
+        if Rec."No." = PrevVehicleNo then
+            exit;
+        PrevVehicleNo := Rec."No.";
+        if (BackgroundTaskId <> 0) then
+            CurrPage.CancelBackgroundTask(BackgroundTaskId);
+
+        //CurrPage.EnqueueBackgroundTask(BackgroundTaskId, Codeunit::"Vehicle Card Calculations", Args);
+
+        //Session.LogMessage('0000D4Q', StrSubstNo(PageBckGrndTaskStartedTxt, Rec."No."), Verbosity::Normal, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, 'Category', VehicleCardServiceCategoryTxt);
+    end;
+
+
+    trigger OnPageBackgroundTaskCompleted(TaskId: Integer; Results: Dictionary of [Text, Text])
+    var
+        //        VehicleCardCalculations: Codeunit "Vehicle Card Calculations";
+        DictionaryValue: Text;
+    begin
+        if (TaskId = BackgroundTaskId) then begin
+            if Results.Count() = 0 then
+                exit;
+
+            //if TryGetDictionaryValueFromKey(Results, VehicleCardCalculations.GetAvgDaysPastDueDateLabel(), DictionaryValue) then
+            //    Evaluate(DaysPastDueDate, DictionaryValue);
+
+
+            //AttentionToPaidDay := DaysPastDueDate > 0;
+            //TotalMoneyOwed := Rec."Balance (LCY)" + ExpectedMoneyOwed;
+
+            //Session.LogMessage('0000D4R', PageBckGrndTaskCompletedTxt, Verbosity::Normal, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, 'Category', CustomerCardServiceCategoryTxt);
+        end;
     end;
 
     var
-
-    var
-        WagonSetup: Record "Wagon Setup";
+        VehicleSetup: Record "Vehicle Setup";
         CalendarMgmt: Codeunit "Calendar Management";
         ApprovalsMgmt: Codeunit "Approvals Mgmt.";
-        //WagonMgt: Codeunit "Wagon Mgt.";
+        //VehicleMgt: Codeunit "Vehicle Mgt.";
         LinkedResourceNo: Code[20];
         StyleTxt: Text;
         BlockedFilterApplied: Boolean;
@@ -814,67 +873,84 @@ page 50010 "Wagon List"
         NewMode: Boolean;
         CaptionTxt: Text;
         IsSaaS: Boolean;
-        PrevWagonNo: Code[20];
+        PrevVehicleNo: Code[20];
         BackgroundTaskId: Integer;
-        TempItemFilteredFromAttributes: Record Wagon temporary;
-        TempItemFilteredFromPickItem: Record Wagon temporary;
-        PowerBIServiceMgt: Codeunit "Power BI Service Mgt.";
-        ClientTypeManagement: Codeunit "Client Type Management";
-        RunOnTempRec: Boolean;
-        EventFilter: Text;
 
-    procedure SelectActiveItems(): Text
+
+    local procedure ActivateFields()
+    begin
+        OnAfterActivateFields(Rec);
+    end;
+
+
+    local procedure SetNoFieldVisible()
     var
-        Wagon: Record Wagon;
+        DocumentNoVisibility: Codeunit DocumentNoVisibility;
     begin
-        Wagon.SetRange(Status, Rec.Status::Active);
-        exit(SelectInItemList(Wagon));
     end;
 
-    procedure SelectActiveItemsForService(var Wagon: Record Wagon): Text
-    begin
-        Wagon.SetRange("Service Blocked", false);
-        exit(SelectInItemList(Wagon));
-    end;
-
-    procedure SelectNewItems(): Text
+    procedure RunReport(ReportNumber: Integer; VehicleNumber: Code[20])
     var
-        Wagon: Record Wagon;
+        Vehicle: Record Vehicle;
     begin
-        Wagon.SetRange(Status, Rec.Status::New);
-        exit(SelectInItemList(Wagon));
+        Vehicle.SetRange("No.", VehicleNumber);
+        REPORT.RunModal(ReportNumber, true, true, Vehicle);
     end;
 
-
-
-    procedure SetTempFilteredItemRec(var Wagon: Record Wagon)
-    begin
-        TempItemFilteredFromAttributes.Reset();
-        TempItemFilteredFromAttributes.DeleteAll();
-
-        TempItemFilteredFromPickItem.Reset();
-        TempItemFilteredFromPickItem.DeleteAll();
-
-        RunOnTempRec := true;
-
-        if Wagon.FindSet() then
-            repeat
-                TempItemFilteredFromAttributes := Wagon;
-                TempItemFilteredFromAttributes.Insert();
-                TempItemFilteredFromPickItem := Wagon;
-                TempItemFilteredFromPickItem.Insert();
-            until Wagon.Next() = 0;
-    end;
-
-    procedure SelectInItemList(var Wagon: Record Wagon): Text
+    local procedure CreateVehicleFromTemplate()
     var
-        WagonListPage: Page "Wagon List";
+        Vehicle: Record Vehicle;
+        VehicleTemplMgt: Codeunit "Vehicle Templ. Mgt.";
     begin
-        Wagon.SetRange(Blocked, false);
-        WagonListPage.SetTableView(Wagon);
-        WagonListPage.LookupMode(true);
-        if WagonListPage.RunModal() = ACTION::LookupOK then
-            exit(WagonListPage.GetSelectionFilter());
+        OnBeforeCreateVehicleFromTemplate(NewMode, Vehicle);
+
+        if not NewMode then
+            exit;
+        NewMode := false;
+        Rec.Copy(Vehicle);
+        OnCreateVehicleFromTemplateOnBeforeCurrPageUpdate(Rec);
+        CurrPage.Update();
+    end;
+
+    local procedure InitPowerAutomateTemplateVisibility()
+    var
+        FeatureKey: Record "Feature Key";
+    begin
+        //    PowerAutomateTemplatesEnabled := true;
+        //    if FeatureKey.Get(PowerAutomateTemplatesFeatureLbl) then
+        //        if FeatureKey.Enabled <> FeatureKey.Enabled::"All Users" then
+        //            PowerAutomateTemplatesEnabled := false;
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnAfterActivateFields(var Vehicle: Record Vehicle)
+    begin
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnAfterOnOpenPage(var Vehicle: Record Vehicle; xVehicle: Record Vehicle)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    [Scope('OnPrem')]
+    procedure SetCaption(var InText: Text)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeCreateVehicleFromTemplate(var NewMode: Boolean; var Vehicle: Record Vehicle)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnCreateVehicleFromTemplateOnBeforeCurrPageUpdate(var Vehicle: Record Vehicle)
+    begin
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnBeforeOnOpenPage(var Vehicle: Record Vehicle)
+    begin
     end;
 }
 

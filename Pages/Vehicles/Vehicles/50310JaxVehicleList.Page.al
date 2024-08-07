@@ -1,20 +1,20 @@
-page 50010 "Wagon List"
+page 50310 "Vehicle List"
 {
     //AdditionalSearchTerms = 'Product, Finished Good, Component, Raw Material, Assembly Item, Product Details, Merchandise Profile, Item Info, Commodity Info, Product Data, Article Details, Goods Profile, Item Detail';
-    AdditionalSearchTerms = 'Wagon';
+    AdditionalSearchTerms = 'Vehicle';
 
     ApplicationArea = Basic, Suite;
-    Caption = 'Wagons';
-    CardPageID = "Wagon Card";
+    Caption = 'Vehicles';
+    CardPageID = "Vehicle Card";
     Editable = false;
     PageType = List;
-    QueryCategory = 'Wagon List';
-    SourceTable = Wagon;
+    QueryCategory = 'Vehicle List';
+    SourceTable = Vehicle;
     UsageCategory = Lists;
 
-    AboutTitle = 'About wagons';
+    AboutTitle = 'About Vehicles';
     //TODO: poprawic tekst
-    //AboutText = '**Wagons** represent the Vehicles and services you buy and sell. For each item, you can manage the default sales and purchase prices used when creating documents, as well as track inventory numbers. With [Item Templates](?page=1383 "Opens the Item Templates") you can quickly create new items having common details defined by the template.';
+    //AboutText = '**Vehicles** represent the Vehicles and services you buy and sell. For each item, you can manage the default sales and purchase prices used when creating documents, as well as track inventory numbers. With [Item Templates](?page=1383 "Opens the Item Templates") you can quickly create new items having common details defined by the template.';
 
     layout
     {
@@ -22,11 +22,11 @@ page 50010 "Wagon List"
         {
             repeater(Control1)
             {
-                Caption = 'Wagon';
+                Caption = 'Vehicle';
                 field("No."; Rec."No.")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Specifies a number to identify the wagon.';
+                    ToolTip = 'Specifies a number to identify the Vehicle.';
                 }
                 field(EVN; Rec.EVN)
                 {
@@ -165,7 +165,7 @@ page 50010 "Wagon List"
                 field(Description; Rec.Description)
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Specifies a default text to describe the wagon on related documents.';
+                    ToolTip = 'Specifies a default text to describe the Vehicle on related documents.';
                     Visible = false;
                 }
                 field("Created From Template Code"; Rec."Created From Template Code")
@@ -196,7 +196,7 @@ page 50010 "Wagon List"
                 Visible = false;
             }
             /*
-            part(Control1901314507; "Wagon Invoicing FactBox")
+            part(Control1901314507; "Vehicle Invoicing FactBox")
             {
                 ApplicationArea = Basic, Suite;
                 SubPageLink = "No." = field("No."),
@@ -204,7 +204,7 @@ page 50010 "Wagon List"
             }
             */
             /*
-                        part(Control1903326807; "Wagon Replenishment FactBox")
+                        part(Control1903326807; "Vehicle Replenishment FactBox")
                         {
                             ApplicationArea = Basic, Suite;
                             SubPageLink = "No." = field("No."),
@@ -213,7 +213,7 @@ page 50010 "Wagon List"
                         }
                         */
             /*
-            part(Control1906840407; "Wagon Planning FactBox")
+            part(Control1906840407; "Vehicle Planning FactBox")
             {
                 ApplicationArea = Basic, Suite;
                 SubPageLink = "No." = field("No."),
@@ -221,7 +221,7 @@ page 50010 "Wagon List"
             }
             */
             /*
-            part(Control1901796907; "Wagon Warehouse FactBox")
+            part(Control1901796907; "Vehicle Warehouse FactBox")
             {
                 ApplicationArea = Basic, Suite;
                 SubPageLink = "No." = field("No."),
@@ -233,10 +233,10 @@ page 50010 "Wagon List"
             {
                 ApplicationArea = All;
                 Caption = 'Attachments';
-                SubPageLink = "Table ID" = const(Database::Wagon), "No." = field("No.");
+                SubPageLink = "Table ID" = const(Database::Vehicle), "No." = field("No.");
             }
             /*
-            part(ItemAttributesFactBox; "Wagon Attributes Factbox")
+            part(ItemAttributesFactBox; "Vehicle Attributes Factbox")
             {
                 ApplicationArea = Basic, Suite;
             }
@@ -256,9 +256,9 @@ page 50010 "Wagon List"
     {
         area(processing)
         {
-            group(Wagon)
+            group(Vehicle)
             {
-                Caption = 'Wagon';
+                Caption = 'Vehicle';
                 Image = DataEntry;
             }
             group(History)
@@ -274,9 +274,9 @@ page 50010 "Wagon List"
                         ApplicationArea = Suite;
                         Caption = 'Ledger E&ntries';
                         Image = ItemLedger;
-                        RunObject = Page "Wagon Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.")
+                        RunObject = Page "Vehicle Entries";
+                        RunPageLink = "Vehicle No." = field("No.");
+                        RunPageView = sorting("Vehicle No.")
                                       order(descending);
                         Scope = Repeater;
                         ShortCutKey = 'Ctrl+F7';
@@ -287,9 +287,9 @@ page 50010 "Wagon List"
                         ApplicationArea = Suite;
                         Caption = '&Kilometers Entries';
                         Image = PhysicalInventoryLedger;
-                        RunObject = Page "Wagon Km Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.");
+                        RunObject = Page "Vehicle Km Entries";
+                        RunPageLink = "Vehicle No." = field("No.");
+                        RunPageView = sorting("Vehicle No.");
                         Scope = Repeater;
                         ToolTip = '';
                     }
@@ -298,9 +298,9 @@ page 50010 "Wagon List"
                         ApplicationArea = Suite;
                         Caption = '&Review Entries';
                         Image = ReservationLedger;
-                        RunObject = Page "Wagon Review Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.", "Date");
+                        RunObject = Page "Vehicle Review Entries";
+                        RunPageLink = "Vehicle No." = field("No.");
+                        RunPageView = sorting("Vehicle No.", "Date");
                         ToolTip = '';
                     }
                     action("&Status Entries")
@@ -308,9 +308,9 @@ page 50010 "Wagon List"
                         ApplicationArea = Suite;
                         Caption = '&Status Entries';
                         Image = ValueLedger;
-                        RunObject = Page "Wagon Status Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.");
+                        RunObject = Page "Vehicle Status Entries";
+                        RunPageLink = "Vehicle No." = field("No.");
+                        RunPageView = sorting("Vehicle No.");
                         ToolTip = '';
                     }
                     action("Review &Plan Entries")
@@ -318,9 +318,9 @@ page 50010 "Wagon List"
                         ApplicationArea = Suite;
                         Caption = 'Review &Plan Entries';
                         Image = ItemTrackingLedger;
-                        RunObject = Page "Wagon Plan Review Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.", "Planned Date");
+                        RunObject = Page "Vehicle Plan Review Entries";
+                        RunPageLink = "Vehicle No." = field("No.");
+                        RunPageView = sorting("Vehicle No.", "Planned Date");
 
                         ToolTip = '';
                     }
@@ -329,9 +329,9 @@ page 50010 "Wagon List"
                         ApplicationArea = Suite;
                         Caption = '&Prorogation Entries';
                         Image = BinLedger;
-                        RunObject = Page "Wagon Prorogation Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.");
+                        RunObject = Page "Vehicle Prorogation Entries";
+                        RunPageLink = "Vehicle No." = field("No.");
+                        RunPageView = sorting("Vehicle No.");
                         ToolTip = '';
                     }
                     action("&Approval Entries")
@@ -339,9 +339,9 @@ page 50010 "Wagon List"
                         ApplicationArea = Suite;
                         Caption = '&Approval Entries';
                         Image = BinLedger;
-                        RunObject = Page "Wagon Approval Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.");
+                        RunObject = Page "Vehicle Approval Entries";
+                        RunPageLink = "Vehicle No." = field("No.");
+                        RunPageView = sorting("Vehicle No.");
                         ToolTip = '';
                     }
                 }
@@ -355,9 +355,9 @@ page 50010 "Wagon List"
                     ApplicationArea = Basic, Suite;
                     Caption = 'Faults';
                     Image = Price;
-                    RunObject = Page "Wagon Fault Entries";
-                    RunPageLink = "Wagon No." = field("No.");
-                    RunPageView = sorting("Wagon No.");
+                    RunObject = Page "Vehicle Fault Entries";
+                    RunPageLink = "Vehicle No." = field("No.");
+                    RunPageView = sorting("Vehicle No.");
                     ToolTip = '';
                 }
                 action(PostFaults)
@@ -365,9 +365,9 @@ page 50010 "Wagon List"
                     ApplicationArea = Basic, Suite;
                     Caption = 'Faults';
                     Image = Price;
-                    RunObject = Page "Wagon Post Fault Entries";
-                    RunPageLink = "Wagon No." = field("No.");
-                    RunPageView = sorting("Wagon No.");
+                    RunObject = Page "Vehicle Post Fault Entries";
+                    RunPageLink = "Vehicle No." = field("No.");
+                    RunPageView = sorting("Vehicle No.");
                     ToolTip = '';
                 }
             }
@@ -378,26 +378,26 @@ page 50010 "Wagon List"
 
                 action(CopyItem)
                 {
-                    AccessByPermission = TableData Wagon = I;
+                    AccessByPermission = TableData Vehicle = I;
                     ApplicationArea = Basic, Suite;
-                    Caption = 'Copy Wagon';
+                    Caption = 'Copy Vehicle';
                     Image = Copy;
-                    ToolTip = 'Create a copy of the current wagon.';
+                    ToolTip = 'Create a copy of the current Vehicle.';
 
                     trigger OnAction()
                     begin
                         //TODO: Oprogramowac
-                        //       CODEUNIT.Run(CODEUNIT::"Copy Wagon", Rec);
+                        //       CODEUNIT.Run(CODEUNIT::"Copy Vehicle", Rec);
                     end;
                 }
             }
-            action("Wagon Journal")
+            action("Vehicle Journal")
             {
                 ApplicationArea = Basic, Suite;
-                Caption = 'Wagon Journal';
+                Caption = 'Vehicle Journal';
                 Image = Journals;
                 //TODO:Oprogramowac
-                //RunObject = Page "Wagon Journal";
+                //RunObject = Page "Vehicle Journal";
                 ToolTip = 'Open a list of journals.';
             }
             action(ApplyTemplate)
@@ -409,11 +409,11 @@ page 50010 "Wagon List"
 
                 trigger OnAction()
                 var
-                    Wagon: Record Wagon;
-                    WagonTemplMgt: Codeunit "Wagon Templ. Mgt.";
+                    Vehicle: Record Vehicle;
+                    VehicleTemplMgt: Codeunit "Vehicle Templ. Mgt.";
                 begin
-                    CurrPage.SetSelectionFilter(Wagon);
-                    WagonTemplMgt.UpdateItemsFromTemplate(Wagon);
+                    CurrPage.SetSelectionFilter(Vehicle);
+                    VehicleTemplMgt.UpdateItemsFromTemplate(Vehicle);
                 end;
             }
         }
@@ -446,7 +446,7 @@ page 50010 "Wagon List"
 
                 group(Reports)
                 {
-                    Caption = 'Wagon Statistics';
+                    Caption = 'Vehicle Statistics';
                     Image = "Report";
 
                 }
@@ -462,7 +462,7 @@ page 50010 "Wagon List"
         {
             group(Action126)
             {
-                Caption = 'Wagon';
+                Caption = 'Vehicle';
 
                 action(Attributes)
                 {
@@ -729,7 +729,7 @@ page 50010 "Wagon List"
 
     trigger OnAfterGetCurrRecord()
     var
-        FilteredItem: Record Wagon;
+        FilteredItem: Record Vehicle;
     begin
         //SetWorkflowManagementEnabledState();
 
@@ -739,21 +739,21 @@ page 50010 "Wagon List"
 
     procedure GetSelectionFilter(): Text
     var
-        Wagon: Record Wagon;
+        Vehicle: Record Vehicle;
         SelectionFilterManagement: Codeunit "Selection Filter Mgt Jax";
-        SelectionFilterForWagon: Text;
+        SelectionFilterForVehicle: Text;
     begin
-        CurrPage.SetSelectionFilter(Wagon);
-        SelectionFilterForWagon := SelectionFilterManagement.GetSelectionFilterForWagon(Wagon);
+        CurrPage.SetSelectionFilter(Vehicle);
+        SelectionFilterForVehicle := SelectionFilterManagement.GetSelectionFilterForVehicle(Vehicle);
 
         //OnAfterGetSelectionFilter(Cust, SelectionFilterForCustomer);
 
-        exit(SelectionFilterForWagon);
+        exit(SelectionFilterForVehicle);
     end;
 
-    procedure SetSelection(var Wagon: Record Wagon)
+    procedure SetSelection(var Vehicle: Record Vehicle)
     begin
-        CurrPage.SetSelectionFilter(Wagon);
+        CurrPage.SetSelectionFilter(Vehicle);
     end;
 
     trigger OnAfterGetRecord()
@@ -803,10 +803,10 @@ page 50010 "Wagon List"
     var
 
     var
-        WagonSetup: Record "Wagon Setup";
+        VehicleSetup: Record "Vehicle Setup";
         CalendarMgmt: Codeunit "Calendar Management";
         ApprovalsMgmt: Codeunit "Approvals Mgmt.";
-        //WagonMgt: Codeunit "Wagon Mgt.";
+        //VehicleMgt: Codeunit "Vehicle Mgt.";
         LinkedResourceNo: Code[20];
         StyleTxt: Text;
         BlockedFilterApplied: Boolean;
@@ -814,10 +814,10 @@ page 50010 "Wagon List"
         NewMode: Boolean;
         CaptionTxt: Text;
         IsSaaS: Boolean;
-        PrevWagonNo: Code[20];
+        PrevVehicleNo: Code[20];
         BackgroundTaskId: Integer;
-        TempItemFilteredFromAttributes: Record Wagon temporary;
-        TempItemFilteredFromPickItem: Record Wagon temporary;
+        TempItemFilteredFromAttributes: Record Vehicle temporary;
+        TempItemFilteredFromPickItem: Record Vehicle temporary;
         PowerBIServiceMgt: Codeunit "Power BI Service Mgt.";
         ClientTypeManagement: Codeunit "Client Type Management";
         RunOnTempRec: Boolean;
@@ -825,29 +825,29 @@ page 50010 "Wagon List"
 
     procedure SelectActiveItems(): Text
     var
-        Wagon: Record Wagon;
+        Vehicle: Record Vehicle;
     begin
-        Wagon.SetRange(Status, Rec.Status::Active);
-        exit(SelectInItemList(Wagon));
+        Vehicle.SetRange(Status, Rec.Status::Active);
+        exit(SelectInItemList(Vehicle));
     end;
 
-    procedure SelectActiveItemsForService(var Wagon: Record Wagon): Text
+    procedure SelectActiveItemsForService(var Vehicle: Record Vehicle): Text
     begin
-        Wagon.SetRange("Service Blocked", false);
-        exit(SelectInItemList(Wagon));
+        Vehicle.SetRange("Service Blocked", false);
+        exit(SelectInItemList(Vehicle));
     end;
 
     procedure SelectNewItems(): Text
     var
-        Wagon: Record Wagon;
+        Vehicle: Record Vehicle;
     begin
-        Wagon.SetRange(Status, Rec.Status::New);
-        exit(SelectInItemList(Wagon));
+        Vehicle.SetRange(Status, Rec.Status::New);
+        exit(SelectInItemList(Vehicle));
     end;
 
 
 
-    procedure SetTempFilteredItemRec(var Wagon: Record Wagon)
+    procedure SetTempFilteredItemRec(var Vehicle: Record Vehicle)
     begin
         TempItemFilteredFromAttributes.Reset();
         TempItemFilteredFromAttributes.DeleteAll();
@@ -857,24 +857,24 @@ page 50010 "Wagon List"
 
         RunOnTempRec := true;
 
-        if Wagon.FindSet() then
+        if Vehicle.FindSet() then
             repeat
-                TempItemFilteredFromAttributes := Wagon;
+                TempItemFilteredFromAttributes := Vehicle;
                 TempItemFilteredFromAttributes.Insert();
-                TempItemFilteredFromPickItem := Wagon;
+                TempItemFilteredFromPickItem := Vehicle;
                 TempItemFilteredFromPickItem.Insert();
-            until Wagon.Next() = 0;
+            until Vehicle.Next() = 0;
     end;
 
-    procedure SelectInItemList(var Wagon: Record Wagon): Text
+    procedure SelectInItemList(var Vehicle: Record Vehicle): Text
     var
-        WagonListPage: Page "Wagon List";
+        VehicleListPage: Page "Vehicle List";
     begin
-        Wagon.SetRange(Blocked, false);
-        WagonListPage.SetTableView(Wagon);
-        WagonListPage.LookupMode(true);
-        if WagonListPage.RunModal() = ACTION::LookupOK then
-            exit(WagonListPage.GetSelectionFilter());
+        Vehicle.SetRange(Blocked, false);
+        VehicleListPage.SetTableView(Vehicle);
+        VehicleListPage.LookupMode(true);
+        if VehicleListPage.RunModal() = ACTION::LookupOK then
+            exit(VehicleListPage.GetSelectionFilter());
     end;
 }
 
