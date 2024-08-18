@@ -73,7 +73,7 @@ page 50295 "Workflow Doc. Check Factbox"
         TotalErrorsStyleTxt: Text;
         CurrentLineStyleTxt: Text;
         ErrorText: array[2] of Text;
-        OtherIssuesTxt: Label '(+%1 other issues)', comment = '%1 - number of issues';
+OtherIssuesTxt: Label '(+%1 other issues)', comment = '%1 - number of issues';
         NoIssuesFoundTxt: Label 'No issues found.';
         RefreshTxt: Label 'Refresh';
 

@@ -22,12 +22,12 @@ Caption = 'Comment List';
                 field(Date; Rec.Date)
                 {
                     ApplicationArea = Comments;
-                    ToolTip = 'Specifies the date the comment was created.';
+ToolTip = 'Specifies the date the comment was created.';
                 }
                 field(Comment; Rec.Comment)
                 {
                     ApplicationArea = Comments;
-                    ToolTip = 'Specifies the comment itself.';
+ToolTip = 'Specifies the comment itself.';
                 }
             }
         }

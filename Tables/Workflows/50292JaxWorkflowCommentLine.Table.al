@@ -1,6 +1,6 @@
 table 50292 "Workflow Comment Line"
 {
-    Caption = 'Workflow Comment Line';
+Caption = 'Workflow Comment Line';
     DrillDownPageID = "Workflow Comment List";
     LookupPageID = "Workflow Comment List";
     DataClassification = CustomerContent;
@@ -29,7 +29,7 @@ table 50292 "Workflow Comment Line"
         }
         field(6; Comment; Text[80])
         {
-            Caption = 'Comment';
+Caption = 'Comment';
         }
         field(7; "Document Line No."; Integer)
         {
