@@ -1413,189 +1413,411 @@
     "ITA":"Serie di carri"},
   "Vehicle Brake Systems":{
     "ITA":"Sistemi frenanti per veicoli"},
-  "Wagon VKMs":{},
-  "Wagon Review Group List":{},
-  "Vehicle Wheelset Types":{},
-  "Wagon Review List":{},
-  "Vehicle Trolley Types":{},
-  "Wagon Brake Adjustment Systems":{},
-  "Vehicle Status List":{},
-  "Wagon Brake Systems":{},
-  "Wagon Wheelset Types":{},
-  "Vehicle Types":{},
-  "Wagon Trolley Types":{},
-  "Vehicle Fault List":{},
-  "Wagon Plan Review Entries":{},
-  "Vehicle Entries":{},
-  "Vendor Types":{},
-  "Vehicle Templates":{},
-  "Specifies the code of the template.":{},
-  "Specifies the description of the template.":{},
-  "Wheelset Card":{},
-  "Specifies the number of the wagon.":{},
-  "Specifies the wagon":{},
-  "Owner":{},
-  "Producer Details":{},
-  "Bearing Producer":{},
-  "Planning":{},
-  "Review":{},
-  "Measurement":{},
-  "&Kilometers Entries":{},
-  "&Review Entries":{},
-  "Review &Plan Entries":{},
-  "&Approval Entries":{},
-  "Wheelset Journal":{},
-  "Open a list of journals.":{},
-  "Print Label":{},
-  "Wheelset Statistics":{},
-  "Wagon Km Entries":{},
-  "Vehicle Template":{},
-  "Specifies that the related record is blocked from being posted in transactions, for example an item that is placed in quarantine.":{},
-  "Specifies whether the item card represents a physical inventory unit (Inventory), a labor time unit (Service), or a physical unit that is not tracked in inventory (Non-Inventory).":{},
-  "Attributes":{},
-  "Components":{},
-  "Copy Template":{},
-  "Copies all information to the current template from the selected one.":{},
-  "Wheelsets":{},
-  "Specifies when the item card was last modified.":{},
-  "Wagon Statistics":{},
-  "Select a template for a new Vehicle":{},
-  "Wagon Picture":{},
-  "Specifies the picture of the wagon.":{},
-  "Vehicle Card":{},
-  "Specifies the Vehicle":{},
-  "Specifies when the Vehicle card was last modified.":{},
-  "Dispatcher Details":{},
-  "Invoicing":{},
-  "&Status Entries":{},
-  "&Prorogation Entries":{},
-  "Faults":{},
-  "Copy Vehicle":{},
-  "Create a copy of the current Vehicle.":{},
-  "Vehicle Journal":{},
-  "Apply Template":{},
-  "Apply a template to update one or more entities with your standard settings for a certain type of entity.":{},
-  "Finance Reports":{},
-  "Item":{},
-  "View or edit the item":{},
-  "Availability":{},
-  "Items b&y Location":{},
-  "Show a list of items grouped by location.":{},
-  "&Item Availability by":{},
-  "Event":{},
-  "View how the actual and the projected available balance of an item will develop over time according to supply and demand events.":{},
-  "Show the projected quantity of the item over time according to time periods, such as day, week, or month.":{},
-  "View the current and projected quantity of the item for each variant.":{},
-  "Location":{},
-  "View the actual and projected quantity of the item per location.":{},
-  "S&ales":{},
-  "Sales Prices":{},
-  "View or set up sales prices for the item. An item price is automatically granted on invoice lines when the specified criteria are met, such as vendor, quantity, or ending date.":{},
-  "Sales Discounts":{},
-  "View or set up sales discounts for the item. An item discount is automatically granted on invoice lines when the specified criteria are met, such as vendor, quantity, or ending date.":{},
-  "&Purchases":{},
-  "Ven&dors":{},
-  "View the list of vendors who can supply the item, and at which lead time.":{},
-  "Purchase Prices":{},
-  "View or set up purchase prices for the item. An item price is automatically granted on invoice lines when the specified criteria are met, such as vendor, quantity, or ending date.":{},
-  "Purchase Discounts":{},
-  "View or set up purchase discounts for the item. An item discount is automatically granted on invoice lines when the specified criteria are met, such as vendor, quantity, or ending date.":{},
-  "Purchase Orders":{},
-  "View a list of ongoing purchase orders for the item.":{},
-  "Ca&talog Items":{},
-  "View the list of items that you do not carry in inventory. ":{},
-  "Ser&vice Items":{},
-  "View instances of the item as service items, such as machines that you maintain or repair for customers through service orders. ":{},
-  "Troubleshooting":{},
-  "View or edit information about technical problems with a service item.":{},
-  "Troubleshooting Setup":{},
-  "View or edit your settings for troubleshooting service items.":{},
-  "Wagon Entries":{},
-  "Specifies a number to identify the Vehicle.":{},
-  "Specifies a default text to describe the Vehicle on related documents.":{},
-  "Specifies that the item was created from a template.":{},
-  "Specifies that transactions with the item cannot be posted, for example, because the item is in quarantine.":{},
-  "Wagon Templates":{},
-  "Wagon Template":{},
-  "Select a template for a new wagon":{},
-  "Wagon Review Entries":{},
-  "Wagon Card":{},
-  "Copy Wagon":{},
-  "Create a copy of the current wagon.":{},
-  "Wagon Journal":{},
-  "Wagons":{},
-  "Specifies a number to identify the wagon.":{},
-  "Specifies a default text to describe the wagon on related documents.":{},
-  "Vehicle Setter Types":{},
-  "Vehicle Prorogation List":{},
-  "DSU Wagon Types":{},
-  "DSU Card":{},
-  "&DSU Wagon Types":{},
-  "View or edit information about zones that you use at this location to structure your bins.":{},
-  "Instituties List":{},
-  "Wagon ECM List":{},
-  "Dispatchers List":{},
-  "Cycles List":{},
-  "Wheelset Review List":{},
-  "Axle Box Types":{},
-  "Tracks List":{},
-  "DSU Configuration Lines":{},
-  "&Line":{},
-  "Show Document":{},
-  "Open the document that the selected line exists on.":{},
-  "Wheelset Types":{},
-  "Lines":{},
-  "DSU Configuration":{},
-  "Wheel Types":{},
-  "DSU Configuration List":{},
-  "Stations List":{},
-  "There is nothing to release for the document of type %1 with the number %2.":{},
-  "This document can only be released when the approval process is complete.":{},
-  "The approval process must be cancelled or completed to reopen this document.":{},
-  "You are about to apply the template to selected records. Data from the template will replace data for the records in fields that do not already contain data.\\\\Do you want also data from the template to replace data for the records in fields that already contain data?":{},
-  "Do you want to open the blank Vehicle card?":{},
-  "Do you want to open the blank wagon card?":{},
-  "Approval of a workflow document is requested.":{},
-  "An approval request for a purchase document is canceled.":{},
-  "A purchase document is released.":{},
-  "An approval request is approved.":{},
-  "An approval request is rejected.":{},
-  "An approval request is delegated.":{},
-  "An event with description %1 already exists.":{},
-  "The overdue approval notifications batch job will be run.":{},
-  "Approval of a job queue entry is requested.":{},
-  "Approval of a job queue entry is cancelled.":{},
-  "User ID %1 does not exist in the Approval User Setup window.":{},
-  "You must set up an approver for user ID %1 in the Approval User Setup window.":{},
-  "The workflow user group member with user ID %1 does not exist in the Approval User Setup window.":{},
-  "There is no substitute, direct approver, or approval administrator for user ID %1 in the Approval User Setup window.":{},
-  "No qualified approver was found.":{},
-  "You can only delegate open approval requests.":{},
-  "You can only approve open approval requests.":{},
-  "You can only reject open approval entries.":{},
-  "The selected approval requests have been delegated.":{},
-  "There is no approval request to approve.":{},
-  "There is no approval request to reject.":{},
-  "There is no approval request to delegate.":{},
-  "An approval request has been sent.":{},
-  "The salesperson/purchaser user ID %1 does not exist in the Approval User Setup window for %2 %3.":{},
-  "No approval requests exist.":{},
-  "A workflow user group with at least one member must be set up.":{},
-  "%1 %2 has been automatically approved. The status has been changed to %3.":{},
-  "Record type %1 is not supported by this workflow response.":{},
-  "Sales %1 %2 must be approved and released before you can perform this action.":{},
-  "Purchase %1 %2 must be approved and released before you can perform this action.":{},
-  "No approval workflow for this record type is enabled.":{},
-  "The approval request for the selected record has been canceled.":{},
-  "An approval request already exists.":{},
-  "An approval request for this batch has already been sent and approved. Do you want to send another approval request?":{},
-  "Only Direct Approver is supported as Approver Limit Type option for %1. The approval request will be approved automatically.":{},
-  "%1 has been approved.":{},
-  "You do not have permission to delegate one or more of the selected approval requests.":{},
-  "There is nothing to approve.":{},
-  "No sufficient approver was found in the approver chain.":{},
-  "You can":{},
-  "Imposed restriction":{},
-  "Pending Approval":{},
-  "The restriction was imposed because the journal batch requires approval.":{}
+  "Wagon VKMs":{
+    "ITA":"Carri VKM"},
+  "Wagon Review Group List":{
+    "ITA":"Elenco dei gruppi di revisione dei carri"},
+  "Vehicle Wheelset Types":{
+    "ITA":"Tipi di ruote per veicoli"},
+  "Wagon Review List":{
+    "ITA":"Elenco delle recensioni dei carri"},
+  "Vehicle Trolley Types":{
+    "ITA":"Tipi di carrelli per veicoli"},
+  "Wagon Brake Adjustment Systems":{
+    "ITA":"Sistemi di regolazione dei freni del carro"},
+  "Vehicle Status List":{
+    "ITA":"Elenco dello stato del veicolo"},
+  "Wagon Brake Systems":{
+    "ITA":"Sistemi frenanti per carri"},
+  "Wagon Wheelset Types":{
+    "ITA":"Tipi di ruote per carri"},
+  "Vehicle Types":{
+    "ITA":"Tipi di veicoli"},
+  "Wagon Trolley Types":{
+    "ITA":"Tipi di carrelli per carri"},
+  "Vehicle Fault List":{
+    "ITA":"Elenco dei guasti del veicolo"},
+  "Wagon Plan Review Entries":{
+    "ITA":"Voci di revisione del piano del carro"},
+  "Vehicle Entries":{
+    "ITA":"Voci dei veicoli"},
+  "Vendor Types":{
+    "ITA":"Tipi di fornitori"},
+  "Vehicle Templates":{
+    "ITA":"Modelli di veicoli"},
+  "Specifies the code of the template.":{
+    "ITA":"Specifica il codice del modello."},
+  "Specifies the description of the template.":{
+    "ITA":"Specifica la descrizione del modello."},
+  "Wheelset Card":{
+    "ITA":"Carta del set di ruote"},
+  "Specifies the number of the wagon.":{
+    "ITA":"Specifica il numero del carro."},
+  "Specifies the wagon":{
+    "ITA":"Specifica il carro"},
+  "Owner":{
+    "ITA":"Proprietario"},
+  "Producer Details":{
+    "ITA":"Dettagli del produttore"},
+  "Bearing Producer":{
+    "ITA":"Produttore di cuscinetti"},
+  "Planning":{
+    "ITA":"Pianificazione"},
+  "Review":{
+    "ITA":"Recensione"},
+  "Measurement":{
+    "ITA":"Misurazione"},
+  "&Kilometers Entries":{
+    "ITA":"& Voci Chilometri"},
+  "&Review Entries":{
+    "ITA":"& Rivedi le voci"},
+  "Review &Plan Entries":{
+    "ITA":"Rivedi e pianifica le voci"},
+  "&Approval Entries":{
+    "ITA":"& Voci di approvazione"},
+  "Wheelset Journal":{
+    "ITA":"Giornale delle ruote"},
+  "Open a list of journals.":{
+    "ITA":"Apri un elenco di diari."},
+  "Print Label":{
+    "ITA":"Stampa etichetta"},
+  "Wheelset Statistics":{
+    "ITA":"Statistiche sulle ruote"},
+  "Wagon Km Entries":{
+    "ITA":"Ingressi Km Carro"},
+  "Vehicle Template":{
+    "ITA":"Modello di veicolo"},
+  "Specifies that the related record is blocked from being posted in transactions, for example an item that is placed in quarantine.":{
+    "ITA":"Specifica che la registrazione del record correlato è bloccata nelle transazioni, ad esempio un elemento che viene messo in quarantena."},
+  "Specifies whether the item card represents a physical inventory unit (Inventory), a labor time unit (Service), or a physical unit that is not tracked in inventory (Non-Inventory).":{
+    "ITA":"Specifica se la scheda articolo rappresenta un'unità di magazzino fisica (Magazzino), un'unità di tempo di lavoro (Servizio) o un'unità fisica non registrata in magazzino (Non inventario)."},
+  "Attributes":{
+    "ITA":"Attributi"},
+  "Components":{
+    "ITA":"Componenti"},
+  "Copy Template":{
+    "ITA":"Copia modello"},
+  "Copies all information to the current template from the selected one.":{
+    "ITA":"Copia tutte le informazioni nel modello corrente da quello selezionato."},
+  "Wheelsets":{
+    "ITA":"Sale montate"},
+  "Specifies when the item card was last modified.":{
+    "ITA":"Specifica la data dell'ultima modifica apportata alla scheda elemento."},
+  "Wagon Statistics":{
+    "ITA":"Statistiche dei carri"},
+  "Select a template for a new Vehicle":{
+    "ITA":"Seleziona un modello per un nuovo veicolo"},
+  "Wagon Picture":{
+    "ITA":"Immagine del carro"},
+  "Specifies the picture of the wagon.":{
+    "ITA":"Specifica l'immagine del carro."},
+  "Vehicle Card":{
+    "ITA":"Scheda veicolo"},
+  "Specifies the Vehicle":{
+    "ITA":"Specifica il veicolo"},
+  "Specifies when the Vehicle card was last modified.":{
+    "ITA":"Specifica la data dell'ultima modifica apportata alla scheda Veicolo."},
+  "Dispatcher Details":{
+    "ITA":"Dettagli del dispatcher"},
+  "Invoicing":{
+    "ITA":"Fatturazione"},
+  "&Status Entries":{
+    "ITA":"&Voci di stato"},
+  "&Prorogation Entries":{
+    "ITA":"&Voci di proroga"},
+  "Faults":{
+    "ITA":"Vizio"},
+  "Copy Vehicle":{
+    "ITA":"Copia veicolo"},
+  "Create a copy of the current Vehicle.":{
+    "ITA":"Crea una copia del veicolo attuale."},
+  "Vehicle Journal":{
+    "ITA":"Giornale di circolazione"},
+  "Apply Template":{
+    "ITA":"Applica modello"},
+  "Apply a template to update one or more entities with your standard settings for a certain type of entity.":{
+    "ITA":"Applica un modello per aggiornare una o più entità con le impostazioni standard per un determinato tipo di entità."},
+  "Finance Reports":{
+    "ITA":"Rapporti finanziari"},
+  "Item":{
+    "ITA":"Articolo"},
+  "View or edit the item":{
+    "ITA":"Visualizzare o modificare l'elemento"},
+  "Availability":{
+    "ITA":"Disponibilità"},
+  "Items b&y Location":{
+    "ITA":"Articoli b&y Ubicazione"},
+  "Show a list of items grouped by location.":{
+    "ITA":"Mostra un elenco di elementi raggruppati per posizione."},
+  "&Item Availability by":{
+    "ITA":"&Disponibilità degli articoli per"},
+  "Event":{
+    "ITA":"Evento"},
+  "View how the actual and the projected available balance of an item will develop over time according to supply and demand events.":{
+    "ITA":"Visualizza come il saldo disponibile effettivo e previsto di un articolo si svilupperà nel tempo in base agli eventi di domanda e offerta."},
+  "Show the projected quantity of the item over time according to time periods, such as day, week, or month.":{
+    "ITA":"Mostra la quantità prevista dell'articolo nel tempo in base a periodi di tempo, ad esempio giorno, settimana o mese."},
+  "View the current and projected quantity of the item for each variant.":{
+    "ITA":"Visualizza la quantità attuale e prevista dell'articolo per ogni variante."},
+  "Location":{
+    "ITA":"Ubicazione"},
+  "View the actual and projected quantity of the item per location.":{
+    "ITA":"Visualizzare la quantità effettiva e prevista dell'articolo per ubicazione."},
+  "S&ales":{
+    "ITA":"S&ales"},
+  "Sales Prices":{
+    "ITA":"Prezzi di vendita"},
+  "View or set up sales prices for the item. An item price is automatically granted on invoice lines when the specified criteria are met, such as vendor, quantity, or ending date.":{
+    "ITA":"Visualizza o imposta i prezzi di vendita dell'articolo. Un prezzo dell'articolo viene assegnato automaticamente nelle righe della fattura quando vengono soddisfatti i criteri specificati, ad esempio il fornitore, la quantità o la data di fine."},
+  "Sales Discounts":{
+    "ITA":"Sconti sulle vendite"},
+  "View or set up sales discounts for the item. An item discount is automatically granted on invoice lines when the specified criteria are met, such as vendor, quantity, or ending date.":{
+    "ITA":"Visualizza o imposta gli sconti di vendita per l'articolo. Uno sconto articolo viene concesso automaticamente nelle righe della fattura quando vengono soddisfatti i criteri specificati, ad esempio il fornitore, la quantità o la data di fine."},
+  "&Purchases":{
+    "ITA":"&Acquisti"},
+  "Ven&dors":{
+    "ITA":"Ven&dors"},
+  "View the list of vendors who can supply the item, and at which lead time.":{
+    "ITA":"Visualizza l'elenco dei fornitori che possono fornire l'articolo e in quale tempo di consegna."},
+  "Purchase Prices":{
+    "ITA":"Prezzi di acquisto"},
+  "View or set up purchase prices for the item. An item price is automatically granted on invoice lines when the specified criteria are met, such as vendor, quantity, or ending date.":{
+    "ITA":"Visualizza o imposta i prezzi di acquisto dell'articolo. Un prezzo dell'articolo viene assegnato automaticamente nelle righe della fattura quando vengono soddisfatti i criteri specificati, ad esempio il fornitore, la quantità o la data di fine."},
+  "Purchase Discounts":{
+    "ITA":"Sconti sull'acquisto"},
+  "View or set up purchase discounts for the item. An item discount is automatically granted on invoice lines when the specified criteria are met, such as vendor, quantity, or ending date.":{
+    "ITA":"Visualizza o imposta gli sconti di acquisto per l'articolo. Uno sconto articolo viene concesso automaticamente nelle righe della fattura quando vengono soddisfatti i criteri specificati, ad esempio il fornitore, la quantità o la data di fine."},
+  "Purchase Orders":{
+    "ITA":"Ordini di acquisto"},
+  "View a list of ongoing purchase orders for the item.":{
+    "ITA":"Visualizza un elenco degli ordini fornitore in corso per l'articolo."},
+  "Ca&talog Items":{
+    "ITA":"Articoli Ca&talog"},
+  "View the list of items that you do not carry in inventory. ":{
+    "ITA":"Visualizza l'elenco degli articoli che non hai nell'inventario."},
+  "Ser&vice Items":{
+    "ITA":"Articoli di servizio"},
+  "View instances of the item as service items, such as machines that you maintain or repair for customers through service orders. ":{
+    "ITA":"Visualizzare le istanze dell'articolo come articoli di assistenza, ad esempio le macchine gestite o riparate per i clienti tramite ordini di assistenza."},
+  "Troubleshooting":{
+    "ITA":"Risoluzione dei problemi"},
+  "View or edit information about technical problems with a service item.":{
+    "ITA":"Visualizzare o modificare le informazioni sui problemi tecnici relativi a un articolo in assistenza."},
+  "Troubleshooting Setup":{
+    "ITA":"Risoluzione dei problemi di configurazione"},
+  "View or edit your settings for troubleshooting service items.":{
+    "ITA":"Visualizza o modifica le impostazioni per la risoluzione dei problemi relativi agli articoli in assistenza."},
+  "Wagon Entries":{
+    "ITA":"Ingressi Wagon"},
+  "Specifies a number to identify the Vehicle.":{
+    "ITA":"Specifica un numero per identificare il veicolo."},
+  "Specifies a default text to describe the Vehicle on related documents.":{
+    "ITA":"Specifica un testo predefinito per descrivere il veicolo nei documenti correlati."},
+  "Specifies that the item was created from a template.":{
+    "ITA":"Specifica che l'elemento è stato creato da un modello."},
+  "Specifies that transactions with the item cannot be posted, for example, because the item is in quarantine.":{
+    "ITA":"Specifica che le transazioni con l'articolo non possono essere registrate, ad esempio, perché l'articolo è in quarantena."},
+  "Wagon Templates":{
+    "ITA":"Modelli di vagoni"},
+  "Wagon Template":{
+    "ITA":"Modello di carro"},
+  "Select a template for a new wagon":{
+    "ITA":"Seleziona un modello per un nuovo carro"},
+  "Wagon Review Entries":{
+    "ITA":"Voci di recensione di Wagon"},
+  "Wagon Card":{
+    "ITA":"Carta Wagon"},
+  "Copy Wagon":{
+    "ITA":"Carro copia"},
+  "Create a copy of the current wagon.":{
+    "ITA":"Crea una copia del carro corrente."},
+  "Wagon Journal":{
+    "ITA":"Giornale del carro"},
+  "Wagons":{
+    "ITA":"Carri"},
+  "Specifies a number to identify the wagon.":{
+    "ITA":"Specifica un numero per identificare il carro."},
+  "Specifies a default text to describe the wagon on related documents.":{
+    "ITA":"Specifica un testo predefinito per descrivere il carro nei documenti correlati."},
+  "Vehicle Setter Types":{
+    "ITA":"Tipi di setter di veicoli"},
+  "Vehicle Prorogation List":{
+    "ITA":"Elenco di proroga del veicolo"},
+  "DSU Wagon Types":{
+    "ITA":"Tipi di carri DSU"},
+  "DSU Card":{
+    "ITA":"Scheda DSU"},
+  "&DSU Wagon Types":{
+    "ITA":"& Tipi di carri DSU"},
+  "View or edit information about zones that you use at this location to structure your bins.":{
+    "ITA":"Visualizzare o modificare le informazioni sulle zone utilizzate in questa posizione per strutturare i contenitori."},
+  "Instituties List":{
+    "ITA":"Elenco Istituti"},
+  "Wagon ECM List":{
+    "ITA":"Elenco ECM dei carri"},
+  "Dispatchers List":{
+    "ITA":"Elenco dei dispatcher"},
+  "Cycles List":{
+    "ITA":"Elenco Cicli"},
+  "Wheelset Review List":{
+    "ITA":"Elenco delle recensioni delle ruote"},
+  "Axle Box Types":{
+    "ITA":"Tipi di boccole"},
+  "Tracks List":{
+    "ITA":"Elenco tracce"},
+  "DSU Configuration Lines":{
+    "ITA":"Righe di configurazione DSU"},
+  "&Line":{
+    "ITA":"&Linea"},
+  "Show Document":{
+    "ITA":"Mostra documento"},
+  "Open the document that the selected line exists on.":{
+    "ITA":"Aprire il documento in cui è presente la riga selezionata."},
+  "Wheelset Types":{
+    "ITA":"Tipi di ruote"},
+  "Lines":{
+    "ITA":"Poema"},
+  "DSU Configuration":{
+    "ITA":"Configurazione DSU"},
+  "Wheel Types":{
+    "ITA":"Tipi di ruote"},
+  "DSU Configuration List":{
+    "ITA":"Elenco di configurazione DSU"},
+  "Stations List":{
+    "ITA":"Elenco delle stazioni"},
+  "There is nothing to release for the document of type %1 with the number %2.":{
+    "ITA":"Non c'è nulla da rilasciare per il documento di tipo %1 con il numero %2."},
+  "This document can only be released when the approval process is complete.":{
+    "ITA":"Questo documento può essere rilasciato solo al termine del processo di approvazione."},
+  "The approval process must be cancelled or completed to reopen this document.":{
+    "ITA":"Il processo di approvazione deve essere annullato o completato per riaprire questo documento."},
+  "You are about to apply the template to selected records. Data from the template will replace data for the records in fields that do not already contain data.\\\\Do you want also data from the template to replace data for the records in fields that already contain data?":{
+    "ITA":"Si sta per applicare il modello ai record selezionati. I dati del modello sostituiranno i dati per i record nei campi che non contengono già dati.\\\\Si desidera che anche i dati del modello sostituiscano i dati per i record nei campi che contengono già dati?"},
+  "Do you want to open the blank Vehicle card?":{
+    "ITA":"Vuoi aprire la scheda veicolo vuota?"},
+  "Do you want to open the blank wagon card?":{
+    "ITA":"Vuoi aprire la carta del carro vuoto?"},
+  "Approval of a workflow document is requested.":{
+    "ITA":"È richiesta l'approvazione di un documento del flusso di lavoro."},
+  "An approval request for a purchase document is canceled.":{
+    "ITA":"Una richiesta di approvazione per un documento di acquisto viene annullata."},
+  "A purchase document is released.":{
+    "ITA":"Viene rilasciato un documento di acquisto."},
+  "An approval request is approved.":{
+    "ITA":"Una richiesta di approvazione viene approvata."},
+  "An approval request is rejected.":{
+    "ITA":"Una richiesta di approvazione viene rifiutata."},
+  "An approval request is delegated.":{
+    "ITA":"Viene delegata una richiesta di approvazione."},
+  "An event with description %1 already exists.":{
+    "ITA":"Esiste già un evento con descrizione %1."},
+  "The overdue approval notifications batch job will be run.":{
+    "ITA":"Verrà eseguito il processo batch di notifiche di approvazione scaduta."},
+  "Approval of a job queue entry is requested.":{
+    "ITA":"È richiesta l'approvazione di un movimento della coda processi."},
+  "Approval of a job queue entry is cancelled.":{
+    "ITA":"L'approvazione di una voce della coda processi viene annullata."},
+  "User ID %1 does not exist in the Approval User Setup window.":{
+    "ITA":"L'ID utente %1 non esiste nella finestra Impostazione utente approvazione."},
+  "You must set up an approver for user ID %1 in the Approval User Setup window.":{
+    "ITA":"È necessario impostare un approvatore per l'ID utente %1 nella finestra Impostazione utente approvazione."},
+  "The workflow user group member with user ID %1 does not exist in the Approval User Setup window.":{
+    "ITA":"Il membro del gruppo di utenti del flusso di lavoro con ID utente %1 non esiste nella finestra Impostazione utente approvazione."},
+  "There is no substitute, direct approver, or approval administrator for user ID %1 in the Approval User Setup window.":{
+    "ITA":"Nella finestra Configurazione utente approvazione non esiste un sostituto, un approvatore diretto o un amministratore di approvazione per l'ID utente %1."},
+  "No qualified approver was found.":{
+    "ITA":"Non è stato trovato alcun approvatore qualificato."},
+  "You can only delegate open approval requests.":{
+    "ITA":"È possibile delegare solo le richieste di approvazione aperte."},
+  "You can only approve open approval requests.":{
+    "ITA":"È possibile approvare solo le richieste di approvazione aperte."},
+  "You can only reject open approval entries.":{
+    "ITA":"È possibile rifiutare solo le voci di approvazione aperte."},
+  "The selected approval requests have been delegated.":{
+    "ITA":"Le richieste di approvazione selezionate sono state delegate."},
+  "There is no approval request to approve.":{
+    "ITA":"Non esiste alcuna richiesta di approvazione da approvare."},
+  "There is no approval request to reject.":{
+    "ITA":"Non esiste alcuna richiesta di approvazione da rifiutare."},
+  "There is no approval request to delegate.":{
+    "ITA":"Non è presente alcuna richiesta di approvazione per la delega."},
+  "An approval request has been sent.":{
+    "ITA":"È stata inviata una richiesta di approvazione."},
+  "The salesperson/purchaser user ID %1 does not exist in the Approval User Setup window for %2 %3.":{
+    "ITA":"L'ID utente venditore/acquirente %1 non esiste nella finestra Impostazione utente approvazione per %2 %3."},
+  "No approval requests exist.":{
+    "ITA":"Non esistono richieste di approvazione."},
+  "A workflow user group with at least one member must be set up.":{
+    "ITA":"È necessario configurare un gruppo di utenti del flusso di lavoro con almeno un membro."},
+  "%1 %2 has been automatically approved. The status has been changed to %3.":{
+    "ITA":"%1 %2 è stato approvato automaticamente. Lo stato è stato modificato in %3."},
+  "Record type %1 is not supported by this workflow response.":{
+    "ITA":"Il tipo di record %1 non è supportato da questa risposta del flusso di lavoro."},
+  "Sales %1 %2 must be approved and released before you can perform this action.":{
+    "ITA":"Le vendite %1 %2 devono essere approvate e rilasciate prima di poter eseguire questa azione."},
+  "Purchase %1 %2 must be approved and released before you can perform this action.":{
+    "ITA":"L'acquisto %1 %2 deve essere approvato e rilasciato prima di poter eseguire questa azione."},
+  "No approval workflow for this record type is enabled.":{
+    "ITA":"Non è abilitato alcun flusso di lavoro di approvazione per questo tipo di record."},
+  "The approval request for the selected record has been canceled.":{
+    "ITA":"La richiesta di approvazione per il record selezionato è stata annullata."},
+  "An approval request already exists.":{
+    "ITA":"Esiste già una richiesta di approvazione."},
+  "An approval request for this batch has already been sent and approved. Do you want to send another approval request?":{
+    "ITA":"Una richiesta di approvazione per questo lotto è già stata inviata e approvata. Vuoi inviare un'altra richiesta di approvazione?"},
+  "Only Direct Approver is supported as Approver Limit Type option for %1. The approval request will be approved automatically.":{
+    "ITA":"Solo l'approvatore diretto è supportato come opzione Tipo di limite approvatore per %1. La richiesta di approvazione verrà approvata automaticamente."},
+  "%1 has been approved.":{
+    "ITA":"%1 è stato approvato."},
+  "You do not have permission to delegate one or more of the selected approval requests.":{
+    "ITA":"Non si dispone dell'autorizzazione per delegare una o più delle richieste di approvazione selezionate."},
+  "There is nothing to approve.":{
+    "ITA":"Non c'è nulla da approvare."},
+  "No sufficient approver was found in the approver chain.":{
+    "ITA":"Non è stato trovato alcun approvatore sufficiente nella catena di approvatori."},
+  "You can":{
+    "ITA":"Si può"},
+  "Imposed restriction":{
+    "ITA":"Restrizione imposta"},
+  "Pending Approval":{
+    "ITA":"In attesa di approvazione"},
+  "The restriction was imposed because the journal batch requires approval.":{
+    "ITA":"La restrizione è stata imposta perché il batch di registrazioni richiede l'approvazione."},
+  "Receipt and Delivery Vehicle Entry":{
+    "ITA":"Ricevimento e Consegna Inserimento Veicolo"},
+  "Fuel Level":{
+    "ITA":"Livello del carburante"},
+  "Cabin Cleanliness":{
+    "ITA":"Pulizia della cabina"},
+  "Engine Compartment Cleanliness":{
+    "ITA":"Pulizia del vano motore"},
+  "Engine Oil (L)":{
+    "ITA":"Olio motore (L)"},
+  "Engine Oil (L) - Reserve":{
+    "ITA":"Olio motore (L) - Riserva"},
+  "Coolant Oil (L)":{
+    "ITA":"Olio refrigerante (L)"},
+  "Coolant (L) - Reserve":{
+    "ITA":"Liquido di raffreddamento (L) - Riserva"},
+  "Sand Level":{
+    "ITA":"Livello della sabbia"},
+  "Sand Level - Reserve":{
+    "ITA":"Livello Sabbia - Riserva"},
+  "Brake Pads To Be Replaced":{
+    "ITA":"Pastiglie dei freni da sostituire"},
+  "Component Condition":{
+    "ITA":"Condizione del componente"},
+  "Belt Shift On Rims":{
+    "ITA":"Cambio A Cinghia Su Cerchi"},
+  "Bumper Loose":{
+    "ITA":"Paraurti allentato"},
+  "Coupling Loose":{
+    "ITA":"Accoppiamento allentato"},
+  "Oil Level On Axle Forks":{
+    "ITA":"Livello dell'olio sulle forcelle dell'asse"},
+  "Oil Level of Body Support (Side Slides)":{
+    "ITA":"Livello dell'olio del supporto del corpo (slitte laterali)"},
+  "Oil Level of Pivot Pin":{
+    "ITA":"Livello dell'olio del perno di articolazione"},
+  "Receipt and Delivery Vehicle Entries":{}
 }
