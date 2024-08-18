@@ -209,7 +209,7 @@ page 50325 "Vehicle Post Fault Entries"
         {
             group(Category_Process)
             {
-                Caption = 'Process', Comment = 'Generated from the PromotedActionCategories property index 1.';
+Caption = 'Process', Comment = 'Generated from the PromotedActionCategories property index 1.';
 
                 actionref("&Navigate_Promoted"; "&Navigate")
                 {
@@ -217,7 +217,7 @@ page 50325 "Vehicle Post Fault Entries"
             }
             group(Category_Category5)
             {
-                Caption = 'Entry', Comment = 'Generated from the PromotedActionCategories property index 4.';
+Caption = 'Entry', Comment = 'Generated from the PromotedActionCategories property index 4.';
 
                 actionref(Vehicle_Promoted; Vehicle)
                 {
@@ -225,7 +225,7 @@ page 50325 "Vehicle Post Fault Entries"
             }
             group(Category_Category6)
             {
-                Caption = 'Navigate', Comment = 'Generated from the PromotedActionCategories property index 5.';
+Caption = 'Navigate', Comment = 'Generated from the PromotedActionCategories property index 5.';
             }
         }
     }

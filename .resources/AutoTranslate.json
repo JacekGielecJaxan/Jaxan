@@ -1,12 +1,24 @@
 {
-  "Cycle":{
-    "ITA":"Ciclo"},
+  "Contract Nos.":{
+    "ITA":"Contratti n."},
+  "Vendor Type":{
+    "ITA":"Tipo di fornitore"},
+  "Active Contract No.":{
+    "ITA":"Contratto attivo n."},
+  "Institute":{
+    "ITA":"Istituto"},
   "Code":{
     "ITA":"Codice"},
   "Name":{
     "ITA":"Nome"},
-  "Formula":{
-    "ITA":"Formula"},
+  "Vendor No.":{
+    "ITA":"N. venditore"},
+  "In Group":{
+    "ITA":"In Gruppo"},
+  "Station":{
+    "ITA":"Stazione"},
+  "Track Mandatory":{
+    "ITA":"Percorso obbligatorio"},
   "Track":{
     "ITA":"Pista"},
   "Station Code":{
@@ -15,18 +27,6 @@
     "ITA":"Informazioni"},
   "Length":{
     "ITA":"Lunghezza"},
-  "Institute":{
-    "ITA":"Istituto"},
-  "Vendor No.":{
-    "ITA":"N. venditore"},
-  "In Group":{
-    "ITA":"In Gruppo"},
-  "Dispatcher":{
-    "ITA":"Dispatcher"},
-  "Station":{
-    "ITA":"Stazione"},
-  "Track Mandatory":{
-    "ITA":"Percorso obbligatorio"},
   "Purchase Contract Header":{
     "ITA":"Intestazione del contratto di acquisto"},
   "Contract Type":{
@@ -102,62 +102,24 @@
     "ITA":"Non è possibile modificare %1 quando %2 è stato compilato."},
   "Do you want to change %1?":{
     "ITA":"Vuoi cambiare %1?"},
-  "Wheelset Km Entry":{
-    "ITA":"Ingresso Km Set di Ruote"},
+  "Dispatcher":{
+    "ITA":"Dispatcher"},
+  "Cycle":{
+    "ITA":"Ciclo"},
+  "Formula":{
+    "ITA":"Formula"},
+  "Wagon Entry":{
+    "ITA":"Ingresso al carro"},
   "Entry No.":{
     "ITA":"Iscrizione n."},
-  "Wheelset No.":{
-    "ITA":"Set di ruote n."},
-  "Date":{
-    "ITA":"Dattero"},
-  "Review Code":{
-    "ITA":"Rivedi il codice"},
-  "Planned Date":{
-    "ITA":"Data prevista"},
-  "Planned Km":{
-    "ITA":"Km previsti"},
-  "Actual Km":{
-    "ITA":"Km effettivi"},
-  "Document No.":{
-    "ITA":"Documento n."},
-  "Approval Document No.":{
-    "ITA":"Documento di approvazione n."},
-  "Description":{
-    "ITA":"Descrizione"},
-  "External Doc. No.":{
-    "ITA":"Dott. esterno n."},
-  "Term.":{
-    "ITA":"Termine."},
   "Wagon No.":{
     "ITA":"Carro n."},
   "Wagon No. 2":{
     "ITA":"Carro n. 2"},
-  "Transaction No.":{
-    "ITA":"Transazione n."},
-  "User Id":{
-    "ITA":"ID utente"},
-  "Wheelset Approval Entry":{
-    "ITA":"Voce di approvazione del set di ruote"},
-  "Approval Date":{
-    "ITA":"Data di approvazione"},
-  "Approval No.":{
-    "ITA":"Approvazione n."},
-  "Valid From":{
-    "ITA":"Valido dal"},
-  "Expiration Date":{
-    "ITA":"Data di scadenza"},
-  "Limit Km":{
-    "ITA":"Limite Km"},
-  "Office Issuing The Approval":{
-    "ITA":"Ufficio che rilascia l'approvazione"},
-  "Status Approval":{
-    "ITA":"Approvazione dello stato"},
-  "Person Canceling":{
-    "ITA":"Persona che annulla"},
-  "Reason For Cancellation":{
-    "ITA":"Motivo della cancellazione"},
-  "Wheelset Entry":{
-    "ITA":"Ingresso nel set di ruote"},
+  "Date":{
+    "ITA":"Dattero"},
+  "Description":{
+    "ITA":"Descrizione"},
   "Job No.":{
     "ITA":"Lavoro n."},
   "Job Task No.":{
@@ -176,6 +138,186 @@
     "ITA":"SEPE Ordine n."},
   "Order No.":{
     "ITA":"Ordine No."},
+  "Transaction No.":{
+    "ITA":"Transazione n."},
+  "User Id":{
+    "ITA":"ID utente"},
+  "Wagon Approval Entry":{
+    "ITA":"Voce di approvazione del carro"},
+  "Certificate Date":{
+    "ITA":"Data del certificato"},
+  "Certificate No.":{
+    "ITA":"Certificato n."},
+  "Valid From":{
+    "ITA":"Valido dal"},
+  "Expiration Date":{
+    "ITA":"Data di scadenza"},
+  "Limit Km":{
+    "ITA":"Limite Km"},
+  "Actual Km":{
+    "ITA":"Km effettivi"},
+  "Office Issuing The Approval":{
+    "ITA":"Ufficio che rilascia l'approvazione"},
+  "Person Issuing The Approval":{
+    "ITA":"Persona che rilascia l'approvazione"},
+  "Status Approval":{
+    "ITA":"Approvazione dello stato"},
+  "Person Canceling":{
+    "ITA":"Persona che annulla"},
+  "Reason For Cancellation":{
+    "ITA":"Motivo della cancellazione"},
+  "Wagon Review Entry":{
+    "ITA":"Voce di recensione del carro"},
+  "Review Code":{
+    "ITA":"Rivedi il codice"},
+  "Review Group":{
+    "ITA":"Gruppo di revisione"},
+  "Planned Date":{
+    "ITA":"Data prevista"},
+  "Planned Km":{
+    "ITA":"Km previsti"},
+  "Document No.":{
+    "ITA":"Documento n."},
+  "Approval Document No.":{
+    "ITA":"Documento di approvazione n."},
+  "External Doc. No.":{
+    "ITA":"Dott. esterno n."},
+  "Prorogation Code":{
+    "ITA":"Codice di Proroga"},
+  "Term.":{
+    "ITA":"Termine."},
+  "Prorogation Date":{
+    "ITA":"Data di proroga"},
+  "Prorogation Doc. No.":{
+    "ITA":"Proroga Doc. n."},
+  "Prorogation Doc. Date":{
+    "ITA":"Data Proroga Doc."},
+  "Wheelset Entry":{
+    "ITA":"Ingresso nel set di ruote"},
+  "Vehicle":{
+    "ITA":"Veicolo"},
+  "EVN":{
+    "ITA":"EVN"},
+  "Leasing Entity No.":{
+    "ITA":"Entità di leasing n."},
+  "Leasing Entity Name":{
+    "ITA":"Nome dell'entità di leasing"},
+  "Project No.":{
+    "ITA":"Progetto n."},
+  "Project Task No.":{
+    "ITA":"Attività di progetto n."},
+  "Track No.":{
+    "ITA":"Traccia n."},
+  "In Stock":{
+    "ITA":"Disponibile"},
+  "Receipt Date":{
+    "ITA":"Data di ricezione"},
+  "Release Date":{
+    "ITA":"Data di uscita"},
+  "Status TM Code":{
+    "ITA":"Codice TM di stato"},
+  "Production Year":{
+    "ITA":"Anno di produzione"},
+  "Producer No.":{
+    "ITA":"N. produttore."},
+  "Producer Name":{
+    "ITA":"Nome del produttore"},
+  "Serial Number":{
+    "ITA":"Numero di serie"},
+  "Institute Code":{
+    "ITA":"Codice Istituto"},
+  "No. 2":{
+    "ITA":"n. 2"},
+  "DSU Code":{
+    "ITA":"Codice DSU"},
+  "Created From Template Code":{
+    "ITA":"Creato dal codice del modello"},
+  "Contract No.":{
+    "ITA":"Contratto n."},
+  "Contract Validity Date":{
+    "ITA":"Data di validità del contratto"},
+  "Resource No.":{
+    "ITA":"Risorsa n."},
+  "ECM":{
+    "ITA":"ECM"},
+  "Dispatcher Code":{
+    "ITA":"Codice dispatcher"},
+  "Brake Adjustment System Code":{
+    "ITA":"Codice del sistema di regolazione dei freni"},
+  "Valve Type Code":{
+    "ITA":"Codice tipo valvola"},
+  "Inset Code":{
+    "ITA":"Codice inserito"},
+  "Trolley Type Code":{
+    "ITA":"Codice tipo carrello"},
+  "Wheelset Type Code":{
+    "ITA":"Codice tipo di set di ruote"},
+  "Bumper Type Code":{
+    "ITA":"Codice tipo paraurti"},
+  "Setter Type Code":{
+    "ITA":"Codice tipo setter"},
+  "Date Filter":{
+    "ITA":"Filtro data"},
+  "VKM":{
+    "ITA":"VKM"},
+  "Type":{
+    "ITA":"Digitare"},
+  "Serie":{
+    "ITA":"Serie"},
+  "Own Weight":{
+    "ITA":"Peso specifico"},
+  "Mh. P":{
+    "ITA":"Mh. P"},
+  "V. Max.":{
+    "ITA":"V. Max."},
+  "Last Review Date":{
+    "ITA":"Data dell'ultima revisione"},
+  "Next Review Date":{
+    "ITA":"Prossima data di revisione"},
+  "Service Blocked":{
+    "ITA":"Servizio bloccato"},
+  "Image":{
+    "ITA":"Immagine"},
+  "Wagon":{
+    "ITA":"Carro"},
+  "Opearting Status Group Code":{
+    "ITA":"Codice gruppo di stato operativo"},
+  "Operating Status Code":{
+    "ITA":"Codice di stato operativo"},
+  "Wagon Valve Type Code":{
+    "ITA":"Codice tipo valvola carro"},
+  "Cargo Volume":{
+    "ITA":"Volume di carico"},
+  "Loading Area":{
+    "ITA":"Area di carico"},
+  "Mh. Empty":{
+    "ITA":"Mh. Vuoto"},
+  "Mh. Loaded":{
+    "ITA":"Mh. Caricato"},
+  "Shifting Mass":{
+    "ITA":"Spostamento della massa"},
+  "V. Max. Empty":{
+    "ITA":"V. Max. Vuoto"},
+  "V. Max. Loaded":{
+    "ITA":"V. Max. Caricato"},
+  "A":{
+    "ITA":"Un"},
+  "B1":{
+    "ITA":"B1"},
+  "B2":{
+    "ITA":"B2"},
+  "C2":{
+    "ITA":"C2"},
+  "C3":{
+    "ITA":"C3"},
+  "C4":{
+    "ITA":"C4"},
+  "D2":{
+    "ITA":"D2"},
+  "D3":{
+    "ITA":"D3"},
+  "D4":{
+    "ITA":"D4"},
   "Wheelset Setup":{
     "ITA":"Configurazione del set di ruote"},
   "Primary Key":{
@@ -194,26 +336,6 @@
     "ITA":"Tipo di boccola"},
   "Max. Axle Load":{
     "ITA":"Carico massimo sull'asse"},
-  "Receipt Date":{
-    "ITA":"Data di ricezione"},
-  "Release Date":{
-    "ITA":"Data di uscita"},
-  "Production Year":{
-    "ITA":"Anno di produzione"},
-  "Producer No.":{
-    "ITA":"N. produttore."},
-  "Producer Name":{
-    "ITA":"Nome del produttore"},
-  "Serial Number":{
-    "ITA":"Numero di serie"},
-  "Institute Code":{
-    "ITA":"Codice Istituto"},
-  "DSU Code":{
-    "ITA":"Codice DSU"},
-  "ECM":{
-    "ITA":"ECM"},
-  "Dispatcher Code":{
-    "ITA":"Codice dispatcher"},
   "Vehicle Type":{
     "ITA":"Tipo di veicolo"},
   "Bearing Producer No.":{
@@ -230,46 +352,26 @@
     "ITA":"Diametro della spina"},
   "Last Review Code":{
     "ITA":"Codice Ultima Recensione"},
-  "Last Review Date":{
-    "ITA":"Data dell'ultima revisione"},
-  "Next Review Date":{
-    "ITA":"Prossima data di revisione"},
-  "Vendor Type":{
-    "ITA":"Tipo di fornitore"},
-  "Wheelset Measurment Entry":{
-    "ITA":"Ingresso nella misurazione delle sale montate"},
-  "Time":{
-    "ITA":"Ore"},
-  "Serie":{
-    "ITA":"Serie"},
-  "Mileage":{
-    "ITA":"Chilometraggio"},
-  "Height (sH)  (Right)":{
-    "ITA":"Altezza (sH) (destra)"},
-  "Height (sH)  (Left)":{
-    "ITA":"Altezza (A) (Sinistra)"},
-  "Thickness (sD) (Left)":{
-    "ITA":"Spessore (sD) (Sinistra)"},
-  "Thickness (sD) (Right)":{
-    "ITA":"Spessore (sD) (Destra)"},
-  "Gradient (qR) (Left)":{
-    "ITA":"Gradiente (qR) (Sinistra)"},
-  "Gradient (qR) (Right)":{
-    "ITA":"Gradiente (qR) (Destra)"},
-  "Hollow (Hl) (Left)":{
-    "ITA":"Cavo (hl) (sinistra)"},
-  "Hollow (Hl) (Right)":{
-    "ITA":"Cavo (hl) (destra)"},
-  "Diameter (D) (Left)":{
-    "ITA":"Diametro (D) (Sinistra)"},
-  "Diameter (D) (Right)":{
-    "ITA":"Diametro (D) (Destra)"},
-  "Place":{
-    "ITA":"Luogo"},
-  "Place On Protocole":{
-    "ITA":"Posto Su Protocole"},
-  "Measurement Person":{
-    "ITA":"Persona di misurazione"},
+  "Mh.P":{
+    "ITA":"Mh.P"},
+  "V Max.":{
+    "ITA":"V Max."},
+  "Wheelset Approval Entry":{
+    "ITA":"Voce di approvazione delle sale montate"},
+  "Wheelset No.":{
+    "ITA":"Set di ruote n."},
+  "Approval Date":{
+    "ITA":"Data di approvazione"},
+  "Approval No.":{
+    "ITA":"Approvazione n."},
+  "Wheelset Km Entry":{
+    "ITA":"Ingresso Km Set di Ruote"},
+  "Vehicle Entry":{
+    "ITA":"Ingresso del veicolo"},
+  "Vehicle No. 2":{
+    "ITA":"Veicolo n. 2"},
+  "Wagon Km Entry":{
+    "ITA":"Ingresso Km Carro"},
   "Quantity":{
     "ITA":"Quantità"},
   "Station From Pos.":{
@@ -284,110 +386,24 @@
     "ITA":"Stazione Al No."},
   "Station To Name":{
     "ITA":"Stazione da nominare"},
-  "DSU Configuration Line":{
-    "ITA":"Linea di configurazione DSU"},
-  "Date From":{
-    "ITA":"Data da"},
-  "Priority":{
-    "ITA":"Priorità"},
-  "Review Group Code":{
-    "ITA":"Rivedi il codice del gruppo"},
-  "Period":{
-    "ITA":"Periodo"},
-  "Next Position":{
-    "ITA":"Posizione successiva"},
-  "Km Limit":{
-    "ITA":"Limite di km"},
-  "Warning Days 1":{
-    "ITA":"Giorni di avvertimento 1"},
-  "Warning Days 2":{
-    "ITA":"Giorni di avvertimento 2"},
-  "Warning Km":{
-    "ITA":"Attenzione Km"},
-  "You cannot delete the order line because it is associated with purchase order %1 line %2.":{
-    "ITA":"Non è possibile eliminare la riga ordine perché è associata alla riga dell'ordine fornitore %1 %2."},
-  "have to be New or In Development":{
-    "ITA":"devono essere nuovi o in fase di sviluppo"},
-  "Wagon Status Group TM":{
-    "ITA":"Gruppo di stato del carro TM"},
-  "Wheelset Review":{
-    "ITA":"Recensione del set di ruote"},
-  "Exclusion":{
-    "ITA":"Esclusione"},
-  "DSU Configuration Header":{
-    "ITA":"Intestazione di configurazione DSU"},
-  "DSU":{
-    "ITA":"DSU"},
-  "Wagon Entry":{
-    "ITA":"Ingresso al carro"},
-  "Timetable Route":{
-    "ITA":"Orario Percorso"},
-  "Pos.":{
-    "ITA":"Pos."},
-  "Lp. PCS":{
-    "ITA":"Lp. PZ"},
-  "Gross Weight":{
-    "ITA":"Peso lordo"},
-  "Train Length":{
-    "ITA":"Lunghezza del treno"},
-  "Infrastructure PCS Agency No.":{
-    "ITA":"Infrastruttura PCS Agenzia n."},
-  "Exit Platform":{
-    "ITA":"Piattaforma di uscita"},
-  "Exit Track":{
-    "ITA":"Traccia di uscita"},
-  "Entrance Platform":{
-    "ITA":"Piattaforma d'ingresso"},
-  "Entrance Track":{
-    "ITA":"Pista d'ingresso"},
-  "Req. Max Perc. Braking Mass":{
-    "ITA":"Richiesta Max Perc. Massa frenante"},
-  "Object No.":{
-    "ITA":"Oggetto n."},
-  "Object Name":{
-    "ITA":"Nome oggetto"},
-  "PCS Object No.":{
-    "ITA":"PCS Oggetto n."},
-  "Stop Time":{
-    "ITA":"Fermare il tempo"},
-  "Vehicle 1 No.":{
-    "ITA":"Veicolo 1 n."},
-  "Vehicle 2 No.":{
-    "ITA":"Veicolo 2 n."},
-  "Vehicle 3 No.":{
-    "ITA":"Veicolo 3 n."},
-  "Train Type No.":{
-    "ITA":"Tipo di treno n."},
-  "Max Load Axle":{
-    "ITA":"Asse di carico massimo"},
-  "Gross Train":{
-    "ITA":"Treno lordo"},
-  "V Max":{
-    "ITA":"V Max"},
-  "Wagon Train Length":{
-    "ITA":"Lunghezza del treno a carri"},
-  "Train Braking Mass":{
-    "ITA":"Massa frenante del treno"},
-  "Is Train Set Change":{
-    "ITA":"Il treno è un cambio"},
-  "Is Technical Stop":{
-    "ITA":"è l'arresto tecnico"},
-  "Is Maneuvers":{
-    "ITA":"IS MANOVRE"},
-  "Is Stop For Employee":{
-    "ITA":"È Stop Per Il Dipendente"},
-  "Is Commercial Stop":{
-    "ITA":"è fermata commerciale"},
-  "Public Service No.":{
-    "ITA":"Servizio pubblico n."},
-  "PCS Brake Type No.":{
-    "ITA":"PCS Tipo di freno n."},
-  "PCS Agency No.":{
-    "ITA":"PCS Agenzia No."},
-  "Commercial Category Code":{
-    "ITA":"Codice Categoria Commerciale"},
-  "Bits Parameters":{
-    "ITA":"Parametri dei bit"},
+  "Mh.Empty":{
+    "ITA":"Mh.Vuoto"},
+  "Mh.Loaded":{
+    "ITA":"Mh.Caricato"},
+  "V Max Empty":{
+    "ITA":"V Max Vuoto"},
+  "V Max Loaded":{
+    "ITA":"V Max caricato"},
+  "Wagon Plan Review Entry":{
+    "ITA":"Voce di revisione del piano del carro"},
+  "Wagon Fault Attachment Entry":{
+    "ITA":"Ingresso attacco guasto carro"},
+  "File Name":{
+    "ITA":"Nome file"},
+  "Fault No.":{
+    "ITA":"Errore n."},
+  "Vehicle Km Entry":{
+    "ITA":"Ingresso Km Veicolo"},
   "Wagon Fault Entry":{
     "ITA":"Ingresso guasto carro"},
   "Element Code":{
@@ -396,8 +412,6 @@
     "ITA":"Codice di errore"},
   "Short Fault Description":{
     "ITA":"Breve descrizione del guasto"},
-  "Fault No.":{
-    "ITA":"Errore n."},
   "External Document No.":{
     "ITA":"Documento esterno n."},
   "Fault Reporting User Id":{
@@ -420,10 +434,191 @@
     "ITA":"Data di presentazione delle domande"},
   "Date of Reporting the Fault":{
     "ITA":"Data di segnalazione del guasto"},
+  "Vehicle Approval Entry":{
+    "ITA":"Voce di omologazione del veicolo"},
+  "Certyficate Date":{
+    "ITA":"Data certificata"},
+  "Certyficate No.":{
+    "ITA":"Certificato n."},
+  "Workflow Comment Line":{
+    "ITA":"Riga di commento del flusso di lavoro"},
+  "Document Type":{
+    "ITA":"Tipo di documento"},
+  "Line No.":{
+    "ITA":"Linea n."},
+  "Document Line No.":{
+    "ITA":"Riga documento n."},
+  "Workflow Header":{
+    "ITA":"Intestazione del flusso di lavoro"},
+  "Buy-from Vendor No.":{
+    "ITA":"N. fornitore 'Origine vendita)"},
+  "Your Reference":{
+    "ITA":"Il tuo riferimento"},
+  "On Hold":{
+    "ITA":"In sospeso"},
+  "Amount Including VAT":{
+    "ITA":"Importo IVA inclusa"},
+  "Vendor Document No.":{
+    "ITA":"N. documento fornitore"},
+  "Reason Code":{
+    "ITA":"Codice motivo"},
+  "Buy-from Vendor Name":{
+    "ITA":"Nome del fornitore 'Origine dell'acquisto'"},
+  "Buy-from Vendor Name 2":{
+    "ITA":"Nome del fornitore Origine acquisto 2"},
+  "Buy-from Address":{
+    "ITA":"Indirizzo del mittente dell'acquisto"},
+  "Buy-from Address 2":{
+    "ITA":"Indirizzo del mittente 2"},
+  "Buy-from City":{
+    "ITA":"Città da cui acquistare"},
+  "Buy-from Contact":{
+    "ITA":"Contatto Buy-Da"},
+  "Payment Method Code":{
+    "ITA":"Codice metodo di pagamento"},
+  "Buy-from Contact No.":{
+    "ITA":"Compra da Contatto n."},
+  "Assigned User ID":{
+    "ITA":"ID utente assegnato"},
+  "Pending Approvals":{
+    "ITA":"Approvazioni in sospeso"},
+  "You cannot reset %1 because the document still has one or more lines.":{
+    "ITA":"Non è possibile reimpostare %1 perché il documento contiene ancora una o più righe."},
+  "You cannot change %1 because the order is associated with one or more sales orders.":{
+    "ITA":"Non è possibile modificare %1 perché l'ordine è associato a uno o più ordini cliente."},
+  "Deleting this document will cause a gap in the number series for receipts. An empty receipt %1 will be created to fill this gap in the number series.\\\\Do you want to continue?":{
+    "ITA":"L'eliminazione di questo documento causerà uno spazio vuoto nella numerazione delle ricevute. Verrà creata una ricevuta vuota %1 per colmare questo spazio vuoto nella serie numerica.\\\\Vuoi continuare?"},
+  "Deleting this document will cause a gap in the number series for posted invoices. An empty posted invoice %1 will be created to fill this gap in the number series.\\\\Do you want to continue?":{
+    "ITA":"L'eliminazione di questo documento causerà un divario nella numerazione per le fatture registrate. Verrà creata una fattura registrata vuota %1 per colmare questo spazio vuoto nella serie numerica.\\\\Vuoi continuare?"},
+  "Deleting this document will cause a gap in the number series for posted credit memos. An empty posted credit memo %1 will be created to fill this gap in the number series.\\\\Do you want to continue?":{
+    "ITA":"L'eliminazione di questo documento causerà un divario nella numerazione delle note di credito registrate. Verrà creata una nota di credito registrata vuota %1 per colmare questa lacuna nella serie numerica.\\\\Vuoi continuare?"},
+  "If you change %1, the existing purchase lines will be deleted and new purchase lines based on the new information in the header will be created.\\\\Do you want to continue?":{
+    "ITA":"Se si modifica %1, le righe di acquisto esistenti verranno eliminate e verranno create nuove righe di acquisto in base alle nuove informazioni nell'intestazione.\\\\Si desidera continuare?"},
+  "If you change %1, the existing purchase lines will be deleted and new purchase lines based on the new information in the header will be created.\\The amount of the item charge assignment will be reset to 0.\\\\Do you want to continue?":{
+    "ITA":"Se si modifica %1, le righe di acquisto esistenti verranno eliminate e verranno create nuove righe di acquisto in base alle nuove informazioni nell'intestazione.\\L'importo dell'assegnazione dell'addebito articolo verrà reimpostato su 0.\\\\Si desidera continuare?"},
+  "You have changed %1 on the purchase header, but it has not been changed on the existing purchase lines.":{
+    "ITA":"È stato modificato %1 nell'intestazione di acquisto, ma non è stato modificato nelle righe di acquisto esistenti."},
+  "You have changed the %1 on the purchase order, which might affect the prices and discounts on the purchase order lines.":{
+    "ITA":"È stato modificato il valore %1 nell'ordine fornitore, il che potrebbe influire sui prezzi e sugli sconti nelle righe dell'ordine fornitore."},
+  "You must update the existing purchase lines manually.":{
+    "ITA":"È necessario aggiornare manualmente le righe di acquisto esistenti."},
+  "The change may affect the exchange rate that is used for price calculation on the purchase lines.":{
+    "ITA":"La modifica può influire sul tasso di cambio utilizzato per il calcolo del prezzo nelle righe di acquisto."},
+  "Do you want to update the exchange rate?":{
+    "ITA":"Vuoi aggiornare il tasso di cambio?"},
+  "Deleting this document will cause a gap in the number series for return shipments. An empty return shipment %1 will be created to fill this gap in the number series.\\\\Do you want to continue?":{
+    "ITA":"L'eliminazione di questo documento causerà un vuoto nella numerazione per le spedizioni di reso. Verrà creata una spedizione di ritorno vuota %1 per colmare questa lacuna nella serie numerica.\\\\Vuoi continuare?"},
+  "This will change the dimension specified on the document. Do you want to recalculate/update dimensions?":{
+    "ITA":"In questo modo verrà modificata la dimensione specificata nel documento. Vuoi ricalcolare/aggiornare le dimensioni?"},
+  "You have modified %1.\\\\Do you want to update the lines?":{
+    "ITA":"È stata modificata %1.\\\\Si desidera aggiornare le righe?"},
+  "You should review the lines and manually update prices and discounts if needed.":{
+    "ITA":"È necessario rivedere le righe e aggiornare manualmente i prezzi e gli sconti, se necessario."},
+  "Do you want to update the order date for existing lines?":{
+    "ITA":"Si desidera aggiornare la data dell'ordine per le righe esistenti?"},
+  "Contact %1 %2 is not related to vendor %3.":{
+    "ITA":"Il contatto %1 %2 non è correlato al fornitore %3."},
+  "Contact %1 %2 is related to a different company than vendor %3.":{
+    "ITA":"Il contatto %1 %2 è correlato a un'azienda diversa dal fornitore %3."},
+  "Contact %1 %2 is not related to a vendor.":{
+    "ITA":"Il contatto %1 %2 non è correlato a un fornitore."},
+  "You can not change the %1 field because %2 %3 has %4 = %5 and the %6 has already been assigned %7 %8.":{
+    "ITA":"Non è possibile modificare il campo %1 perché %2 %3 ha %4 = %5 e %6 è già stato assegnato %7 %8."},
+  "Deleting this document will cause a gap in the number series for prepayment invoices. An empty prepayment invoice %1 will be created to fill this gap in the number series.\\\\Do you want to continue?":{
+    "ITA":"L'eliminazione di questo documento causerà un divario nella numerazione delle fatture con pagamento anticipato. Verrà creata una fattura di pagamento anticipato %1 vuota per colmare questa lacuna nella numerazione.\\\\Vuoi continuare?"},
+  "Deleting this document will cause a gap in the number series for prepayment credit memos. An empty prepayment credit memo %1 will be created to fill this gap in the number series.\\\\Do you want to continue?":{
+    "ITA":"L'eliminazione di questo documento causerà un divario nella numerazione per le note di credito con pagamento anticipato. Verrà creata una nota di credito per il pagamento anticipato %1 vuota per colmare questa lacuna nella serie numerica.\\\\Vuoi continuare?"},
+  "Reservations exist for this order. These reservations will be canceled if a date conflict is caused by this change.\\\\Do you want to continue?":{
+    "ITA":"Esistono riserve per questo ordine. Queste prenotazioni verranno cancellate se questo cambiamento causa un conflitto di date.\\\\Vuoi continuare?"},
+  "You may have changed a dimension.\\\\Do you want to update the lines?":{
+    "ITA":"È possibile che sia stata modificata una quota.\\\\Si desidera aggiornare le linee?"},
+  "The %1 field on the purchase order %2 must be the same as on sales order %3.":{
+    "ITA":"Il campo %1 dell'ordine fornitore %2 deve essere uguale a quello dell'ordine cliente %3."},
+  "You cannot post the document of type %1 with the number %2 before all related prepayment invoices are posted.":{
+    "ITA":"Non è possibile registrare il documento di tipo %1 con il numero %2 prima della registrazione di tutte le fatture di pagamento anticipato correlate."},
+  "You don":{
+    "ITA":"Tu non"},
+  "There are unpaid prepayment invoices that are related to the document of type %1 with the number %2.":{
+    "ITA":"Sono presenti fatture di pagamento anticipato non pagate correlate al documento di tipo %1 con il numero %2."},
+  "You have changed the %1 on the purchase header, do you want to update the deferral schedules for the lines with this date?":{
+    "ITA":"Hai modificato il valore %1 nell'intestazione di acquisto, vuoi aggiornare i programmi di differimento per le righe con questa data?"},
+  "Buy-from Vendor":{
+    "ITA":"Fornitore di origine acquisti"},
+  "The document has been saved but is not yet posted.\\\\Are you sure you want to exit?":{
+    "ITA":"Il documento è stato salvato ma non è ancora stato pubblicato.\\\\Sei sicuro di voler uscire?"},
+  "You cannot print the purchase order because it contains one or more lines for drop shipment in addition to regular purchase lines.":{
+    "ITA":"Non è possibile stampare l'ordine fornitore perché contiene una o più righe per la spedizione diretta oltre alle normali righe di acquisto."},
+  "Update the address":{
+    "ITA":"Aggiornare l'indirizzo"},
+  "Don":{
+    "ITA":"Don"},
+  "The address you entered for %1 is different from the Vendor":{
+    "ITA":"L'indirizzo che hai inserito per %1 è diverso dal fornitore"},
+  "s existing address.":{},
+  "Update Buy-from Vendor Address":{
+    "ITA":"Aggiorna indirizzo mittente"},
+  "Warn if the Buy-from address on purchase documents is different from the Vendor":{
+    "ITA":"Avvisare se l'indirizzo del mittente riportato sui documenti di acquisto è diverso da quello del venditore"},
+  "Update Pay-to Vendor Address":{
+    "ITA":"Aggiorna indirizzo fornitore di pagamento"},
+  "Warn if the Pay-to address on purchase documents is different from the Vendor":{
+    "ITA":"Avvisare se l'indirizzo di pagamento riportato sui documenti di acquisto è diverso da quello del Venditore"},
+  "Purchase %1 %2 already exists for this vendor.":{
+    "ITA":"L'acquisto %1 %2 esiste già per questo fornitore."},
+  "Show the vendor ledger entry.":{
+    "ITA":"Mostra il movimento contabile fornitore."},
+  "Purchase document with same external document number already exists.":{
+    "ITA":"Il documento di acquisto con lo stesso numero di documento esterno esiste già."},
+  "Warn if purchase document with same external document number already exists.":{
+    "ITA":"Avvisa se esiste già un documento di acquisto con lo stesso numero di documento esterno."},
+  "Field captions must not be duplicated when using this method. Use UpdatePurchLinesByFieldNo instead.":{
+    "ITA":"Quando si utilizza questo metodo, le didascalie dei campi non devono essere duplicate. Utilizzare invece UpdatePurchLinesByFieldNo."},
+  "%1\\%2":{
+    "ITA":"%1\\%2"},
+  "Purchase Quote,Purchase Order,Purchase Invoice,Purchase Credit Memo,Purchase Blanket Order,Purchase Return Order":{
+    "ITA":"Preventivo di acquisto,Ordine di acquisto,Fattura di acquisto,Nota di credito di acquisto,Ordine quadro di acquisto,Ordine di restituzione di acquisto"},
+  "Warn before posting Purchase lines with 0 quantity":{
+    "ITA":"Avvisa prima di registrare Righe di acquisto con 0 quantità"},
+  "Warn before posting lines on Purchase documents where quantity is 0.":{
+    "ITA":"Avvisa prima di registrare le righe nei documenti di acquisto in cui la quantità è 0."},
+  "Workflow Setup":{
+    "ITA":"Configurazione del flusso di lavoro"},
+  "Workflow Nos.":{
+    "ITA":"Flusso di lavoro n."},
+  "Vehicle Setup":{
+    "ITA":"Configurazione del veicolo"},
+  "DSU":{
+    "ITA":"DSU"},
+  "DSU Configuration Header":{
+    "ITA":"Intestazione di configurazione DSU"},
+  "Date From":{
+    "ITA":"Data da"},
+  "Wagon Prorogation Entry":{
+    "ITA":"Ingresso Proroga Carro"},
+  "Prorogation No.":{
+    "ITA":"Proroga n."},
+  "Prorogation Up To":{
+    "ITA":"Proroga fino a"},
+  "Office Issuing The Prorogation":{
+    "ITA":"Ufficio che emette la proroga"},
+  "Person Issuing The Prorogation":{
+    "ITA":"Persona che emette la proroga"},
+  "Vehicle Fault Attachment Entry":{
+    "ITA":"Voce di collegamento guasto del veicolo"},
+  "Wagon Setup":{
+    "ITA":"Configurazione del carro"},
+  "Vehicle Fault Entry":{
+    "ITA":"Inserimento dei guasti del veicolo"},
   "Timetable Construciton Route":{
     "ITA":"Orari Percorso Costruttivo"},
+  "Pos.":{
+    "ITA":"Pos."},
   "Preliminary Route Pos.":{
     "ITA":"Percorso Preliminare Pos."},
+  "Object No.":{
+    "ITA":"Oggetto n."},
+  "Object Name":{
+    "ITA":"Nome oggetto"},
   "Driving Time":{
     "ITA":"Tempo di guida"},
   "Cumulative Way":{
@@ -442,42 +637,86 @@
     "ITA":"Misuratore dell'asse"},
   "Next Axle Meter":{
     "ITA":"Prossimo Misuratore per asse"},
+  "Stop Time":{
+    "ITA":"Fermare il tempo"},
+  "Is Technical Stop":{
+    "ITA":"è l'arresto tecnico"},
   "Is Train Front Change":{
     "ITA":"Il cambio del fronte del treno è"},
   "Preliminary Route Object":{
     "ITA":"Oggetto percorso preliminare"},
   "Approved":{
     "ITA":"Approvato"},
+  "Lp. PCS":{
+    "ITA":"Lp. PZ"},
+  "Gross Weight":{
+    "ITA":"Peso lordo"},
+  "Train Length":{
+    "ITA":"Lunghezza del treno"},
+  "Infrastructure PCS Agency No.":{
+    "ITA":"Infrastruttura PCS Agenzia n."},
+  "Exit Platform":{
+    "ITA":"Piattaforma di uscita"},
+  "Exit Track":{
+    "ITA":"Traccia di uscita"},
+  "Entrance Platform":{
+    "ITA":"Piattaforma d'ingresso"},
+  "Entrance Track":{
+    "ITA":"Pista d'ingresso"},
+  "Req. Max Perc. Braking Mass":{
+    "ITA":"Richiesta Max Perc. Massa frenante"},
+  "PCS Object No.":{
+    "ITA":"PCS Oggetto n."},
+  "Vehicle 1 No.":{
+    "ITA":"Veicolo 1 n."},
   "Vehicle 1 Code":{
     "ITA":"Codice Veicolo 1"},
+  "Vehicle 2 No.":{
+    "ITA":"Veicolo 2 n."},
   "Vehicle 2 Code":{
     "ITA":"Codice Veicolo 2"},
+  "Vehicle 3 No.":{
+    "ITA":"Veicolo 3 n."},
   "Vehicle 3 Code":{
     "ITA":"Codice veicolo 3"},
+  "Train Type No.":{
+    "ITA":"Tipo di treno n."},
   "Train Type Code":{
     "ITA":"Codice tipo di treno"},
   "Max. Load Axle":{
     "ITA":"Max. asse di carico"},
-  "V. Max.":{
-    "ITA":"V. Max."},
-  "Wagon Km Entry":{
-    "ITA":"Ingresso Km Carro"},
-  "Review Group":{
-    "ITA":"Gruppo di revisione"},
-  "Prorogation Code":{
-    "ITA":"Codice di Proroga"},
-  "Prorogation Date":{
-    "ITA":"Data di proroga"},
-  "Prorogation Doc. No.":{
-    "ITA":"Proroga Doc. n."},
-  "Prorogation Doc. Date":{
-    "ITA":"Data Proroga Doc."},
-  "Wagon Fault Attachment Entry":{
-    "ITA":"Ingresso attacco guasto carro"},
-  "File Name":{
-    "ITA":"Nome file"},
-  "Image":{
-    "ITA":"Immagine"},
+  "Gross Train":{
+    "ITA":"Treno lordo"},
+  "Wagon Train Length":{
+    "ITA":"Lunghezza del treno a carri"},
+  "Train Braking Mass":{
+    "ITA":"Massa frenante del treno"},
+  "Is Train Set Change":{
+    "ITA":"Il treno è un cambio"},
+  "Is Maneuvers":{
+    "ITA":"IS MANOVRE"},
+  "Is Stop For Employee":{
+    "ITA":"È Stop Per Il Dipendente"},
+  "Is Commercial Stop":{
+    "ITA":"è fermata commerciale"},
+  "Public Service No.":{
+    "ITA":"Servizio pubblico n."},
+  "PCS Brake Type No.":{
+    "ITA":"PCS Tipo di freno n."},
+  "PCS Agency No.":{
+    "ITA":"PCS Agenzia No."},
+  "Commercial Category Code":{
+    "ITA":"Codice Categoria Commerciale"},
+  "Bits Parameters":{
+    "ITA":"Parametri dei bit"},
+  "Wagon Status Entry":{
+    "ITA":"Voce stato vagone"},
+  "Timetable Route":{
+    "ITA":"Orario Percorso"},
+  "Max Load Axle":{
+    "ITA":"Asse di carico massimo"},
+  "V Max":{
+    "ITA":"V Max"},
   "SKRJ Object":{
     "ITA":"Oggetto SKRJ"},
   "Short Name":{
@@ -490,8 +729,6 @@
     "ITA":"Poss. Inizio Di Un Treno Merci"},
   "Poss. End Of Freight Train Run":{
     "ITA":"Poss. Fine della corsa del treno merci"},
-  "Traction Vehicle Types":{
-    "ITA":"Tipi di veicoli di trazione"},
   "Wagon Post Fault Entry":{
     "ITA":"Ingresso guasto palo carro"},
   "Company Repairing the Fault":{
@@ -519,7 +756,7 @@
   "Start Object Name":{
     "ITA":"Nome oggetto iniziale"},
   "Start Offset Arrival":{
-    "ITA":"Inizio offset arrivo"},
+    "ITA":"Inizio Offset Arrivo"},
   "Start Offset Departure":{
     "ITA":"Inizio Offset Partenza"},
   "End Object No.":{
@@ -638,180 +875,128 @@
     "ITA":"Tipi di treno"},
   "Last History":{
     "ITA":"Ultima storia"},
-  "Project No.":{
-    "ITA":"Progetto n."},
-  "Project Task No.":{
-    "ITA":"Attività di progetto n."},
+  "DSU Configuration Line":{
+    "ITA":"Linea di configurazione DSU"},
+  "Priority":{
+    "ITA":"Priorità"},
+  "Review Group Code":{
+    "ITA":"Rivedi il codice del gruppo"},
+  "Period":{
+    "ITA":"Periodo"},
+  "Next Position":{
+    "ITA":"Posizione successiva"},
+  "Km Limit":{
+    "ITA":"Limite di km"},
+  "Warning Days 1":{
+    "ITA":"Giorni di avvertimento 1"},
+  "Warning Days 2":{
+    "ITA":"Giorni di avvertimento 2"},
+  "Warning Km":{
+    "ITA":"Attenzione Km"},
+  "You cannot delete the order line because it is associated with purchase order %1 line %2.":{
+    "ITA":"Non è possibile eliminare la riga ordine perché è associata alla riga dell'ordine fornitore %1 %2."},
+  "have to be New or In Development":{
+    "ITA":"devono essere nuovi o in fase di sviluppo"},
   "Timetable":{
     "ITA":"Orario"},
   "Year":{
     "ITA":"Anno"},
   "Date To":{
     "ITA":"Data A"},
-  "Wagon Approval Entry":{
-    "ITA":"Voce di approvazione del carro"},
-  "Certyficate Date":{
-    "ITA":"Data certificata"},
-  "Certyficate No.":{
-    "ITA":"Certificato n."},
-  "Wagon":{
-    "ITA":"Carro"},
-  "EVN":{
-    "ITA":"EVN"},
-  "Leasing Entity No.":{
-    "ITA":"Entità di leasing n."},
-  "Leasing Entity Name":{
-    "ITA":"Nome dell'entità di leasing"},
-  "Track No.":{
-    "ITA":"Traccia n."},
-  "In Stock":{
-    "ITA":"Disponibile"},
-  "Status TM Code":{
-    "ITA":"Codice TM di stato"},
-  "No. 2":{
-    "ITA":"n. 2"},
-  "Created From Template Code":{
-    "ITA":"Creato dal codice del modello"},
-  "Contract No.":{
-    "ITA":"Contratto n."},
-  "Contract Validity Date":{
-    "ITA":"Data di validità del contratto"},
-  "Resource No.":{
-    "ITA":"Risorsa n."},
-  "Brake Adjustment System Code":{
-    "ITA":"Codice del sistema di regolazione dei freni"},
-  "Wagon Valve Type Code":{
-    "ITA":"Codice tipo valvola carro"},
-  "Inset Code":{
-    "ITA":"Codice inserito"},
-  "Trolley Type Code":{
-    "ITA":"Codice tipo carrello"},
-  "Wheelset Type Code":{
-    "ITA":"Codice tipo di set di ruote"},
-  "Bumper Type Code":{
-    "ITA":"Codice tipo paraurti"},
-  "Setter Type Code":{
-    "ITA":"Codice tipo setter"},
-  "Date Filter":{
-    "ITA":"Filtro data"},
-  "VKM":{
-    "ITA":"VKM"},
-  "Type":{
-    "ITA":"Digitare"},
-  "Cargo Volume":{
-    "ITA":"Volume di carico"},
-  "Loading Area":{
-    "ITA":"Area di carico"},
-  "Own Weight":{
-    "ITA":"Peso specifico"},
-  "Mh. P":{
-    "ITA":"Mh. P"},
-  "Mh. Empty":{
-    "ITA":"Mh. Vuoto"},
-  "Mh. Loaded":{
-    "ITA":"Mh. Caricato"},
-  "Shifting Mass":{
-    "ITA":"Spostamento della massa"},
-  "V. Max. Empty":{
-    "ITA":"V. Max. Vuoto"},
-  "V. Max. Loaded":{
-    "ITA":"V. Max. Caricato"},
-  "A":{
-    "ITA":"Un"},
-  "B1":{
-    "ITA":"B1"},
-  "B2":{
-    "ITA":"B2"},
-  "C2":{
-    "ITA":"C2"},
-  "C3":{
-    "ITA":"C3"},
-  "C4":{
-    "ITA":"C4"},
-  "D2":{
-    "ITA":"D2"},
-  "D3":{
-    "ITA":"D3"},
-  "D4":{
-    "ITA":"D4"},
-  "Service Blocked":{
-    "ITA":"Servizio bloccato"},
-  "Mh.P":{
-    "ITA":"Mh.P"},
-  "Mh.Empty":{
-    "ITA":"Mh.Vuoto"},
-  "V Max Empty":{
-    "ITA":"V Max Vuoto"},
-  "V Max Loaded":{
-    "ITA":"V Max caricato"},
-  "Active Contract No.":{
-    "ITA":"Contratto attivo n."},
-  "Contract Nos.":{
-    "ITA":"Contratti n."},
-  "Wagon Prorogation Entry":{
-    "ITA":"Ingresso Proroga Carro"},
-  "Prorogation No.":{
-    "ITA":"Proroga n."},
-  "Prorogation Up To":{
-    "ITA":"Proroga fino a"},
-  "Office Issuing The Prorogation":{
-    "ITA":"Ufficio che emette la proroga"},
-  "Wagon Setup":{
-    "ITA":"Configurazione del carro"},
-  "Wagon Review":{
-    "ITA":"Recensione del carro"},
+  "Wheelset Measurment Entry":{
+    "ITA":"Ingresso nella misurazione delle sale montate"},
+  "Time":{
+    "ITA":"Ore"},
+  "Mileage":{
+    "ITA":"Chilometraggio"},
+  "Height (sH)  (Right)":{
+    "ITA":"Altezza (sH) (destra)"},
+  "Height (sH)  (Left)":{
+    "ITA":"Altezza (A) (Sinistra)"},
+  "Thickness (sD) (Left)":{
+    "ITA":"Spessore (sD) (Sinistra)"},
+  "Thickness (sD) (Right)":{
+    "ITA":"Spessore (sD) (Destra)"},
+  "Gradient (qR) (Left)":{
+    "ITA":"Gradiente (qR) (Sinistra)"},
+  "Gradient (qR) (Right)":{
+    "ITA":"Gradiente (qR) (Destra)"},
+  "Hollow (Hl) (Left)":{
+    "ITA":"Cavo (hl) (sinistra)"},
+  "Hollow (Hl) (Right)":{
+    "ITA":"Cavo (hl) (destra)"},
+  "Diameter (D) (Left)":{
+    "ITA":"Diametro (D) (Sinistra)"},
+  "Diameter (D) (Right)":{
+    "ITA":"Diametro (D) (Destra)"},
+  "Place":{
+    "ITA":"Luogo"},
+  "Place On Protocole":{
+    "ITA":"Posto Su Protocole"},
+  "Measurement Person":{
+    "ITA":"Persona di misurazione"},
+  "Vehicle Post Fault Entry":{
+    "ITA":"Inserimento guasto post veicolo"},
+  "Vehicle Prorogation Entry":{
+    "ITA":"Ingresso Proroga Veicolo"},
+  "Wagon Status Group TM":{
+    "ITA":"Gruppo di stato del carro TM"},
+  "Wagon Status":{
+    "ITA":"Stato del carro"},
+  "Wagon Situation":{
+    "ITA":"Situazione del carro"},
+  "Exclusion":{
+    "ITA":"Esclusione"},
+  "Work":{
+    "ITA":"Lavoro"},
+  "Group Code":{
+    "ITA":"Codice Gruppo"},
+  "Wagon Brake Adjustment System":{
+    "ITA":"Sistema di regolazione del freno del carro"},
+  "Vehicle Trolley Type":{
+    "ITA":"Tipo di carrello del veicolo"},
+  "Vehicle Wheelset Type":{
+    "ITA":"Tipo di set di ruote del veicolo"},
+  "Wagon Brake System":{
+    "ITA":"Sistema frenante del carro"},
+  "Wagon Type":{
+    "ITA":"Tipo di carro"},
+  "Wagon Wheelset Type":{
+    "ITA":"Tipo di sale montate per carri"},
+  "Vehicle Status":{
+    "ITA":"Stato del veicolo"},
+  "Vehicle Situation":{
+    "ITA":"Situazione del veicolo"},
+  "Wagon Trolley Type":{
+    "ITA":"Tipo di carrello del carro"},
+  "Vehicle VKM":{
+    "ITA":"Veicolo VKM"},
+  "Wagon Valve Type":{
+    "ITA":"Tipo di valvola del carro"},
+  "Vehicle Review Group":{
+    "ITA":"Gruppo di revisione del veicolo"},
+  "Wagon Inset":{
+    "ITA":"Inserto del carro"},
+  "Wagon Serie":{
+    "ITA":"Carro Serie"},
+  "Vehicle Review":{
+    "ITA":"Recensione del veicolo"},
   "Level":{
     "ITA":"Livello"},
   "Status 1":{
     "ITA":"Stato 1"},
   "Status 2":{
     "ITA":"Stato 2"},
-  "Wagon Review Group":{
-    "ITA":"Gruppo di revisione del carro"},
-  "You are about to apply the template to selected records. Data from the template will replace data for the records in fields that do not already contain data.\\\\Do you want also data from the template to replace data for the records in fields that already contain data?":{
-    "ITA":"Si sta per applicare il modello ai record selezionati. I dati del modello sostituiranno i dati per i record nei campi che non contengono già dati.\\\\Si desidera che anche i dati del modello sostituiscano i dati per i record nei campi che contengono già dati?"},
-  "Do you want to open the blank wagon card?":{
-    "ITA":"Vuoi aprire la carta del carro vuoto?"},
-  "Wagon Brake Adjustment System":{
-    "ITA":"Sistema di regolazione del freno del carro"},
-  "Wagon Bumper Type":{
-    "ITA":"Tipo di paraurti del carro"},
-  "Wagon Inset":{
-    "ITA":"Inserto del carro"},
-  "Wagon Status Group":{
-    "ITA":"Gruppo di stato del carro"},
-  "Wagon Valve Type":{
-    "ITA":"Tipo di valvola del carro"},
-  "Wagon Status":{
-    "ITA":"Stato del carro"},
-  "Short Description":{
-    "ITA":"Breve descrizione"},
-  "Anomaly":{
-    "ITA":"Anomalia"},
-  "Criteria":{
-    "ITA":"Criteri"},
-  "Tips":{
-    "ITA":"Suggerimenti"},
-  "Procedure Text":{
-    "ITA":"Testo della procedura"},
-  "Error Class":{
-    "ITA":"Classe di errore"},
-  "Wagon Serie":{
-    "ITA":"Carro Serie"},
   "Wagon VKM":{
     "ITA":"Carro VKM"},
-  "Wagon Brake System":{
-    "ITA":"Sistema frenante del carro"},
-  "Wagon Elements":{
-    "ITA":"Elementi del carro"},
-  "Wagon Wheelset Type":{
-    "ITA":"Tipo di sale montate per carri"},
-  "Wagon Setter Type":{
-    "ITA":"Tipo di inquadratore del carro"},
-  "Proragation":{
-    "ITA":"Proragazione"},
-  "Wagon Trolley Type":{
-    "ITA":"Tipo di carrello del carro"},
+  "Vehicle Brake Adjustment System":{
+    "ITA":"Sistema di regolazione dei freni del veicolo"},
+  "Wagon Review Group":{
+    "ITA":"Gruppo di revisione del carro"},
+  "Vehicle Brake System":{
+    "ITA":"Sistema frenante del veicolo"},
+  "Wagon Review":{
+    "ITA":"Recensione del carro"},
   "Wheelsets":{
     "ITA":"Sale montate"},
   "Specifies when the item card was last modified.":{
@@ -834,48 +1019,8 @@
     "ITA":"Giornale delle ruote"},
   "Open a list of journals.":{
     "ITA":"Apri un elenco di diari."},
-  "Vendor Types":{
-    "ITA":"Tipi di fornitori"},
-  "Wheelset Card":{
-    "ITA":"Carta del set di ruote"},
-  "General":{
-    "ITA":"Generale"},
-  "Specifies the number of the wagon.":{
-    "ITA":"Specifica il numero del carro."},
-  "Specifies the wagon":{
-    "ITA":"Specifica il carro"},
-  "Specifies when the wagon card was last modified.":{
-    "ITA":"Specifica la data dell'ultima modifica apportata alla scheda del carro."},
-  "Owner":{
-    "ITA":"Proprietario"},
-  "Contractor":{
-    "ITA":"Imprenditore"},
-  "Producer Details":{
-    "ITA":"Dettagli del produttore"},
-  "Bearing Producer":{
-    "ITA":"Produttore di cuscinetti"},
-  "Planning":{
-    "ITA":"Pianificazione"},
-  "Statistics":{
-    "ITA":"Statistica"},
-  "Review":{
-    "ITA":"Recensione"},
-  "Measurement":{
-    "ITA":"Misurazione"},
-  "Attachments":{
-    "ITA":"Allegati"},
-  "View the history of transactions that have been posted for the selected record.":{
-    "ITA":"Visualizzare la cronologia delle transazioni registrate per il record selezionato."},
-  "Print Label":{
-    "ITA":"Stampa etichetta"},
-  "Inventory":{
-    "ITA":"Inventario"},
-  "Wheelset Statistics":{
-    "ITA":"Statistiche sulle ruote"},
-  "Wheelset Entries":{
-    "ITA":"Voci del set di ruote"},
-  "Specifies a description of the customer entry.":{
-    "ITA":"Specifica una descrizione della voce cliente."},
+  "Wheelset Measurement Entries":{
+    "ITA":"Voci di misurazione delle sale montate"},
   "Specifies the number of the entry, as assigned from the specified number series when the entry was created.":{
     "ITA":"Specifica il numero della voce, assegnato dalla serie di numeri specificata al momento della creazione della voce."},
   "Ent&ry":{
@@ -890,64 +1035,235 @@
     "ITA":"Entrata"},
   "Navigate":{
     "ITA":"Navigare"},
-  "Timetable Route Card":{
-    "ITA":"Tabella Orari"},
+  "Wheelset Approval Entries":{
+    "ITA":"Voci di approvazione delle sale montate"},
+  "Workflow Comment Sheet":{
+    "ITA":"Foglio di commento del flusso di lavoro"},
+  "Specifies the date the comment was created.":{
+    "ITA":"Specifica la data di creazione del commento."},
+  "Specifies the comment itself.":{
+    "ITA":"Specifica il commento stesso."},
+  "Specifies a code for the comment.":{
+    "ITA":"Specifica un codice per il commento."},
+  "Wheelset Review Entries":{
+    "ITA":"Voci di revisione delle ruote"},
+  "Wheelset Plan Review Entries":{
+    "ITA":"Voci di revisione del piano delle ruote"},
+  "Wheelset Km Entries":{
+    "ITA":"Ingressi Km Set Ruote"},
+  "Specifies a description of the customer entry.":{
+    "ITA":"Specifica una descrizione della voce cliente."},
+  "Wheelset Entries":{
+    "ITA":"Voci del set di ruote"},
+  "Workflow Card":{
+    "ITA":"Scheda flusso di lavoro"},
+  "General":{
+    "ITA":"Generale"},
+  "Buy-from":{
+    "ITA":"Acquista da"},
+  "Address":{
+    "ITA":"Indirizzo"},
+  "Address 2":{
+    "ITA":"Indirizzo 2"},
+  "City":{
+    "ITA":"Città"},
+  "Contact No.":{
+    "ITA":"Contatto No."},
+  "Phone No.":{
+    "ITA":"Telefono No."},
+  "Mobile Phone No.":{
+    "ITA":"Cellulare n."},
+  "Email":{
+    "ITA":"E-mail"},
+  "Contact":{
+    "ITA":"Contatto"},
+  "Specifies when the invoice is due. The program calculates the date using the Payment Terms Code and Document Date fields.":{
+    "ITA":"Specifica la data di scadenza della fattura. Il programma calcola la data utilizzando i campi Codice Termini di pagamento e Data documento."},
+  "Specifies the code of the responsibility center, such as a distribution hub, that is associated with the involved user, company, customer, or vendor.":{
+    "ITA":"Specifica il codice del centro di responsabilità, ad esempio un hub di distribuzione, associato all'utente, alla società, al cliente o al fornitore interessato."},
+  "Specifies the ID of the user who is responsible for the document.":{
+    "ITA":"Specifica l'ID dell'utente responsabile del documento."},
+  "Specifies whether the record is open, waiting to be approved, invoiced for prepayment, or released to the next stage of processing.":{
+    "ITA":"Specifica se il record è aperto, in attesa di approvazione, di fatturazione anticipata o di passaggio alla fase successiva dell'elaborazione."},
+  "Invoice Details":{
+    "ITA":"Dettagli della fattura"},
+  "Specifies the currency code for amounts on the purchase lines.":{
+    "ITA":"Specifica il codice valuta per gli importi nelle righe di acquisto."},
+  "Specifies how to make payment, such as with bank transfer, cash, or check.":{
+    "ITA":"Specifica la modalità di pagamento, ad esempio tramite bonifico bancario, contanti o assegno."},
+  "Specifies the reason code, a supplementary source code that enables you to trace the document.":{
+    "ITA":"Specifica il codice motivo, un codice sorgente supplementare che consente di tracciare il documento."},
+  "Specifies that the related entry represents an unpaid invoice for which either a payment suggestion, a reminder, or a finance charge memo exists.":{
+    "ITA":"Specifica che la voce correlata rappresenta una fattura non pagata per la quale esiste un suggerimento di pagamento, un sollecito o una nota di addebito interessi."},
+  "Document Check":{
+    "ITA":"Controllo documenti"},
+  "Attachments":{
+    "ITA":"Allegati"},
+  "&Invoice":{
+    "ITA":"&Fattura"},
+  "Statistics":{
+    "ITA":"Statistica"},
+  "View statistical information, such as the value of posted entries, for the record.":{
+    "ITA":"Visualizzare le informazioni statistiche, ad esempio il valore dei movimenti registrati, per il record."},
+  "Vendor":{
+    "ITA":"Venditore"},
+  "View or edit detailed information about the vendor on the purchase document.":{
+    "ITA":"Visualizzare o modificare le informazioni dettagliate sul fornitore nel documento di acquisto."},
+  "Co&mments":{
+    "ITA":"Collaborazioni"},
+  "View or add comments for the record.":{
+    "ITA":"Visualizza o aggiungi commenti per il record."},
+  "Add a file as an attachment. You can attach images as well as documents.":{
+    "ITA":"Aggiungere un file come allegato. Puoi allegare immagini e documenti."},
+  "Approval":{
+    "ITA":"Approvazione"},
+  "Approve":{
+    "ITA":"Approvare"},
+  "Approve the requested changes.":{
+    "ITA":"Approva le modifiche richieste."},
+  "Reject":{
+    "ITA":"Rigettare"},
+  "Reject the approval request.":{
+    "ITA":"Rifiutare la richiesta di approvazione."},
+  "Delegate":{
+    "ITA":"Delegato"},
+  "Delegate the approval to a substitute approver.":{
+    "ITA":"Delegare l'approvazione a un approvatore sostitutivo."},
+  "Comments":{
+    "ITA":"Commenti"},
+  "Release":{
+    "ITA":"Rilascio"},
+  "Re&lease":{
+    "ITA":"Ri&locazione"},
+  "Release the document to the next stage of processing. You must reopen the document before you can make changes to it.":{
+    "ITA":"Rilasciare il documento alla fase successiva dell'elaborazione. È necessario riaprire il documento prima di potervi apportare modifiche."},
+  "Re&open":{
+    "ITA":"Riaprire"},
+  "Reopen the document to change it after it has been approved. Approved documents have the Released status and must be opened before they can be changed.":{
+    "ITA":"Riaprire il documento per modificarlo dopo che è stato approvato. I documenti approvati hanno lo stato Rilasciato e devono essere aperti prima di poter essere modificati."},
+  "Request Approval":{
+    "ITA":"Richiedi approvazione"},
+  "Approvals":{
+    "ITA":"Approvazioni"},
+  "View a list of the records that are waiting to be approved. For example, you can see who requested the record to be approved, when it was sent, and when it is due to be approved.":{
+    "ITA":"Visualizza un elenco dei record in attesa di approvazione. Ad esempio, è possibile vedere chi ha richiesto l'approvazione del record, quando è stato inviato e quando deve essere approvato."},
+  "Send A&pproval Request":{
+    "ITA":"Invia una richiesta di approvazione"},
+  "Request approval of the document.":{
+    "ITA":"Richiedi l'approvazione del documento."},
+  "Cancel Approval Re&quest":{
+    "ITA":"Annulla Approvazione Re&Quest"},
+  "Cancel the approval request.":{
+    "ITA":"Annullare la richiesta di approvazione."},
+  "Power Automate":{
+    "ITA":"Automazione di potenza"},
+  "Create approval flow":{
+    "ITA":"Creare un flusso di approvazione"},
+  "Create a new flow in Power Automate from a list of relevant flow templates.":{
+    "ITA":"Crea un nuovo flusso in Power Automate da un elenco di modelli di flusso pertinenti."},
+  "Create a flow":{
+    "ITA":"Creare un flusso"},
+  "See my flows":{
+    "ITA":"Visualizzare i flussi personali"},
+  "View and configure Power Automate flows that you created.":{
+    "ITA":"Visualizzare e configurare i flussi di Power Automate creati."},
+  "P&osting":{
+    "ITA":"P&osting"},
+  "P&ost":{
+    "ITA":"P&ost"},
+  "Finalize the document or journal by posting the amounts and quantities to the related accounts in your company books.":{
+    "ITA":"Finalizzare il documento o il giornale di registrazione registrando gli importi e le quantità nei conti correlati nei libri contabili della società."},
+  "Preview Posting":{
+    "ITA":"Anteprima pubblicazione"},
+  "Review the different types of entries that will be created when you post the document or journal.":{
+    "ITA":"Esaminare i diversi tipi di movimenti che verranno creati quando si registra il documento o il giornale di registrazione."},
+  "Test Report":{
+    "ITA":"Rapporto di prova"},
+  "View a test report so that you can find and correct any errors before you perform the actual posting of the journal or document.":{
+    "ITA":"Visualizzare un report di prova in modo da poter individuare e correggere eventuali errori prima di eseguire la registrazione effettiva del giornale di registrazione o del documento."},
+  "Post and &Print":{
+    "ITA":"Posta e stampa"},
+  "Finalize and print the document or journal. The values and quantities are posted to the related accounts.":{
+    "ITA":"Finalizza e stampa il documento o il diario. I valori e le quantità vengono registrati nei conti correlati."},
+  "Post and New":{
+    "ITA":"Posta e Nuovo"},
+  "Post the purchase document and create a new, empty one.":{
+    "ITA":"Registrare il documento di acquisto e crearne uno nuovo vuoto."},
+  "Post &Batch":{
+    "ITA":"Invio e batch"},
+  "Post several documents at once. A report request window opens where you can specify which documents to post.":{
+    "ITA":"Pubblica più documenti contemporaneamente. Viene visualizzata una finestra di richiesta di report in cui è possibile specificare i documenti da registrare."},
+  "Remove From Job Queue":{
+    "ITA":"Rimuovi dalla coda dei lavori"},
+  "Remove the scheduled processing of this record from the job queue.":{
+    "ITA":"Rimuovere l'elaborazione pianificata di questo record dalla coda dei processi."},
+  "Posting":{
+    "ITA":"Affissione"},
+  "Prepare":{
+    "ITA":"Preparare"},
+  "Incoming Document":{
+    "ITA":"Documento in entrata"},
+  "Invoice":{
+    "ITA":"Fattura"},
+  "View":{
+    "ITA":"Vista"},
+  "Report":{
+    "ITA":"Rapporto"},
+  "This invoice was received through intercompany and it":{
+    "ITA":"Questa fattura è stata ricevuta tramite intercompany ed è"},
+  "s related to the purchase %1 with no. %2. You can delete that order and post this invoice.":{
+    "%1-EITHER":"order",
+    "OR":"posted invoice"},
+  "Rejecting this invoice will remove it from your company and send it back to the partner company.\\\\ Do you want to continue?":{
+    "ITA":"Se si rifiuta questa fattura, questa verrà rimossa dalla tua azienda e rispedita all'azienda partner.\\\\ Vuoi continuare?"},
+  "The invoice is posted as number %1 and moved to the Posted Purchase Invoices window.\\\\Do you want to open the posted invoice?":{
+    "ITA":"La fattura viene registrata con il numero %1 e spostata nella finestra Fatture di acquisto registrate.\\\\Si desidera aprire la fattura registrata?"},
+  "The invoice cannot be posted because the total is different from the total on the related incoming document.":{
+    "ITA":"La fattura non può essere registrata perché il totale è diverso dal totale del documento in entrata correlato."},
+  "PowerAutomateTemplates":{
+    "ITA":"PowerAutomateTemplates"},
+  "Workflow List":{
+    "ITA":"Elenco flussi di lavoro"},
+  "Specifies the name of the vendor who delivered the items.":{
+    "ITA":"Specifica il nome del fornitore che ha consegnato gli articoli."},
+  "Specifies the name of the contact person at the vendor who delivered the items.":{
+    "ITA":"Specifica il nome della persona di contatto presso il fornitore che ha consegnato gli articoli."},
+  "Specifies the code of the currency of the amounts on the purchase lines.":{
+    "ITA":"Specifica il codice della valuta degli importi nelle righe di acquisto."},
+  "Timetable Construciton Route Card":{
+    "ITA":"Orario Costruzione Route Card"},
   "Parameters":{
     "ITA":"Parametri"},
   "Vehicles":{
     "ITA":"Veicoli"},
   "Is":{
     "ITA":"È"},
-  "Wagon Approval Entries":{
-    "ITA":"Voci di approvazione del carro"},
-  "Timetable Route List":{
-    "ITA":"Elenco dei percorsi"},
-  "Wagon Status Entries":{
-    "ITA":"Voci di stato del carro"},
-  "Wagon Types":{
-    "ITA":"Tipi di vagoni"},
-  "Timetable Order Card":{
-    "ITA":"Scheda d'ordine dell'orario"},
-  "Train":{
-    "ITA":"Treno"},
-  "Job":{
-    "ITA":"Lavoro"},
-  "Object":{
-    "ITA":"Oggetto"},
-  "Decree":{
-    "ITA":"Decreto"},
-  "Rejection":{
-    "ITA":"Rifiuto"},
-  "Requires":{
-    "ITA":"Richiede"},
-  "Restriction":{
-    "ITA":"Restrizione"},
-  "Notes":{
-    "ITA":"Note"},
-  "&Route":{
-    "ITA":"&Percorso"},
-  "&Construction Route":{
-    "ITA":"& Percorso di costruzione"},
-  "Wagon Plan Review Entries":{
-    "ITA":"Voci di revisione del piano del carro"},
-  "Wagon Review Entries":{
-    "ITA":"Voci di recensione di Wagon"},
-  "Timetable Order List":{
-    "ITA":"Elenco degli ordini degli orari"},
-  "SKRJ Object List":{
-    "ITA":"Elenco oggetti SKRJ"},
-  "Wagon Km Entries":{
-    "ITA":"Ingressi Km Carro"},
-  "Timetable Construction Route List":{
-    "ITA":"Orario Costruzione Elenco percorsi"},
-  "Timetable List":{
-    "ITA":"Elenco orari"},
-  "&DSU":{
-    "ITA":"&DSU"},
-  "&Wagon Types":{
-    "ITA":"& Tipi di vagoni"},
+  "Wagon Template":{
+    "ITA":"Modello di carro"},
+  "Specifies the code of the template.":{
+    "ITA":"Specifica il codice del modello."},
+  "Specifies the description of the template.":{
+    "ITA":"Specifica la descrizione del modello."},
+  "Specifies that the related record is blocked from being posted in transactions, for example an item that is placed in quarantine.":{
+    "ITA":"Specifica che la registrazione del record correlato è bloccata nelle transazioni, ad esempio un elemento che viene messo in quarantena."},
+  "Specifies whether the item card represents a physical inventory unit (Inventory), a labor time unit (Service), or a physical unit that is not tracked in inventory (Non-Inventory).":{
+    "ITA":"Specifica se la scheda articolo rappresenta un'unità di magazzino fisica (Magazzino), un'unità di tempo di lavoro (Servizio) o un'unità fisica non registrata in magazzino (Non inventario)."},
+  "Attributes":{
+    "ITA":"Attributi"},
+  "Components":{
+    "ITA":"Componenti"},
+  "Planning":{
+    "ITA":"Pianificazione"},
+  "Copy Template":{
+    "ITA":"Copia modello"},
+  "Copies all information to the current template from the selected one.":{
+    "ITA":"Copia tutte le informazioni nel modello corrente da quello selezionato."},
+  "Wagon Templates":{
+    "ITA":"Modelli di vagoni"},
   "Wagon Statistics":{
     "ITA":"Statistiche dei carri"},
+  "Specifies the number of the wagon.":{
+    "ITA":"Specifica il numero del carro."},
   "Service":{
     "ITA":"Servizio"},
   "Wagon Picture":{
@@ -978,54 +1294,22 @@
     "ITA":"immagine/jpeg"},
   "Wagon Entries":{
     "ITA":"Ingressi Wagon"},
-  "Wagon Prorogation Entries":{
-    "ITA":"Voci di proroga del carro"},
-  "Timetable Construciton Route Card":{
-    "ITA":"Orario Costruzione Route Card"},
-  "Wagon Status List":{
-    "ITA":"Elenco stato del carro"},
-  "Wagon Templates":{
-    "ITA":"Modelli di vagoni"},
-  "Specifies the code of the template.":{
-    "ITA":"Specifica il codice del modello."},
-  "Specifies the description of the template.":{
-    "ITA":"Specifica la descrizione del modello."},
-  "Wagon Template":{
-    "ITA":"Modello di carro"},
-  "Specifies that the related record is blocked from being posted in transactions, for example an item that is placed in quarantine.":{
-    "ITA":"Specifica che la registrazione del record correlato è bloccata nelle transazioni, ad esempio un elemento che viene messo in quarantena."},
-  "Specifies whether the item card represents a physical inventory unit (Inventory), a labor time unit (Service), or a physical unit that is not tracked in inventory (Non-Inventory).":{
-    "ITA":"Specifica se la scheda articolo rappresenta un'unità di magazzino fisica (Magazzino), un'unità di tempo di lavoro (Servizio) o un'unità fisica non registrata in magazzino (Non inventario)."},
-  "Attributes":{
-    "ITA":"Attributi"},
-  "Components":{
-    "ITA":"Componenti"},
-  "Copy Template":{
-    "ITA":"Copia modello"},
-  "Copies all information to the current template from the selected one.":{
-    "ITA":"Copia tutte le informazioni nel modello corrente da quello selezionato."},
-  "Select a template for a new wagon":{
-    "ITA":"Seleziona un modello per un nuovo carro"},
-  "Wagon Trolley Types":{
-    "ITA":"Tipi di carrelli per carri"},
-  "Wagon Fault Entries":{
-    "ITA":"Voci di guasto del carro"},
-  "Wagon Wheelset Types":{
-    "ITA":"Tipi di ruote per carri"},
-  "Wagon Post Fault Entries":{
-    "ITA":"Voci di guasto del montante del carro"},
-  "Wheelset Measurement Entries":{
-    "ITA":"Voci di misurazione delle sale montate"},
-  "Wagons":{
-    "ITA":"Carri"},
-  "Specifies a number to identify the wagon.":{
-    "ITA":"Specifica un numero per identificare il carro."},
-  "Specifies a default text to describe the wagon on related documents.":{
-    "ITA":"Specifica un testo predefinito per descrivere il carro nei documenti correlati."},
-  "Specifies that the item was created from a template.":{
-    "ITA":"Specifica che l'elemento è stato creato da un modello."},
-  "Specifies that transactions with the item cannot be posted, for example, because the item is in quarantine.":{
-    "ITA":"Specifica che le transazioni con l'articolo non possono essere registrate, ad esempio, perché l'articolo è in quarantena."},
+  "Wagon Card":{
+    "ITA":"Carta Wagon"},
+  "Specifies the wagon":{
+    "ITA":"Specifica il carro"},
+  "Specifies when the wagon card was last modified.":{
+    "ITA":"Specifica la data dell'ultima modifica apportata alla scheda del carro."},
+  "Contractor":{
+    "ITA":"Imprenditore"},
+  "Dispatcher Details":{
+    "ITA":"Dettagli del dispatcher"},
+  "Producer Details":{
+    "ITA":"Dettagli del produttore"},
+  "Invoicing":{
+    "ITA":"Fatturazione"},
+  "View the history of transactions that have been posted for the selected record.":{
+    "ITA":"Visualizzare la cronologia delle transazioni registrate per il record selezionato."},
   "&Status Entries":{
     "ITA":"&Voci di stato"},
   "&Prorogation Entries":{
@@ -1042,8 +1326,14 @@
     "ITA":"Applica modello"},
   "Apply a template to update one or more entities with your standard settings for a certain type of entity.":{
     "ITA":"Applica un modello per aggiornare una o più entità con le impostazioni standard per un determinato tipo di entità."},
+  "Print Label":{
+    "ITA":"Stampa etichetta"},
+  "Inventory":{
+    "ITA":"Inventario"},
   "Finance Reports":{
     "ITA":"Rapporti finanziari"},
+  "Item":{
+    "ITA":"Articolo"},
   "View or edit the item":{
     "ITA":"Visualizzare o modificare l'elemento"},
   "Availability":{
@@ -1094,6 +1384,10 @@
     "ITA":"Ordini di acquisto"},
   "View a list of ongoing purchase orders for the item.":{
     "ITA":"Visualizza un elenco degli ordini fornitore in corso per l'articolo."},
+  "Ca&talog Items":{
+    "ITA":"Articoli Ca&talog"},
+  "View the list of items that you do not carry in inventory. ":{
+    "ITA":"Visualizza l'elenco degli articoli che non hai nell'inventario."},
   "Ser&vice Items":{
     "ITA":"Articoli di servizio"},
   "View instances of the item as service items, such as machines that you maintain or repair for customers through service orders. ":{
@@ -1108,62 +1402,215 @@
     "ITA":"Visualizza o modifica le impostazioni per la risoluzione dei problemi relativi agli articoli in assistenza."},
   "Periodic Activities":{
     "ITA":"Attività periodiche"},
-  "Report":{
-    "ITA":"Rapporto"},
-  "Wheelset Approval Entries":{
-    "ITA":"Voci di approvazione delle sale montate"},
-  "Wheelset Plan Review Entries":{
-    "ITA":"Voci di revisione del piano delle ruote"},
-  "Wheelset Review Entries":{
-    "ITA":"Voci di revisione delle ruote"},
-  "Wagon Brake Systems":{
-    "ITA":"Sistemi frenanti per carri"},
-  "Wagon Fault Attachment Entries":{
-    "ITA":"Voci di collegamento dei guasti del carro"},
-  "Wheelset Km Entries":{
-    "ITA":"Ingressi Km Set Ruote"},
-  "Wagon Type":{
-    "ITA":"Tipo di carro"},
-  "Wagon Review Group List":{
-    "ITA":"Elenco dei gruppi di revisione dei carri"},
-  "Wagon VKMs":{
-    "ITA":"Carri VKM"},
-  "Wagon Review List":{
-    "ITA":"Elenco delle recensioni dei carri"},
-  "Wagon Brake Adjustment Systems":{
-    "ITA":"Sistemi di regolazione dei freni del carro"},
-  "Wagon Situation":{
-    "ITA":"Situazione del carro"},
-  "Work":{
-    "ITA":"Lavoro"},
-  "Group Code":{
-    "ITA":"Codice Gruppo"},
-  "Wagon Series":{
-    "ITA":"Serie di carri"},
-  "Wagon Valve Types":{
-    "ITA":"Tipi di valvole per carri"},
-  "Wagon Insets":{
-    "ITA":"Inserti del carro"},
+  "Timetable Construction Route List":{
+    "ITA":"Orario Costruzione Elenco percorsi"},
   "Wagon Status Groups TM":{
     "ITA":"Gruppi di stato del carro TM"},
-  "Wagon Fault List":{
-    "ITA":"Elenco guasti del carro"},
-  "Wagon Prorogation List":{
-    "ITA":"Elenco di proroga del carro"},
-  "Wagon Status Groups":{
-    "ITA":"Gruppi di stato del carro"},
-  "Wagon Bumper Types":{
-    "ITA":"Tipi di paraurti per carri"},
-  "DSU Configuration":{
-    "ITA":"Configurazione DSU"},
-  "Cycles List":{
-    "ITA":"Elenco Cicli"},
-  "DSU Configuration List":{
-    "ITA":"Elenco di configurazione DSU"},
-  "Dispatchers List":{
-    "ITA":"Elenco dei dispatcher"},
-  "DSU Wagon Types":{
-    "ITA":"Tipi di carri DSU"},
+  "SKRJ Object List":{
+    "ITA":"Elenco oggetti SKRJ"},
+  "Select a template for a new wagon":{
+    "ITA":"Seleziona un modello per un nuovo carro"},
+  "Wagons":{
+    "ITA":"Carri"},
+  "Specifies a number to identify the wagon.":{
+    "ITA":"Specifica un numero per identificare il carro."},
+  "Specifies a default text to describe the wagon on related documents.":{
+    "ITA":"Specifica un testo predefinito per descrivere il carro nei documenti correlati."},
+  "Specifies that the item was created from a template.":{
+    "ITA":"Specifica che l'elemento è stato creato da un modello."},
+  "Specifies that transactions with the item cannot be posted, for example, because the item is in quarantine.":{
+    "ITA":"Specifica che le transazioni con l'articolo non possono essere registrate, ad esempio, perché l'articolo è in quarantena."},
+  "Timetable Route Card":{
+    "ITA":"Tabella Orari"},
+  "Timetable List":{
+    "ITA":"Elenco orari"},
+  "&DSU":{
+    "ITA":"&DSU"},
+  "&Wagon Types":{
+    "ITA":"& Tipi di vagoni"},
+  "Timetable Order Card":{
+    "ITA":"Scheda d'ordine dell'orario"},
+  "Train":{
+    "ITA":"Treno"},
+  "Job":{
+    "ITA":"Lavoro"},
+  "Object":{
+    "ITA":"Oggetto"},
+  "Decree":{
+    "ITA":"Decreto"},
+  "Rejection":{
+    "ITA":"Rifiuto"},
+  "Requires":{
+    "ITA":"Richiede"},
+  "Restriction":{
+    "ITA":"Restrizione"},
+  "Notes":{
+    "ITA":"Note"},
+  "&Route":{
+    "ITA":"&Percorso"},
+  "&Construction Route":{
+    "ITA":"& Percorso di costruzione"},
+  "Timetable Route List":{
+    "ITA":"Elenco dei percorsi"},
+  "Wagon Review Entries":{
+    "ITA":"Voci di recensione di Wagon"},
+  "Wheelset Review List":{
+    "ITA":"Elenco delle recensioni delle ruote"},
+  "Timetable Order List":{
+    "ITA":"Elenco degli ordini degli orari"},
+  "Axle Box Types":{
+    "ITA":"Tipi di boccole"},
+  "Wheelset Types":{
+    "ITA":"Tipi di ruote"},
+  "Wheel Types":{
+    "ITA":"Tipi di ruote"},
+  "Number Series":{
+    "ITA":"Serie numeriche"},
+  "Specifies the code for the number series that will be used to assign numbers to workflows.":{
+    "ITA":"Specifica il codice per la numerazione numerata che verrà utilizzata per assegnare i numeri ai flussi di lavoro."},
+  "Wheelset Card":{
+    "ITA":"Carta del set di ruote"},
+  "Owner":{
+    "ITA":"Proprietario"},
+  "Bearing Producer":{
+    "ITA":"Produttore di cuscinetti"},
+  "Review":{
+    "ITA":"Recensione"},
+  "Measurement":{
+    "ITA":"Misurazione"},
+  "Wheelset Statistics":{
+    "ITA":"Statistiche sulle ruote"},
+  "Vendor Types":{
+    "ITA":"Tipi di fornitori"},
+  "Wagon Km Entries":{
+    "ITA":"Ingressi Km Carro"},
+  "Wagon Plan Review Entries":{
+    "ITA":"Voci di revisione del piano del carro"},
+  "Specifies a number to identify the Vehicle.":{
+    "ITA":"Specifica un numero per identificare il veicolo."},
+  "Specifies a default text to describe the Vehicle on related documents.":{
+    "ITA":"Specifica un testo predefinito per descrivere il veicolo nei documenti correlati."},
+  "Copy Vehicle":{
+    "ITA":"Copia veicolo"},
+  "Create a copy of the current Vehicle.":{
+    "ITA":"Crea una copia del veicolo attuale."},
+  "Vehicle Journal":{
+    "ITA":"Giornale di circolazione"},
+  "Vehicle Statistics":{
+    "ITA":"Statistiche del veicolo"},
+  "Vehicle Setter Type":{
+    "ITA":"Tipo di setter del veicolo"},
+  "Vehicle Proragation":{
+    "ITA":"Propagazione del veicolo"},
+  "Wagon Approval Entries":{
+    "ITA":"Voci di approvazione del carro"},
+  "Select a template for a new Vehicle":{
+    "ITA":"Seleziona un modello per un nuovo veicolo"},
+  "Vehicle Card":{
+    "ITA":"Scheda veicolo"},
+  "Specifies the number of the Vehicle.":{
+    "ITA":"Specifica il numero del veicolo."},
+  "Specifies the Vehicle":{
+    "ITA":"Specifica il veicolo"},
+  "Specifies when the Vehicle card was last modified.":{
+    "ITA":"Specifica la data dell'ultima modifica apportata alla scheda Veicolo."},
+  "Wagon Setter Type":{
+    "ITA":"Tipo di inquadratore del carro"},
+  "Wagon Status Entries":{
+    "ITA":"Voci di stato del carro"},
+  "Vehicle Elements":{
+    "ITA":"Elementi del veicolo"},
+  "Wagon Prorogation Entries":{
+    "ITA":"Voci di proroga del carro"},
+  "Vehicle Template":{
+    "ITA":"Modello di veicolo"},
+  "There is nothing to release for the document of type %1 with the number %2.":{
+    "ITA":"Non c'è nulla da rilasciare per il documento di tipo %1 con il numero %2."},
+  "This document can only be released when the approval process is complete.":{
+    "ITA":"Questo documento può essere rilasciato solo al termine del processo di approvazione."},
+  "The approval process must be cancelled or completed to reopen this document.":{
+    "ITA":"Il processo di approvazione deve essere annullato o completato per riaprire questo documento."},
+  "Wheelset Review":{
+    "ITA":"Recensione del set di ruote"},
+  "Proragation":{
+    "ITA":"Proragazione"},
+  "You are about to apply the template to selected records. Data from the template will replace data for the records in fields that do not already contain data.\\\\Do you want also data from the template to replace data for the records in fields that already contain data?":{
+    "ITA":"Si sta per applicare il modello ai record selezionati. I dati del modello sostituiranno i dati per i record nei campi che non contengono già dati.\\\\Si desidera che anche i dati del modello sostituiscano i dati per i record nei campi che contengono già dati?"},
+  "Do you want to open the blank Vehicle card?":{
+    "ITA":"Vuoi aprire la scheda veicolo vuota?"},
+  "Vehicle Faults":{
+    "ITA":"Guasti del veicolo"},
+  "Short Description":{
+    "ITA":"Breve descrizione"},
+  "Anomaly":{
+    "ITA":"Anomalia"},
+  "Criteria":{
+    "ITA":"Criteri"},
+  "Tips":{
+    "ITA":"Suggerimenti"},
+  "Procedure Text":{
+    "ITA":"Testo della procedura"},
+  "Error Class":{
+    "ITA":"Classe di errore"},
+  "Traction Vehicle Types":{
+    "ITA":"Tipi di veicoli di trazione"},
+  "Vehicle Templates":{
+    "ITA":"Modelli di veicoli"},
+  "Wagon Fault Entries":{
+    "ITA":"Voci di guasto del carro"},
+  "Do you want to open the blank wagon card?":{
+    "ITA":"Vuoi aprire la carta del carro vuoto?"},
+  "Vehicle Status Group":{
+    "ITA":"Gruppo di stato del veicolo"},
+  "Vehicle Entries":{
+    "ITA":"Voci dei veicoli"},
+  "Wagon Elements":{
+    "ITA":"Elementi del carro"},
+  "Vehicle Bumper Type":{
+    "ITA":"Tipo di paraurti del veicolo"},
+  "Wagon Post Fault Entries":{
+    "ITA":"Voci di guasto del montante del carro"},
+  "Vehicle Picture":{
+    "ITA":"Immagine del veicolo"},
+  "Specifies the picture of the Vehicle.":{
+    "ITA":"Specifica l'immagine del veicolo."},
+  "Wagon Fault":{
+    "ITA":"Guasto del carro"},
+  "Vehicle Inset":{
+    "ITA":"Inserto del veicolo"},
+  "Wagon Status Group":{
+    "ITA":"Gruppo di stato del carro"},
+  "Vehicle Valve Type":{
+    "ITA":"Tipo di valvola del veicolo"},
+  "Wagon Bumper Type":{
+    "ITA":"Tipo di paraurti del carro"},
+  "Wagon Fault Attachment Entries":{
+    "ITA":"Voci di collegamento dei guasti del carro"},
+  "Vehicle Serie":{
+    "ITA":"Serie Veicoli"},
+  "Vehicle Km Entries":{
+    "ITA":"Voci Km Veicolo"},
+  "Vehicle Fault Attachment Entries":{
+    "ITA":"Voci di collegamento dei guasti del veicolo"},
+  "Vehicle Post Fault Entries":{},
+  "Vehicle Fault Entries":{
+    "ITA":"Voci di guasto del veicolo"},
+  "Vehicle Prorogation Entries":{
+    "ITA":"Voci di proroga del veicolo"},
+  "Vehicle Approval Entries":{
+    "ITA":"Voci di omologazione del veicolo"},
+  "Vehicle Status Entries":{
+    "ITA":"Voci di stato del veicolo"},
+  "Vehicle Plan Review Entries":{
+    "ITA":"Voci di revisione del piano del veicolo"},
+  "Vehicle Review Entries":{
+    "ITA":"Voci di revisione del veicolo"},
+  "Stations List":{
+    "ITA":"Elenco delle stazioni"},
+  "Tracks List":{
+    "ITA":"Elenco tracce"},
+  "Instituties List":{
+    "ITA":"Elenco Istituti"},
   "Purchase Contract Card":{
     "ITA":"Acquista la carta del contratto"},
   "Specifies the number of the contract.":{
@@ -1184,18 +1631,16 @@
     "ITA":"Dtld. Contatto 4"},
   "&Contract":{
     "ITA":"& Contratto"},
-  "Add a file as an attachment. You can attach images as well as documents.":{
-    "ITA":"Aggiungere un file come allegato. Puoi allegare immagini e documenti."},
-  "Approve":{
-    "ITA":"Approvare"},
-  "Request Approval":{
-    "ITA":"Richiedi approvazione"},
   "New Document":{
     "ITA":"Nuovo documento"},
   "Prices & Discounts":{
     "ITA":"Prezzi & Sconti"},
-  "Vendor":{
-    "ITA":"Venditore"},
+  "Wagon ECM List":{
+    "ITA":"Elenco ECM dei carri"},
+  "Dispatchers List":{
+    "ITA":"Elenco dei dispatcher"},
+  "Cycles List":{
+    "ITA":"Elenco Cicli"},
   "Contracts":{
     "ITA":"Contratti"},
   "Contract":{
@@ -1204,26 +1649,22 @@
     "ITA":"Specifica un numero per identificare il contratto."},
   "Specifies when the contract card was last modified.":{
     "ITA":"Specifica la data dell'ultima modifica apportata alla scheda contratto."},
-  "DSU Card":{
-    "ITA":"Scheda DSU"},
-  "&DSU Wagon Types":{
-    "ITA":"& Tipi di carri DSU"},
-  "View or edit information about zones that you use at this location to structure your bins.":{
-    "ITA":"Visualizzare o modificare le informazioni sulle zone utilizzate in questa posizione per strutturare i contenitori."},
-  "Lines":{
-    "ITA":"Poema"},
-  "Wheelset Review List":{
-    "ITA":"Elenco delle recensioni delle ruote"},
-  "Wagon ECM List":{
-    "ITA":"Elenco ECM dei carri"},
-  "Axle Box Types":{
-    "ITA":"Tipi di boccole"},
-  "Wheelset Types":{
-    "ITA":"Tipi di ruote"},
-  "Wheel Types":{
-    "ITA":"Tipi di ruote"},
-  "Wagon Setter Types":{
-    "ITA":"Tipi di inquadratore per carri"},
+  "Wagon Wheelset Types":{
+    "ITA":"Tipi di ruote per carri"},
+  "Wagon Brake Adjustment Systems":{
+    "ITA":"Sistemi di regolazione dei freni del carro"},
+  "Wagon Series":{
+    "ITA":"Serie di carri"},
+  "Wagon VKMs":{
+    "ITA":"Carri VKM"},
+  "Wagon Review Group List":{
+    "ITA":"Elenco dei gruppi di revisione dei carri"},
+  "Wagon Valve Types":{
+    "ITA":"Tipi di valvole per carri"},
+  "Wagon Review List":{
+    "ITA":"Elenco delle recensioni dei carri"},
+  "Wagon Brake Systems":{
+    "ITA":"Sistemi frenanti per carri"},
   "DSU Configuration Lines":{
     "ITA":"Righe di configurazione DSU"},
   "&Line":{
@@ -1232,168 +1673,170 @@
     "ITA":"Mostra documento"},
   "Open the document that the selected line exists on.":{
     "ITA":"Aprire il documento in cui è presente la riga selezionata."},
-  "Tracks List":{
-    "ITA":"Elenco tracce"},
-  "Instituties List":{
-    "ITA":"Elenco Istituti"},
-  "Stations List":{
-    "ITA":"Elenco delle stazioni"},
-  "Wagon Card":{
-    "ITA":"Carta Wagon"},
-  "Dispatcher Details":{
-    "ITA":"Dettagli del dispatcher"},
-  "Invoicing":{
-    "ITA":"Fatturazione"},
-  "Item":{
-    "ITA":"Articolo"},
-  "Ca&talog Items":{
-    "ITA":"Articoli Ca&talog"},
-  "View the list of items that you do not carry in inventory. ":{
-    "ITA":"Visualizza l'elenco degli articoli che non hai nell'inventario."},
-  "Vehicle Status":{
-    "ITA":"Stato del veicolo"},
-  "Vehicle Situation":{
-    "ITA":"Situazione del veicolo"},
-  "Vehicle Trolley Type":{
-    "ITA":"Tipo di carrello del veicolo"},
-  "Vehicle Wheelset Type":{
-    "ITA":"Tipo di set di ruote del veicolo"},
-  "Vehicle Brake System":{
-    "ITA":"Sistema frenante del veicolo"},
-  "Vehicle Brake Adjustment System":{
-    "ITA":"Sistema di regolazione dei freni del veicolo"},
-  "Vehicle Review":{
-    "ITA":"Recensione del veicolo"},
-  "Vehicle Review Group":{
-    "ITA":"Gruppo di revisione del veicolo"},
-  "Vehicle VKM":{
-    "ITA":"Veicolo VKM"},
-  "Vehicle Serie":{
-    "ITA":"Serie Veicoli"},
-  "Vehicle Valve Type":{
-    "ITA":"Tipo di valvola del veicolo"},
-  "Vehicle Inset":{
-    "ITA":"Inserto del veicolo"},
-  "Vehicle Bumper Type":{
-    "ITA":"Tipo di paraurti del veicolo"},
-  "Vehicle Status Group":{
-    "ITA":"Gruppo di stato del veicolo"},
-  "Vehicle Faults":{
-    "ITA":"Guasti del veicolo"},
-  "Vehicle Elements":{
-    "ITA":"Elementi del veicolo"},
-  "Vehicle Proragation":{
-    "ITA":"Propagazione del veicolo"},
-  "Vehicle Setter Type":{
-    "ITA":"Tipo di setter del veicolo"},
-  "Vehicle Types":{
-    "ITA":"Tipi di veicoli"},
-  "Vehicle Status List":{
-    "ITA":"Elenco dello stato del veicolo"},
-  "Vehicle Trolley Types":{
-    "ITA":"Tipi di carrelli per veicoli"},
-  "Vehicle Wheelset Types":{
-    "ITA":"Tipi di ruote per veicoli"},
+  "Lines":{
+    "ITA":"Poema"},
+  "Wagon Trolley Types":{
+    "ITA":"Tipi di carrelli per carri"},
+  "DSU Configuration":{
+    "ITA":"Configurazione DSU"},
+  "Wagon Status List":{
+    "ITA":"Elenco stato del carro"},
+  "DSU Configuration List":{
+    "ITA":"Elenco di configurazione DSU"},
+  "Wagon Types":{
+    "ITA":"Tipi di vagoni"},
+  "DSU Wagon Types":{
+    "ITA":"Tipi di carri DSU"},
+  "DSU Card":{
+    "ITA":"Scheda DSU"},
+  "&DSU Wagon Types":{
+    "ITA":"& Tipi di carri DSU"},
+  "View or edit information about zones that you use at this location to structure your bins.":{
+    "ITA":"Visualizzare o modificare le informazioni sulle zone utilizzate in questa posizione per strutturare i contenitori."},
   "Vehicle Brake Systems":{
     "ITA":"Sistemi frenanti per veicoli"},
-  "Vehicle Brake Adjustment Systems":{
-    "ITA":"Sistemi di regolazione dei freni del veicolo"},
-  "Vehicle Review List":{
-    "ITA":"Elenco delle recensioni dei veicoli"},
-  "Vehicle Review Group List":{
-    "ITA":"Elenco dei gruppi di revisione dei veicoli"},
-  "Vehicle VKMs":{
-    "ITA":"VKM del veicolo"},
-  "Vehicle Series":{
-    "ITA":"Serie di veicoli"},
-  "Vehicle Valve Types":{
-    "ITA":"Tipi di valvole per veicoli"},
-  "Vehicle Insets":{
-    "ITA":"Inserti per veicoli"},
-  "Vehicle Bumper Types":{
-    "ITA":"Tipi di paraurti per veicoli"},
-  "Vehicle Status Groups":{
-    "ITA":"Gruppi di stato del veicolo"},
-  "Vehicle Fault List":{
-    "ITA":"Elenco dei guasti del veicolo"},
+  "Wagon Prorogation List":{
+    "ITA":"Elenco di proroga del carro"},
+  "Vehicle Wheelset Types":{
+    "ITA":"Tipi di ruote per veicoli"},
+  "Wagon Fault List":{
+    "ITA":"Elenco guasti del carro"},
+  "Vehicle Trolley Types":{
+    "ITA":"Tipi di carrelli per veicoli"},
+  "Wagon Status Groups":{
+    "ITA":"Gruppi di stato del carro"},
+  "Wagon Setter Types":{
+    "ITA":"Tipi di inquadratore per carri"},
+  "Wagon Bumper Types":{
+    "ITA":"Tipi di paraurti per carri"},
+  "Vehicle Status List":{
+    "ITA":"Elenco dello stato del veicolo"},
+  "Vehicle Types":{
+    "ITA":"Tipi di veicoli"},
+  "Wagon Insets":{
+    "ITA":"Inserti del carro"},
   "Vehicle Prorogation List":{
     "ITA":"Elenco di proroga del veicolo"},
   "Vehicle Setter Types":{
     "ITA":"Tipi di setter di veicoli"},
-  "V Max.":{
-    "ITA":"V Max."},
-  "Vehicle":{
-    "ITA":"Veicolo"},
-  "Valve Type Code":{
-    "ITA":"Codice tipo valvola"},
-  "Vehicle Entry":{
-    "ITA":"Ingresso del veicolo"},
-  "Vehicle No. 2":{
-    "ITA":"Veicolo n. 2"},
-  "Vehicle Approval Entry":{
-    "ITA":"Voce di omologazione del veicolo"},
-  "Vehicle Km Entry":{
-    "ITA":"Ingresso Km Veicolo"},
-  "Vehicle Fault Entry":{
-    "ITA":"Inserimento dei guasti del veicolo"},
-  "Vehicle Fault Attachment Entry":{
-    "ITA":"Voce di collegamento guasto del veicolo"},
-  "Vehicle Post Fault Entry":{
-    "ITA":"Inserimento guasto post veicolo"},
-  "Vehicle Setup":{
-    "ITA":"Configurazione del veicolo"},
-  "Vehicle Prorogation Entry":{
-    "ITA":"Ingresso Proroga Veicolo"},
-  "Specifies a number to identify the Vehicle.":{
-    "ITA":"Specifica un numero per identificare il veicolo."},
-  "Specifies a default text to describe the Vehicle on related documents.":{
-    "ITA":"Specifica un testo predefinito per descrivere il veicolo nei documenti correlati."},
-  "Copy Vehicle":{
-    "ITA":"Copia veicolo"},
-  "Create a copy of the current Vehicle.":{
-    "ITA":"Crea una copia del veicolo attuale."},
-  "Vehicle Journal":{
-    "ITA":"Giornale di circolazione"},
-  "Vehicle Statistics":{
-    "ITA":"Statistiche del veicolo"},
-  "Vehicle Card":{
-    "ITA":"Scheda veicolo"},
-  "Specifies the number of the Vehicle.":{
-    "ITA":"Specifica il numero del veicolo."},
-  "Specifies the Vehicle":{
-    "ITA":"Specifica il veicolo"},
-  "Specifies when the Vehicle card was last modified.":{
-    "ITA":"Specifica la data dell'ultima modifica apportata alla scheda Veicolo."},
-  "Select a template for a new Vehicle":{
-    "ITA":"Seleziona un modello per un nuovo veicolo"},
-  "Vehicle Template":{
-    "ITA":"Modello di veicolo"},
-  "Vehicle Templates":{
-    "ITA":"Modelli di veicoli"},
-  "Vehicle Entries":{
-    "ITA":"Voci dei veicoli"},
-  "Vehicle Picture":{
-    "ITA":"Immagine del veicolo"},
-  "Specifies the picture of the Vehicle.":{
-    "ITA":"Specifica l'immagine del veicolo."},
-  "Vehicle Km Entries":{
-    "ITA":"Voci Km Veicolo"},
-  "Vehicle Review Entries":{
-    "ITA":"Voci di revisione del veicolo"},
-  "Vehicle Plan Review Entries":{
-    "ITA":"Voci di revisione del piano del veicolo"},
-  "Vehicle Status Entries":{
-    "ITA":"Voci di stato del veicolo"},
-  "Vehicle Approval Entries":{
-    "ITA":"Voci di omologazione del veicolo"},
-  "Vehicle Prorogation Entries":{
-    "ITA":"Voci di proroga del veicolo"},
-  "Vehicle Fault Entries":{
-    "ITA":"Voci di guasto del veicolo"},
-  "Vehicle Post Fault Entries":{
-    "ITA":"Voci di guasto del post del veicolo"},
-  "Vehicle Fault Attachment Entries":{
-    "ITA":"Voci di collegamento dei guasti del veicolo"},
-  "Do you want to open the blank Vehicle card?":{
-    "ITA":"Vuoi aprire la scheda veicolo vuota?"}
+  "Vehicle Fault List":{
+    "ITA":"Elenco dei guasti del veicolo"},
+  "Vehicle Status Groups":{
+    "ITA":"Gruppi di stato del veicolo"},
+  "Vehicle Bumper Types":{
+    "ITA":"Tipi di paraurti per veicoli"},
+  "Vehicle Insets":{
+    "ITA":"Inserti per veicoli"},
+  "Vehicle Valve Types":{
+    "ITA":"Tipi di valvole per veicoli"},
+  "Vehicle Series":{
+    "ITA":"Serie di veicoli"},
+  "Vehicle VKMs":{
+    "ITA":"VKM del veicolo"},
+  "Vehicle Review Group List":{
+    "ITA":"Elenco dei gruppi di revisione dei veicoli"},
+  "Vehicle Review List":{
+    "ITA":"Elenco delle recensioni dei veicoli"},
+  "Vehicle Brake Adjustment Systems":{
+    "ITA":"Sistemi di regolazione dei freni del veicolo"},
+  "Approval of a workflow document is requested.":{
+    "ITA":"È richiesta l'approvazione di un documento del flusso di lavoro."},
+  "An approval request for a purchase document is canceled.":{
+    "ITA":"Una richiesta di approvazione per un documento di acquisto viene annullata."},
+  "A purchase document is released.":{
+    "ITA":"Viene rilasciato un documento di acquisto."},
+  "An approval request is approved.":{
+    "ITA":"Una richiesta di approvazione viene approvata."},
+  "An approval request is rejected.":{
+    "ITA":"Una richiesta di approvazione viene rifiutata."},
+  "An approval request is delegated.":{
+    "ITA":"Viene delegata una richiesta di approvazione."},
+  "An event with description %1 already exists.":{
+    "ITA":"Esiste già un evento con descrizione %1."},
+  "The overdue approval notifications batch job will be run.":{
+    "ITA":"Verrà eseguito il processo batch di notifiche di approvazione scaduta."},
+  "Approval of a job queue entry is requested.":{
+    "ITA":"È richiesta l'approvazione di un movimento della coda processi."},
+  "Approval of a job queue entry is cancelled.":{
+    "ITA":"L'approvazione di una voce della coda processi viene annullata."},
+  "User ID %1 does not exist in the Approval User Setup window.":{
+    "ITA":"L'ID utente %1 non esiste nella finestra Impostazione utente approvazione."},
+  "You must set up an approver for user ID %1 in the Approval User Setup window.":{
+    "ITA":"È necessario impostare un approvatore per l'ID utente %1 nella finestra Impostazione utente approvazione."},
+  "The workflow user group member with user ID %1 does not exist in the Approval User Setup window.":{
+    "ITA":"Il membro del gruppo di utenti del flusso di lavoro con ID utente %1 non esiste nella finestra Impostazione utente approvazione."},
+  "There is no substitute, direct approver, or approval administrator for user ID %1 in the Approval User Setup window.":{
+    "ITA":"Nella finestra Configurazione utente approvazione non esiste un sostituto, un approvatore diretto o un amministratore di approvazione per l'ID utente %1."},
+  "No qualified approver was found.":{
+    "ITA":"Non è stato trovato alcun approvatore qualificato."},
+  "You can only delegate open approval requests.":{
+    "ITA":"È possibile delegare solo le richieste di approvazione aperte."},
+  "You can only approve open approval requests.":{
+    "ITA":"È possibile approvare solo le richieste di approvazione aperte."},
+  "You can only reject open approval entries.":{
+    "ITA":"È possibile rifiutare solo le voci di approvazione aperte."},
+  "The selected approval requests have been delegated.":{
+    "ITA":"Le richieste di approvazione selezionate sono state delegate."},
+  "There is no approval request to approve.":{
+    "ITA":"Non esiste alcuna richiesta di approvazione da approvare."},
+  "There is no approval request to reject.":{
+    "ITA":"Non esiste alcuna richiesta di approvazione da rifiutare."},
+  "There is no approval request to delegate.":{
+    "ITA":"Non è presente alcuna richiesta di approvazione per la delega."},
+  "An approval request has been sent.":{
+    "ITA":"È stata inviata una richiesta di approvazione."},
+  "The salesperson/purchaser user ID %1 does not exist in the Approval User Setup window for %2 %3.":{
+    "ITA":"L'ID utente venditore/acquirente %1 non esiste nella finestra Impostazione utente approvazione per %2 %3."},
+  "No approval requests exist.":{
+    "ITA":"Non esistono richieste di approvazione."},
+  "A workflow user group with at least one member must be set up.":{
+    "ITA":"È necessario configurare un gruppo di utenti del flusso di lavoro con almeno un membro."},
+  "%1 %2 has been automatically approved. The status has been changed to %3.":{
+    "ITA":"%1 %2 è stato approvato automaticamente. Lo stato è stato modificato in %3."},
+  "Record type %1 is not supported by this workflow response.":{
+    "ITA":"Il tipo di record %1 non è supportato da questa risposta del flusso di lavoro."},
+  "Sales %1 %2 must be approved and released before you can perform this action.":{
+    "ITA":"Le vendite %1 %2 devono essere approvate e rilasciate prima di poter eseguire questa azione."},
+  "Purchase %1 %2 must be approved and released before you can perform this action.":{
+    "ITA":"L'acquisto %1 %2 deve essere approvato e rilasciato prima di poter eseguire questa azione."},
+  "No approval workflow for this record type is enabled.":{
+    "ITA":"Non è abilitato alcun flusso di lavoro di approvazione per questo tipo di record."},
+  "The approval request for the selected record has been canceled.":{
+    "ITA":"La richiesta di approvazione per il record selezionato è stata annullata."},
+  "An approval request already exists.":{
+    "ITA":"Esiste già una richiesta di approvazione."},
+  "An approval request for this batch has already been sent and approved. Do you want to send another approval request?":{
+    "ITA":"Una richiesta di approvazione per questo lotto è già stata inviata e approvata. Vuoi inviare un'altra richiesta di approvazione?"},
+  "Only Direct Approver is supported as Approver Limit Type option for %1. The approval request will be approved automatically.":{
+    "ITA":"Solo l'approvatore diretto è supportato come opzione Tipo di limite approvatore per %1. La richiesta di approvazione verrà approvata automaticamente."},
+  "%1 has been approved.":{
+    "ITA":"%1 è stato approvato."},
+  "You do not have permission to delegate one or more of the selected approval requests.":{
+    "ITA":"Non si dispone dell'autorizzazione per delegare una o più delle richieste di approvazione selezionate."},
+  "There is nothing to approve.":{
+    "ITA":"Non c'è nulla da approvare."},
+  "No sufficient approver was found in the approver chain.":{
+    "ITA":"Non è stato trovato alcun approvatore sufficiente nella catena di approvatori."},
+  "You can":{
+    "ITA":"Si può"},
+  "Imposed restriction":{
+    "ITA":"Restrizione imposta"},
+  "Pending Approval":{
+    "ITA":"In attesa di approvazione"},
+  "The restriction was imposed because the journal batch requires approval.":{
+    "ITA":"La restrizione è stata imposta perché il batch di registrazioni richiede l'approvazione."},
+  "Issues Total":{
+    "ITA":"Totale Edizioni"},
+  "Specifies the number of issues that have been found in the document.":{
+    "ITA":"Specifica il numero di problemi rilevati nel documento."},
+  "Issues":{
+    "ITA":"Problemi"},
+  "(+%1 other issues)":{
+    "ITA":"(+%1 altre problematiche)"},
+  "No issues found.":{
+    "ITA":"Nessun problema trovato."},
+  "Refresh":{
+    "ITA":"Aggiornare"},
+  "Comment List":{
+    "ITA":"Elenco dei commenti"}
 }

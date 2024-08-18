@@ -61,16 +61,16 @@ page 50326 "Vehicle Fault Att. Entries"
         {
             group(Category_Process)
             {
-                Caption = 'Process', Comment = 'Generated from the PromotedActionCategories property index 1.';
+Caption = 'Process', Comment = 'Generated from the PromotedActionCategories property index 1.';
 
             }
             group(Category_Category5)
             {
-                Caption = 'Entry', Comment = 'Generated from the PromotedActionCategories property index 4.';
+Caption = 'Entry', Comment = 'Generated from the PromotedActionCategories property index 4.';
             }
             group(Category_Category6)
             {
-                Caption = 'Navigate', Comment = 'Generated from the PromotedActionCategories property index 5.';
+Caption = 'Navigate', Comment = 'Generated from the PromotedActionCategories property index 5.';
             }
         }
     }
