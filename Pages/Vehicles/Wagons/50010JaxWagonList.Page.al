@@ -265,85 +265,91 @@ page 50010 "Wagon List"
             {
                 Caption = 'History';
                 Image = History;
-                group("E&ntries")
+                action("Ledger E&ntries")
                 {
-                    Caption = 'E&ntries';
-                    Image = Entries;
-                    action("Ledger E&ntries")
-                    {
-                        ApplicationArea = Suite;
-                        Caption = 'Ledger E&ntries';
-                        Image = ItemLedger;
-                        RunObject = Page "Wagon Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.")
+                    ApplicationArea = Suite;
+                    Caption = 'Ledger E&ntries';
+                    Image = ItemLedger;
+                    RunObject = Page "Wagon Entries";
+                    RunPageLink = "Wagon No." = field("No.");
+                    RunPageView = sorting("Wagon No.")
                                       order(descending);
-                        Scope = Repeater;
-                        ShortCutKey = 'Ctrl+F7';
-                        ToolTip = 'View the history of transactions that have been posted for the selected record.';
-                    }
-                    action("&Kilometers Entries")
-                    {
-                        ApplicationArea = Suite;
-                        Caption = '&Kilometers Entries';
-                        Image = PhysicalInventoryLedger;
-                        RunObject = Page "Wagon Km Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.");
-                        Scope = Repeater;
-                        ToolTip = '';
-                    }
-                    action("&Review Entries")
-                    {
-                        ApplicationArea = Suite;
-                        Caption = '&Review Entries';
-                        Image = ReservationLedger;
-                        RunObject = Page "Wagon Review Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.", "Date");
-                        ToolTip = '';
-                    }
-                    action("&Status Entries")
-                    {
-                        ApplicationArea = Suite;
-                        Caption = '&Status Entries';
-                        Image = ValueLedger;
-                        RunObject = Page "Wagon Status Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.");
-                        ToolTip = '';
-                    }
-                    action("Review &Plan Entries")
-                    {
-                        ApplicationArea = Suite;
-                        Caption = 'Review &Plan Entries';
-                        Image = ItemTrackingLedger;
-                        RunObject = Page "Wagon Plan Review Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.", "Planned Date");
+                    Scope = Repeater;
+                    ShortCutKey = 'Ctrl+F7';
+                    ToolTip = 'View the history of transactions that have been posted for the selected record.';
+                }
+                action("&Kilometers Entries")
+                {
+                    ApplicationArea = Suite;
+                    Caption = '&Kilometers Entries';
+                    Image = PhysicalInventoryLedger;
+                    RunObject = Page "Wagon Km Entries";
+                    RunPageLink = "Wagon No." = field("No.");
+                    RunPageView = sorting("Wagon No.");
+                    Scope = Repeater;
+                    ToolTip = '';
+                }
+                action("&Review Entries")
+                {
+                    ApplicationArea = Suite;
+                    Caption = '&Review Entries';
+                    Image = ReservationLedger;
+                    RunObject = Page "Wagon Review Entries";
+                    RunPageLink = "Wagon No." = field("No.");
+                    RunPageView = sorting("Wagon No.", "Date");
+                    ToolTip = '';
+                }
+                action("&Status Entries")
+                {
+                    ApplicationArea = Suite;
+                    Caption = '&Status Entries';
+                    Image = ValueLedger;
+                    RunObject = Page "Wagon Status Entries";
+                    RunPageLink = "Wagon No." = field("No.");
+                    RunPageView = sorting("Wagon No.");
+                    ToolTip = '';
+                }
+                action("Review &Plan Entries")
+                {
+                    ApplicationArea = Suite;
+                    Caption = 'Review &Plan Entries';
+                    Image = ItemTrackingLedger;
+                    RunObject = Page "Wagon Plan Review Entries";
+                    RunPageLink = "Wagon No." = field("No.");
+                    RunPageView = sorting("Wagon No.", "Planned Date");
 
-                        ToolTip = '';
-                    }
-                    action("&Prorogation Entries")
-                    {
-                        ApplicationArea = Suite;
-                        Caption = '&Prorogation Entries';
-                        Image = BinLedger;
-                        RunObject = Page "Wagon Prorogation Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.");
-                        ToolTip = '';
-                    }
-                    action("&Approval Entries")
-                    {
-                        ApplicationArea = Suite;
-                        Caption = '&Approval Entries';
-                        Image = BinLedger;
-                        RunObject = Page "Wagon Approval Entries";
-                        RunPageLink = "Wagon No." = field("No.");
-                        RunPageView = sorting("Wagon No.");
-                        ToolTip = '';
-                    }
+                    ToolTip = '';
+                }
+                action("&Prorogation Entries")
+                {
+                    ApplicationArea = Suite;
+                    Caption = '&Prorogation Entries';
+                    Image = BinLedger;
+                    RunObject = Page "Wagon Prorogation Entries";
+                    RunPageLink = "Wagon No." = field("No.");
+                    RunPageView = sorting("Wagon No.");
+                    ToolTip = '';
+                }
+                action("&Approval Entries")
+                {
+                    ApplicationArea = Suite;
+                    Caption = '&Approval Entries';
+                    Image = BinLedger;
+                    RunObject = Page "Wagon Approval Entries";
+                    RunPageLink = "Wagon No." = field("No.");
+                    RunPageView = sorting("Wagon No.");
+                    ToolTip = '';
+                }
+
+                action("&Exclusion Entries")
+                {
+                    ApplicationArea = Suite;
+                    Caption = '&Exclusion Entries';
+                    Image = BinLedger;
+                    RunObject = Page "Wagon Exclusion Entries";
+                    RunPageLink = "Wagon No." = field("No.");
+                    RunPageView = sorting("Wagon No.");
+                    ToolTip = '';
                 }
             }
             group(FaultsDetails)
@@ -709,20 +715,20 @@ page 50010 "Wagon List"
 
             group(Category_Category5)
             {
-Caption = 'History', Comment = 'Generated from the PromotedActionCategories property index 4.';
+                Caption = 'History', Comment = 'Generated from the PromotedActionCategories property index 4.';
             }
             group(Category_Category8)
             {
-Caption = 'Periodic Activities', Comment = 'Generated from the PromotedActionCategories property index 7.';
+                Caption = 'Periodic Activities', Comment = 'Generated from the PromotedActionCategories property index 7.';
             }
             group(Category_Category9)
             {
-Caption = 'Inventory', Comment = 'Generated from the PromotedActionCategories property index 8.';
+                Caption = 'Inventory', Comment = 'Generated from the PromotedActionCategories property index 8.';
 
             }
             group(Category_Report)
             {
-Caption = 'Report', Comment = 'Generated from the PromotedActionCategories property index 2.';
+                Caption = 'Report', Comment = 'Generated from the PromotedActionCategories property index 2.';
             }
         }
     }

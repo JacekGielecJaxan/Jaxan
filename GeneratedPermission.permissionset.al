@@ -371,5 +371,8 @@ permissionset 50000 GeneratedPermission
         page "Workflow Comment Sheet" = X,
         page "Workflow Doc. Check Factbox" = X,
         page "Workflow List" = X,
-        page "Workflow Setup" = X;
+        page "Workflow Setup" = X,
+        tabledata "R/D Vehicle Entry" = RIMD,
+        table "R/D Vehicle Entry" = X,
+        page "R/D Vehicle Entries" = X;
 }

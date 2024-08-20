@@ -265,86 +265,103 @@ page 50310 "Vehicle List"
             {
                 Caption = 'History';
                 Image = History;
-                group("E&ntries")
+                action("Ledger E&ntries")
                 {
-                    Caption = 'E&ntries';
-                    Image = Entries;
-                    action("Ledger E&ntries")
-                    {
-                        ApplicationArea = Suite;
-                        Caption = 'Ledger E&ntries';
-                        Image = ItemLedger;
-                        RunObject = Page "Vehicle Entries";
-                        RunPageLink = "Vehicle No." = field("No.");
-                        RunPageView = sorting("Vehicle No.")
+                    ApplicationArea = Suite;
+                    Caption = 'Ledger E&ntries';
+                    Image = ItemLedger;
+                    RunObject = Page "Vehicle Entries";
+                    RunPageLink = "Vehicle No." = field("No.");
+                    RunPageView = sorting("Vehicle No.")
                                       order(descending);
-                        Scope = Repeater;
-                        ShortCutKey = 'Ctrl+F7';
-                        ToolTip = 'View the history of transactions that have been posted for the selected record.';
-                    }
-                    action("&Kilometers Entries")
-                    {
-                        ApplicationArea = Suite;
-                        Caption = '&Kilometers Entries';
-                        Image = PhysicalInventoryLedger;
-                        RunObject = Page "Vehicle Km Entries";
-                        RunPageLink = "Vehicle No." = field("No.");
-                        RunPageView = sorting("Vehicle No.");
-                        Scope = Repeater;
-                        ToolTip = '';
-                    }
-                    action("&Review Entries")
-                    {
-                        ApplicationArea = Suite;
-                        Caption = '&Review Entries';
-                        Image = ReservationLedger;
-                        RunObject = Page "Vehicle Review Entries";
-                        RunPageLink = "Vehicle No." = field("No.");
-                        RunPageView = sorting("Vehicle No.", "Date");
-                        ToolTip = '';
-                    }
-                    action("&Status Entries")
-                    {
-                        ApplicationArea = Suite;
-                        Caption = '&Status Entries';
-                        Image = ValueLedger;
-                        RunObject = Page "Vehicle Status Entries";
-                        RunPageLink = "Vehicle No." = field("No.");
-                        RunPageView = sorting("Vehicle No.");
-                        ToolTip = '';
-                    }
-                    action("Review &Plan Entries")
-                    {
-                        ApplicationArea = Suite;
-                        Caption = 'Review &Plan Entries';
-                        Image = ItemTrackingLedger;
-                        RunObject = Page "Vehicle Plan Review Entries";
-                        RunPageLink = "Vehicle No." = field("No.");
-                        RunPageView = sorting("Vehicle No.", "Planned Date");
-
-                        ToolTip = '';
-                    }
-                    action("&Prorogation Entries")
-                    {
-                        ApplicationArea = Suite;
-                        Caption = '&Prorogation Entries';
-                        Image = BinLedger;
-                        RunObject = Page "Vehicle Prorogation Entries";
-                        RunPageLink = "Vehicle No." = field("No.");
-                        RunPageView = sorting("Vehicle No.");
-                        ToolTip = '';
-                    }
-                    action("&Approval Entries")
-                    {
-                        ApplicationArea = Suite;
-                        Caption = '&Approval Entries';
-                        Image = BinLedger;
-                        RunObject = Page "Vehicle Approval Entries";
-                        RunPageLink = "Vehicle No." = field("No.");
-                        RunPageView = sorting("Vehicle No.");
-                        ToolTip = '';
-                    }
+                    Scope = Repeater;
+                    ShortCutKey = 'Ctrl+F7';
+                    ToolTip = 'View the history of transactions that have been posted for the selected record.';
                 }
+                action("&Kilometers Entries")
+                {
+                    ApplicationArea = Suite;
+                    Caption = '&Kilometers Entries';
+                    Image = PhysicalInventoryLedger;
+                    RunObject = Page "Vehicle Km Entries";
+                    RunPageLink = "Vehicle No." = field("No.");
+                    RunPageView = sorting("Vehicle No.");
+                    Scope = Repeater;
+                    ToolTip = '';
+                }
+                action("&Review Entries")
+                {
+                    ApplicationArea = Suite;
+                    Caption = '&Review Entries';
+                    Image = ReservationLedger;
+                    RunObject = Page "Vehicle Review Entries";
+                    RunPageLink = "Vehicle No." = field("No.");
+                    RunPageView = sorting("Vehicle No.", "Date");
+                    ToolTip = '';
+                }
+                action("&Status Entries")
+                {
+                    ApplicationArea = Suite;
+                    Caption = '&Status Entries';
+                    Image = ValueLedger;
+                    RunObject = Page "Vehicle Status Entries";
+                    RunPageLink = "Vehicle No." = field("No.");
+                    RunPageView = sorting("Vehicle No.");
+                    ToolTip = '';
+                }
+                action("Review &Plan Entries")
+                {
+                    ApplicationArea = Suite;
+                    Caption = 'Review &Plan Entries';
+                    Image = ItemTrackingLedger;
+                    RunObject = Page "Vehicle Plan Review Entries";
+                    RunPageLink = "Vehicle No." = field("No.");
+                    RunPageView = sorting("Vehicle No.", "Planned Date");
+
+                    ToolTip = '';
+                }
+                action("&Prorogation Entries")
+                {
+                    ApplicationArea = Suite;
+                    Caption = '&Prorogation Entries';
+                    Image = BinLedger;
+                    RunObject = Page "Vehicle Prorogation Entries";
+                    RunPageLink = "Vehicle No." = field("No.");
+                    RunPageView = sorting("Vehicle No.");
+                    ToolTip = '';
+                }
+                action("&Approval Entries")
+                {
+                    ApplicationArea = Suite;
+                    Caption = '&Approval Entries';
+                    Image = BinLedger;
+                    RunObject = Page "Vehicle Approval Entries";
+                    RunPageLink = "Vehicle No." = field("No.");
+                    RunPageView = sorting("Vehicle No.");
+                    ToolTip = '';
+                }
+                action("&R/D Entries")
+                {
+                    ApplicationArea = Suite;
+                    Caption = '&Receipt and Delivery Vehicle Entries';
+                    Image = BinLedger;
+                    RunObject = Page "r/d vehicle entries";
+                    RunPageLink = "Vehicle No." = field("No.");
+                    RunPageView = sorting("Vehicle No.");
+                    ToolTip = '';
+                }
+
+                action("&Exclusion Entries")
+                {
+                    ApplicationArea = Suite;
+                    Caption = '&Exclusion Entries';
+                    Image = BinLedger;
+                    RunObject = Page "Vehicle Exclusion Entries";
+                    RunPageLink = "Vehicle No." = field("No.");
+                    RunPageView = sorting("Vehicle No.");
+                    ToolTip = '';
+                }
+
             }
             group(FaultsDetails)
             {
@@ -709,20 +726,20 @@ page 50310 "Vehicle List"
 
             group(Category_Category5)
             {
-Caption = 'History', Comment = 'Generated from the PromotedActionCategories property index 4.';
+                Caption = 'History', Comment = 'Generated from the PromotedActionCategories property index 4.';
             }
             group(Category_Category8)
             {
-Caption = 'Periodic Activities', Comment = 'Generated from the PromotedActionCategories property index 7.';
+                Caption = 'Periodic Activities', Comment = 'Generated from the PromotedActionCategories property index 7.';
             }
             group(Category_Category9)
             {
-Caption = 'Inventory', Comment = 'Generated from the PromotedActionCategories property index 8.';
+                Caption = 'Inventory', Comment = 'Generated from the PromotedActionCategories property index 8.';
 
             }
             group(Category_Report)
             {
-Caption = 'Report', Comment = 'Generated from the PromotedActionCategories property index 2.';
+                Caption = 'Report', Comment = 'Generated from the PromotedActionCategories property index 2.';
             }
         }
     }
