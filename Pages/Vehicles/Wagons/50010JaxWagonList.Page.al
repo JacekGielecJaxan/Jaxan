@@ -715,20 +715,20 @@ page 50010 "Wagon List"
 
             group(Category_Category5)
             {
-                Caption = 'History', Comment = 'Generated from the PromotedActionCategories property index 4.';
+Caption = 'History', Comment = 'Generated from the PromotedActionCategories property index 4.';
             }
             group(Category_Category8)
             {
-                Caption = 'Periodic Activities', Comment = 'Generated from the PromotedActionCategories property index 7.';
+Caption = 'Periodic Activities', Comment = 'Generated from the PromotedActionCategories property index 7.';
             }
             group(Category_Category9)
             {
-                Caption = 'Inventory', Comment = 'Generated from the PromotedActionCategories property index 8.';
+Caption = 'Inventory', Comment = 'Generated from the PromotedActionCategories property index 8.';
 
             }
             group(Category_Report)
             {
-                Caption = 'Report', Comment = 'Generated from the PromotedActionCategories property index 2.';
+Caption = 'Report', Comment = 'Generated from the PromotedActionCategories property index 2.';
             }
         }
     }
