@@ -18,42 +18,42 @@
         </trans-unit>
         <trans-unit id="Table 906039455 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Name</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Dysponent</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Axle Box Type - Field Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 675937908 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cycle</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Cykl</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Cycle - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 675937908 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Code</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kod</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Cycle - Field Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 675937908 - Field 3304877602 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Formula</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Formuła daty</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Cycle - Field Formula - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 675937908 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Name</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Nazwa</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Cycle - Field Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2860877257 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dispatcher</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Dysponent</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Dispatcher - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2860877257 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Code</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kod</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Dispatcher - Field Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2860877257 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Name</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Nazwa</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Dispatcher - Field Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3726083510 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -98,7 +98,7 @@
         </trans-unit>
         <trans-unit id="Table 495927967 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Status</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Dysponent</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table DSU Configuration Header - Field Status - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1824235448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -208,17 +208,17 @@
         </trans-unit>
         <trans-unit id="Table 2901042955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Institute</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Zakład naprawczy</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Institute - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2901042955 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Code</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kod</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Institute - Field Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2901042955 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Name</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Nazwa</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Institute - Field Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2054066394 - Field 1296262074 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -228,193 +228,193 @@
         </trans-unit>
         <trans-unit id="Table 907207146 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Purchase Contract Header</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Umowy zakupu</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - NamedType 2551427998" size-unit="char" translate="yes" xml:space="preserve">
           <source>Do you want to change %1?</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Czy chcesz zmienić %1?</target>
           <note from="Developer" annotates="general" priority="2">%1 = a Field Caption like Currency Code</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - NamedType ConfirmChangeQst</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
           <source>You cannot rename a %1.</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Nie możesz zmienić nazwy %1.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - NamedType Text003</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - NamedType 3283546407" size-unit="char" translate="yes" xml:space="preserve">
           <source>Confirm change?</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Potwierdzić zmianę?</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - NamedType Text008</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - NamedType 3699446230" size-unit="char" translate="yes" xml:space="preserve">
           <source>You cannot change the %1 when the %2 has been filled in.</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Nie możesz zmienić %1 w momencie gdy %2 została wypełniona.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - NamedType Text034</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Ilość</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Amount - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 3543129988 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Blocked</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Blokada</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Blocked - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 2790486453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Comment</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Komentarz</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Comment - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 329745299 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contact 1</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kontakt 1</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Contact 1 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 2242835150 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contact 2</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kontakt 2</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Contact 2 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 1605138533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contact 3</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kontakt 3</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Contact 3 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 2711622744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contact 4</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kontakt 4</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Contact 4 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 354138342 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contact Tel. 1</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kontakt tel. 1</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Contact Tel. 1 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 2736015787 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contact Tel. 2</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kontakt tel. 2</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Contact Tel. 2 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 3373712404 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contact Tel. 3</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kontakt tel. 3</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Contact Tel. 3 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 1460622553 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contact Tel. 4</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kontakt tel. 4</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Contact Tel. 4 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 2796685584 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contract Description</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Opis umowy</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Contract Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 693076570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contract Subject</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Przedmiot umowy</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Contract Subject - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 3178647430 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contract Type</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Rodzaj umowy</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Contract Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 4198939294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Currency Code</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kod waluty</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Currency Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 580412389 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Document Date</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Data dokumentu</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Document Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 4085727052 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Due Date</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Termin ważności</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Due Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 915548286 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>External No.</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Numer zewnętrzny</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field External No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 2273653569 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Language Code</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kod języka</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Language Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 2393253273 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Last Date Modified</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Data ostatniej modyfikacji</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Last Date Modified - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No.</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Nr</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 1351594800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No. Series</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Nr serii</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field No. Series - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 304272296 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Prices Including VAT</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kwota z VAT</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Prices Including VAT - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 2247850105 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Responsibility Center</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Centrum odpowiedzialności</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Responsibility Center - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Status</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Status</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Status - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 617267791 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>VAT Registration No.</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Nr rejestracji VAT</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field VAT Registration No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 2713482502 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Vendor Address</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Adres dostawcy</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Vendor Address - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 76576788 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Vendor Address 2</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Adres dostawcy 2</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Vendor Address 2 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 3098961253 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Vendor City</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Miasto dostawcy</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Vendor City - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 3119688693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Vendor Name</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Nazwa dostawcy</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Vendor Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 1319178771 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Vendor Name 2</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Nazwa dostawcy 2</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Vendor Name 2 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 1527594213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Vendor No.</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Numer dostawcy</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Vendor No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 907207146 - Field 3559847907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Vendor Post Code</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kod pocztowy dostawcy</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Purchase Contract Header - Field Vendor Post Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1900113838 - Field 1296262074 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -469,22 +469,22 @@
         </trans-unit>
         <trans-unit id="Table 2866414926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Station</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Stacje</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Station - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2866414926 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Code</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kod</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Station - Field Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2866414926 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Name</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Nazwa</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Station - Field Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2866414926 - Field 3991889156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Track Mandatory</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Obowiązkowy tor </target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Station - Field Track Mandatory - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1209972229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1364,32 +1364,32 @@
         </trans-unit>
         <trans-unit id="Table 3026365729 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Track</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Tor</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Track - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3026365729 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Code</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kod</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Track - Field Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3026365729 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Name</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Nazwa</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Track - Field Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3026365729 - Field 3123527090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Info</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Informacje</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Track - Field Info - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3026365729 - Field 1881551368 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Length</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Długość</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Track - Field Length - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3026365729 - Field 505039721 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Station Code</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Numer stacji</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Track - Field Station Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1558553364 - Field 1296262074 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2004,27 +2004,27 @@
         </trans-unit>
         <trans-unit id="Table 954550773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Institute</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Wagony ECM</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Wagon ECM - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 954550773 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Code</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Kod</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Wagon ECM - Field Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 954550773 - Field 2698019052 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>In Group</source>
-          <target state="needs-translation"></target>
+          <target state="translated">W grupie</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Wagon ECM - Field In Group - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 954550773 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Name</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Nazwa</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Wagon ECM - Field Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 954550773 - Field 1527594213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Vendor No.</source>
-          <target state="needs-translation"></target>
+          <target state="translated">Numer dostawcy</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Wagon ECM - Field Vendor No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 379910266 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">

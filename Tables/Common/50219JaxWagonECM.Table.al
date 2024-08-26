@@ -3,7 +3,7 @@
 /// </summary>
 table 50219 "Wagon ECM"
 {
-    Caption = 'Institute';
+    Caption = 'Wagon ECM';
     DataCaptionFields = "Code", Name;
     DrillDownPageID = "Wagon ECM List";
     LookupPageID = "Wagon ECM List";
