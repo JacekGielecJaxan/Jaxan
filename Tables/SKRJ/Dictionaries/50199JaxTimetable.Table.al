@@ -1,3 +1,6 @@
+/// <summary>
+/// Rozklady jazdy
+/// </summary>
 table 50199 Timetable
 {
     Caption = 'Timetable';

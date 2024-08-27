@@ -1,3 +1,6 @@
+/// <summary>
+/// Obiekty SKRJ (stacje)
+/// </summary>
 table 50210 "SKRJ Object"
 {
     Caption = 'SKRJ Object';
