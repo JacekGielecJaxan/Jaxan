@@ -1,7 +1,6 @@
 gantt.config.date_format = "%Y-%m-%d %H:%i";
 gantt.init("controlAddIn");
 
-
 gantt.attachEvent("onBeforeLightbox", function(id) {
   return false;
 });
@@ -19,13 +18,14 @@ function getRandomColor() {
 gantt.attachEvent("onTaskDblClick", function(id,e){
   var timelineClick = gantt.utils.dom.closest(e.target, ".gantt_task_line");
   if (timelineClick) {
-    Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("TaskClicked",[]);
+    Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("TaskClicked",[id]);
     //var task = gantt.getTask(id);
     //task.color = getRandomColor()
     //gantt.updateTask(id)
   }
   return true;
 });
+
 /* 
 gantt.parse({
    data: [

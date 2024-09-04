@@ -7,7 +7,8 @@ controladdin graph
     HorizontalStretch = true;
 
     event ControlReady();
-    event TaskClicked();
+    event TaskClicked(TaskId: Integer);
 
     procedure Load(Data: JsonObject);
+    procedure SaveChanges(Task: JsonObject);
 }

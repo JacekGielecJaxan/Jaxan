@@ -20,9 +20,31 @@ page 50699 "Planning"
                     CurrPage.Graph.Load(JobAsJson(Rec));
                 end;
 
-                trigger TaskClicked()
+                trigger TaskClicked(TaskId: Integer)
+                var
+                    JobCard: Record Job;
                 begin
-                    page.Run(89); //Odpala formularz z wahadłami
+                    //CurrPage.Graph.SaveChanges(1);
+
+                    IF JobCard.FindSet() then begin
+                        JobCard.Next(TaskId - 1);
+                        PAGE.RunModal(Page::"Job Card", JobCard);
+                        CurrPage.Graph.Load(JobAsJson(Rec)); //DODAĆ TUTAJ LEPSZE ZAPISYWANIE GANTTA
+                    end;
+
+
+
+                    //JobPage.Run();
+
+                    //Page.Run(89);
+                    /*
+                    JobCard.SetCurrentKey("No.");
+                    JobCard.SetRange("No.", Rec."No.");
+                    JobPage.SetTableView(JobCard);
+                    JobPage.Run();
+                    */
+                    //page.Run(Page::"Job Card", JobCard); //Odpala formularz z wahadłami
+
                 end;
             }
         }
