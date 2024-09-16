@@ -12,7 +12,8 @@
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger":true,
             "longRunningSqlStatementsThreshold":500,
-            "schemaUpdateMode":"ForceSync"
+            "schemaUpdateMode":"ForceSync",
+            "startupObjectId": 50699
         }
     ]
 }
