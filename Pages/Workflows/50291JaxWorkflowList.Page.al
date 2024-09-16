@@ -6,6 +6,12 @@ page 50291 "Workflow List"
     PageType = List;
     SourceTable = "Workflow Header";
 
+    ApplicationArea = Basic, Suite;
+    CardPageID = "Workflow Card";
+    UsageCategory = Lists;
+
+    AboutTitle = 'About Vehicles';
+
     layout
     {
         area(content)
@@ -17,6 +23,14 @@ page 50291 "Workflow List"
                 {
                     ApplicationArea = Basic, Suite;
                     //ToolTip = 'Specifies the number of the involved entry or record, according to the specified number series.';
+                }
+                field("Kind of Document"; rec."Kind of Document")
+                {
+                    ApplicationArea = basic, suite;
+                }
+                field(Important; rec.Important)
+                {
+                    ApplicationArea = all;
                 }
                 field("Buy-from Vendor No."; Rec."Buy-from Vendor No.")
                 {
@@ -32,7 +46,10 @@ page 50291 "Workflow List"
                 {
                     ApplicationArea = Basic, Suite;
                     ToolTip = 'Specifies the name of the contact person at the vendor who delivered the items.';
-                    Visible = false;
+                }
+                field(Description; rec.Description)
+                {
+                    ApplicationArea = basic, suite;
                 }
                 field("Assigned User ID"; Rec."Assigned User ID")
                 {

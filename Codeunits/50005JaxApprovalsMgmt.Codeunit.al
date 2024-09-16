@@ -15,10 +15,10 @@ codeunit 50005 "Jax Approvals Mgmt."
         WorkflowEventHandling: Codeunit "Jax Workflow Event Handling";
         WorkflowManagement: Codeunit "Workflow Management";
 
-UserIdNotInSetupErr: Label 'User ID %1 does not exist in the Approval User Setup window.', Comment = 'User ID NAVUser does not exist in the Approval User Setup window.';
-ApproverUserIdNotInSetupErr: Label 'You must set up an approver for user ID %1 in the Approval User Setup window.', Comment = 'You must set up an approver for user ID NAVUser in the Approval User Setup window.';
-WFUserGroupNotInSetupErr: Label 'The workflow user group member with user ID %1 does not exist in the Approval User Setup window.', Comment = 'The workflow user group member with user ID NAVUser does not exist in the Approval User Setup window.';
-SubstituteNotFoundErr: Label 'There is no substitute, direct approver, or approval administrator for user ID %1 in the Approval User Setup window.', Comment = 'There is no substitute for user ID NAVUser in the Approval User Setup window.';
+        UserIdNotInSetupErr: Label 'User ID %1 does not exist in the Approval User Setup window.', Comment = 'User ID NAVUser does not exist in the Approval User Setup window.';
+        ApproverUserIdNotInSetupErr: Label 'You must set up an approver for user ID %1 in the Approval User Setup window.', Comment = 'You must set up an approver for user ID NAVUser in the Approval User Setup window.';
+        WFUserGroupNotInSetupErr: Label 'The workflow user group member with user ID %1 does not exist in the Approval User Setup window.', Comment = 'The workflow user group member with user ID NAVUser does not exist in the Approval User Setup window.';
+        SubstituteNotFoundErr: Label 'There is no substitute, direct approver, or approval administrator for user ID %1 in the Approval User Setup window.', Comment = 'There is no substitute for user ID NAVUser in the Approval User Setup window.';
         NoSuitableApproverFoundErr: Label 'No qualified approver was found.';
         DelegateOnlyOpenRequestsErr: Label 'You can only delegate open approval requests.';
         ApproveOnlyOpenRequestsErr: Label 'You can only approve open approval requests.';
@@ -28,27 +28,27 @@ SubstituteNotFoundErr: Label 'There is no substitute, direct approver, or approv
         NoReqToRejectErr: Label 'There is no approval request to reject.';
         NoReqToDelegateErr: Label 'There is no approval request to delegate.';
         PendingApprovalMsg: Label 'An approval request has been sent.';
-PurchaserUserNotFoundErr: Label 'The salesperson/purchaser user ID %1 does not exist in the Approval User Setup window for %2 %3.', Comment = 'Example: The salesperson/purchaser user ID NAVUser does not exist in the Approval User Setup window for Salesperson/Purchaser code AB.';
+        PurchaserUserNotFoundErr: Label 'The salesperson/purchaser user ID %1 does not exist in the Approval User Setup window for %2 %3.', Comment = 'Example: The salesperson/purchaser user ID NAVUser does not exist in the Approval User Setup window for Salesperson/Purchaser code AB.';
         NoApprovalRequestsFoundErr: Label 'No approval requests exist.';
         NoWFUserGroupMembersErr: Label 'A workflow user group with at least one member must be set up.';
-DocStatusChangedMsg: Label '%1 %2 has been automatically approved. The status has been changed to %3.', Comment = 'Order 1001 has been automatically approved. The status has been changed to Released.';
-UnsupportedRecordTypeErr: Label 'Record type %1 is not supported by this workflow response.', Comment = 'Record type Customer is not supported by this workflow response.';
-SalesPrePostCheckErr: Label 'Sales %1 %2 must be approved and released before you can perform this action.', Comment = '%1=document type, %2=document no., e.g. Sales Order 321 must be approved...';
-PurchPrePostCheckErr: Label 'Purchase %1 %2 must be approved and released before you can perform this action.', Comment = '%1=document type, %2=document no., e.g. Purchase Order 321 must be approved...';
+        DocStatusChangedMsg: Label '%1 %2 has been automatically approved. The status has been changed to %3.', Comment = 'Order 1001 has been automatically approved. The status has been changed to Released.';
+        UnsupportedRecordTypeErr: Label 'Record type %1 is not supported by this workflow response.', Comment = 'Record type Customer is not supported by this workflow response.';
+        SalesPrePostCheckErr: Label 'Sales %1 %2 must be approved and released before you can perform this action.', Comment = '%1=document type, %2=document no., e.g. Sales Order 321 must be approved...';
+        PurchPrePostCheckErr: Label 'Purchase %1 %2 must be approved and released before you can perform this action.', Comment = '%1=document type, %2=document no., e.g. Purchase Order 321 must be approved...';
         NoWorkflowEnabledErr: Label 'No approval workflow for this record type is enabled.';
         ApprovalReqCanceledForSelectedLinesMsg: Label 'The approval request for the selected record has been canceled.';
-PendingJournalBatchApprovalExistsErr: Label 'An approval request already exists.', Comment = '%1 is the Document No. of the journal line';
+        PendingJournalBatchApprovalExistsErr: Label 'An approval request already exists.', Comment = '%1 is the Document No. of the journal line';
         ApprovedJournalBatchApprovalExistsMsg: Label 'An approval request for this batch has already been sent and approved. Do you want to send another approval request?';
-ApporvalChainIsUnsupportedMsg: Label 'Only Direct Approver is supported as Approver Limit Type option for %1. The approval request will be approved automatically.', Comment = 'Only Direct Approver is supported as Approver Limit Type option for Gen. Journal Batch DEFAULT, CASH. The approval request will be approved automatically.';
-RecHasBeenApprovedMsg: Label '%1 has been approved.', Comment = '%1 = Record Id';
+        ApporvalChainIsUnsupportedMsg: Label 'Only Direct Approver is supported as Approver Limit Type option for %1. The approval request will be approved automatically.', Comment = 'Only Direct Approver is supported as Approver Limit Type option for Gen. Journal Batch DEFAULT, CASH. The approval request will be approved automatically.';
+        RecHasBeenApprovedMsg: Label '%1 has been approved.', Comment = '%1 = Record Id';
         NoPermissionToDelegateErr: Label 'You do not have permission to delegate one or more of the selected approval requests.';
         NothingToApproveErr: Label 'There is nothing to approve.';
         ApproverChainErr: Label 'No sufficient approver was found in the approver chain.';
-PreventModifyRecordWithOpenApprovalEntryMsg: Label 'You can''t modify a record pending approval. Add a comment or reject the approval to modify the record.';
-PreventInsertRecordWithOpenApprovalEntryForCurrUserMsg: Label 'You can''t insert a record for active batch approval request. To insert a record, you can Reject approval and document requested changes in approval comment lines.';
+        PreventModifyRecordWithOpenApprovalEntryMsg: Label 'You can''t modify a record pending approval. Add a comment or reject the approval to modify the record.';
+        PreventInsertRecordWithOpenApprovalEntryForCurrUserMsg: Label 'You can''t insert a record for active batch approval request. To insert a record, you can Reject approval and document requested changes in approval comment lines.';
         PreventInsertRecordWithOpenApprovalEntryMsg: Label 'You can''t insert a record that has active approval request. Do you want to cancel the batch approval request first?';
         PreventDeleteRecordWithOpenApprovalEntryMsg: Label 'You can''t delete a record that has open approval entries. Do you want to cancel the approval request first?';
-PreventDeleteRecordWithOpenApprovalEntryForCurrUserMsg: Label 'You can''t delete a record that has open approval entries. To delete a record, you can Reject approval and document requested changes in approval comment lines.';
+        PreventDeleteRecordWithOpenApprovalEntryForCurrUserMsg: Label 'You can''t delete a record that has open approval entries. To delete a record, you can Reject approval and document requested changes in approval comment lines.';
         PreventDeleteRecordWithOpenApprovalEntryForSenderMsg: Label 'You can''t delete a record that has open approval entries. To delete a record, you need to Cancel approval request first.';
         ImposedRestrictionLbl: Label 'Imposed restriction';
         PendingApprovalLbl: Label 'Pending Approval';
@@ -350,10 +350,7 @@ PreventDeleteRecordWithOpenApprovalEntryForCurrUserMsg: Label 'You can''t delete
             exit(Result);
 
         if not IsWorkflowApprovalsWorkflowEnabled(WorkflowHeader) then
-            Error(NoWorkflowEnabledErr);
-
-
-        OnAfterCheckWorkflowApprovalPossible(WorkflowHeader);
+            OnAfterCheckWorkflowApprovalPossible(WorkflowHeader);
 
         exit(true);
     end;

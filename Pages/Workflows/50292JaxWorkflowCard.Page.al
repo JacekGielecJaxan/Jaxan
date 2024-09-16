@@ -1,9 +1,10 @@
 page 50292 "Workflow Card"
 {
     Caption = 'Workflow Card';
-    PageType = Document;
+    PageType = Card;
     RefreshOnActivate = true;
     SourceTable = "Workflow Header";
+    ApplicationArea = Basic, Suite;
     //AdditionalSearchTerms = 'Vendor Invoice, Procurement Invoice, Vendor Bill, Purchase Bill, Supplier Invoice, Acquisition Bill, Buying Invoice, Supplier Bill, Invoice Purchase, Merchant Invoice, Trade Invoice';
 
     layout
@@ -25,6 +26,14 @@ page 50292 "Workflow Card"
                         if Rec.AssistEdit(xRec) then
                             CurrPage.Update();
                     end;
+                }
+                field("Kind of Document"; rec."Kind of Document")
+                {
+                    ApplicationArea = all;
+                }
+                field(Important; rec.Important)
+                {
+                    ApplicationArea = all;
                 }
                 field("Buy-from Vendor No."; Rec."Buy-from Vendor No.")
                 {
@@ -341,7 +350,7 @@ page 50292 "Workflow Card"
                     RunPageLink = "Document Type" = field("Document Type"),
                                   "No." = field("No."),
                                   "Document Line No." = const(0);
-ToolTip = 'View or add comments for the record.';
+                    ToolTip = 'View or add comments for the record.';
                 }
                 action(DocAttach)
                 {
@@ -415,9 +424,9 @@ ToolTip = 'View or add comments for the record.';
                 action(Comment)
                 {
                     ApplicationArea = All;
-Caption = 'Comments';
+                    Caption = 'Comments';
                     Image = ViewComments;
-ToolTip = 'View or add comments for the record.';
+                    ToolTip = 'View or add comments for the record.';
                     Visible = OpenApprovalEntriesExistForCurrUser;
 
                     trigger OnAction()
@@ -525,11 +534,11 @@ ToolTip = 'View or add comments for the record.';
         {
             group(Category_Process)
             {
-Caption = 'Process', Comment = 'Generated from the PromotedActionCategories property index 1.';
+                Caption = 'Process', Comment = 'Generated from the PromotedActionCategories property index 1.';
 
                 group(Category_Category10)
                 {
-Caption = 'Release', Comment = 'Generated from the PromotedActionCategories property index 9.';
+                    Caption = 'Release', Comment = 'Generated from the PromotedActionCategories property index 9.';
                     ShowAs = SplitButton;
 
                     actionref("Re&lease_Promoted"; "Re&lease")
@@ -542,7 +551,7 @@ Caption = 'Release', Comment = 'Generated from the PromotedActionCategories prop
             }
             group(Category_Category4)
             {
-Caption = 'Approve', Comment = 'Generated from the PromotedActionCategories property index 3.';
+                Caption = 'Approve', Comment = 'Generated from the PromotedActionCategories property index 3.';
 
                 actionref(Approve_Promoted; Approve)
                 {
@@ -559,7 +568,7 @@ Caption = 'Approve', Comment = 'Generated from the PromotedActionCategories prop
             }
             group(Category_Category8)
             {
-Caption = 'Request Approval', Comment = 'Generated from the PromotedActionCategories property index 7.';
+                Caption = 'Request Approval', Comment = 'Generated from the PromotedActionCategories property index 7.';
 
                 actionref(SendApprovalRequest_Promoted; SendApprovalRequest)
                 {
@@ -570,7 +579,7 @@ Caption = 'Request Approval', Comment = 'Generated from the PromotedActionCatego
             }
             group(Category_Category5)
             {
-Caption = 'Invoice', Comment = 'Generated from the PromotedActionCategories property index 4.';
+                Caption = 'Invoice', Comment = 'Generated from the PromotedActionCategories property index 4.';
 
                 actionref("Co&mments_Promoted"; "Co&mments")
                 {
@@ -590,11 +599,11 @@ Caption = 'Invoice', Comment = 'Generated from the PromotedActionCategories prop
             }
             group(Category_Category7)
             {
-Caption = 'View', Comment = 'Generated from the PromotedActionCategories property index 6.';
+                Caption = 'View', Comment = 'Generated from the PromotedActionCategories property index 6.';
             }
             group(Category_Report)
             {
-Caption = 'Report', Comment = 'Generated from the PromotedActionCategories property index 2.';
+                Caption = 'Report', Comment = 'Generated from the PromotedActionCategories property index 2.';
             }
         }
     }
