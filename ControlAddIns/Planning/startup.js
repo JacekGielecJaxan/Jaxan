@@ -15,15 +15,25 @@ function getRandomColor() {
   return color;
 }
 
-gantt.attachEvent("onTaskDblClick", function(id,e){
+gantt.attachEvent("onTaskDblClick", function(id, e){
   var timelineClick = gantt.utils.dom.closest(e.target, ".gantt_task_line");
   if (timelineClick) {
+    var parent = gantt.getParent(id);
+    if (parent == 0){
     Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("TaskClicked",[id]);
+    } else
+    Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("TaskClicked",[parent]);
     //var task = gantt.getTask(id);
     //task.color = getRandomColor()
     //gantt.updateTask(id)
   }
   return true;
+});
+
+gantt.attachEvent("onAfterTaskDrag", function(id){
+  var task = gantt.getTask(id);
+  Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("TaskDragged",[task, id]);
+  //alert(task.text);
 });
 
 /* 
