@@ -7453,6 +7453,11 @@
           <target state="translated">Kwota z VAT</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Header - Field Amount Including VAT - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 813405560 - Field 2699477970 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount Zero</source>
+          <target state="translated">Kwota zero</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Header - Field Amount Zero - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 813405560 - Field 3294270728 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Assigned User ID</source>
           <target state="translated">Przypisany identyfikator użytkownika</target>
@@ -7502,6 +7507,11 @@
           <source>Comment</source>
           <target state="translated">Komentarz</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Header - Field Comment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 813405560 - Field 1658344021 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comment Exists</source>
+          <target state="translated">Komenatrz istnieje</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Header - Field Comment Exists - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 813405560 - Field 4198939294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Currency Code</source>
@@ -7613,15 +7623,30 @@
           <target state="translated">Obieg - Rodzaj dokumentu</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Kind of Document - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2335627655 - Field 4010099213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount Mandatory</source>
+          <target state="translated">Obowiązkowa kwota</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Kind of Document - Field Amount Mandatory - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2335627655 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Code</source>
           <target state="translated">Identyfikator</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Kind of Document - Field Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2335627655 - Field 773224785 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contractor No. Mandatory</source>
+          <target state="translated">Obowiązkowy nr wykonawcy</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Kind of Document - Field Contractor No. Mandatory - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2335627655 - Field 2173647922 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
           <target state="translated">Opis</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Kind of Document - Field Descripiton - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2335627655 - Field 1042634940 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ext. Document No. Mandatory</source>
+          <target state="translated">Obowiązkowy nr zewnętrznego dokumentu</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Kind of Document - Field Ext. Document No. Mandatory - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2335627655 - Field 3749788842 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Important</source>
@@ -7633,10 +7658,20 @@
           <target state="translated">Ustawienia obiegu dokumentów</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Setup - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3807047648 - Field 2166259579 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description Mandatory</source>
+          <target state="translated">Obowiązkowy opis</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Setup - Field Description Mandatory - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3807047648 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Primary Key</source>
           <target state="translated">Klucz główny</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3807047648 - Field 1871240040 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Responsibility Center Mandatory</source>
+          <target state="translated">Obowiązkowe centrum odpowiedzialności</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Setup - Field Respons. Center Mandatory - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3807047648 - Field 1885118153 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Workflow Nos.</source>
@@ -14296,35 +14331,15 @@
           <target state="translated">Faktura nie może zostać zaksięgowana, ponieważ suma różni się od sumy na powiązanym dokumencie przychodzącym.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - NamedType TotalsMismatchErr</note>
         </trans-unit>
-        <trans-unit id="Page 3081673281 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>General</source>
-          <target state="translated">Ogólne</target>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control General - Property Caption</note>
+        <trans-unit id="Page 3081673281 - Control 3390995943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contractor Details</source>
+          <target state="translated">Szczegóły wykonawcy</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Contractor Details - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3081673281 - Control 3294270728 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the ID of the user who is responsible for the document.</source>
-          <target state="translated">Określa identyfikator użytkownika odpowiedzialnego za dokument.</target>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Assigned User ID - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3081673281 - Control 2791880759 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Buy-from</source>
-          <target state="translated">Zakup</target>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Buy-from - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3081673281 - Control 4003957413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Address</source>
-          <target state="translated">Adres</target>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Buy-from Address - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3081673281 - Control 1455637603 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Address 2</source>
-          <target state="translated">Adres 2</target>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Buy-from Address 2 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3081673281 - Control 3425279406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>City</source>
-          <target state="translated">Miasto</target>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Buy-from City - Property Caption</note>
+        <trans-unit id="Page 3081673281 - Control 1750733095 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contact</source>
+          <target state="translated">Kontakt</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Buy-from Contact - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3081673281 - Control 3794489734 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contact No.</source>
@@ -14346,10 +14361,20 @@
           <target state="translated">Nr telefonu</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control BuyFromContactPhoneNo - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3081673281 - Control 1750733095 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Contact</source>
-          <target state="translated">Kontakt</target>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Buy-from Contact - Property Caption</note>
+        <trans-unit id="Page 3081673281 - Control 4003957413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Address</source>
+          <target state="translated">Adres</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Buy-from Address - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3081673281 - Control 1455637603 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Address 2</source>
+          <target state="translated">Adres 2</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Buy-from Address 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3081673281 - Control 3425279406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>City</source>
+          <target state="translated">Miasto</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Buy-from City - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3081673281 - Control 3230600482 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Vendor Name</source>
@@ -14361,10 +14386,40 @@
           <target state="translated">Nr dostawcy</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Buy-from Vendor No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3081673281 - Control 4198939294 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the currency code for amounts on the purchase lines.</source>
+          <target state="translated">Określa kod waluty dla kwot w wierszach zakupu.</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Currency Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3081673281 - Control 3855271124 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how to make payment, such as with bank transfer, cash, or check.</source>
+          <target state="translated">Określa sposób dokonania płatności, np. przelewem bankowym, gotówką lub czekiem.</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Payment Method Code - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3081673281 - Control 4085727052 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies when the invoice is due. The program calculates the date using the Payment Terms Code and Document Date fields.</source>
           <target state="translated">Określa termin płatności faktury. Program oblicza datę na podstawie pól Kod warunków płatności i Data dokumentu.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Due Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3081673281 - Control 926489874 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that the related entry represents an unpaid invoice for which either a payment suggestion, a reminder, or a finance charge memo exists.</source>
+          <target state="translated">Określa, że powiązany wpis reprezentuje niezapłaconą fakturę, dla której istnieje sugestia płatności, przypomnienie lub nota obciążeniowa.</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control On Hold - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3081673281 - Control 1908046867 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the reason code, a supplementary source code that enables you to trace the document.</source>
+          <target state="translated">Określa kod przyczyny, dodatkowy kod źródłowy umożliwiający śledzenie dokumentu.</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Reason Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3081673281 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target state="translated">Ogólne</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3081673281 - Control 3294270728 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the ID of the user who is responsible for the document.</source>
+          <target state="translated">Określa identyfikator użytkownika odpowiedzialnego za dokument.</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Assigned User ID - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3081673281 - Control 2247850105 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the code of the responsibility center, such as a distribution hub, that is associated with the involved user, company, customer, or vendor.</source>
@@ -14375,31 +14430,6 @@
           <source>Specifies whether the record is open, waiting to be approved, invoiced for prepayment, or released to the next stage of processing.</source>
           <target state="translated">Określa, czy rekord jest otwarty, oczekuje na zatwierdzenie, zafakturowanie przedpłaty lub zwolnienie do następnego etapu przetwarzania.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Status - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3081673281 - Control 712518885 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Invoice Details</source>
-          <target state="translated">Szczegóły faktury</target>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Invoice Details - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3081673281 - Control 4198939294 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the currency code for amounts on the purchase lines.</source>
-          <target state="translated">Określa kod waluty dla kwot w wierszach zakupu.</target>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Currency Code - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3081673281 - Control 926489874 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies that the related entry represents an unpaid invoice for which either a payment suggestion, a reminder, or a finance charge memo exists.</source>
-          <target state="translated">Określa, że powiązany wpis reprezentuje niezapłaconą fakturę, dla której istnieje sugestia płatności, przypomnienie lub nota obciążeniowa.</target>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control On Hold - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3081673281 - Control 3855271124 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies how to make payment, such as with bank transfer, cash, or check.</source>
-          <target state="translated">Określa sposób dokonania płatności, np. przelewem bankowym, gotówką lub czekiem.</target>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Payment Method Code - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3081673281 - Control 1908046867 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the reason code, a supplementary source code that enables you to trace the document.</source>
-          <target state="translated">Określa kod przyczyny, dodatkowy kod źródłowy umożliwiający śledzenie dokumentu.</target>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Reason Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3081673281 - Control 1658766258 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Attachments</source>
