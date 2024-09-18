@@ -17,6 +17,15 @@ page 50290 "Workflow Setup"
             {
                 Caption = 'General';
 
+                field("Respons. Center Mandatory"; rec."Respons. Center Mandatory")
+                {
+                    ApplicationArea = basic, suite;
+                }
+                field("Description Mandatory"; rec."Description Mandatory")
+                {
+                    ApplicationArea = basic, suite;
+                }
+
             }
             group("Number Series")
             {

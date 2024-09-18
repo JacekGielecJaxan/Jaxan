@@ -63,6 +63,14 @@ table 50291 "Workflow Header"
         {
             Caption = 'Kind of Document';
             TableRelation = "Workflow Kind of Document";
+
+            trigger OnValidate()
+            var
+                kindofdocument: Record "Workflow Kind of Document";
+            begin
+                if kindofdocument.Get("Kind of Document") then
+                    Important := kindofdocument.Important;
+            end;
         }
         field(6; Important; Boolean)
         {
@@ -103,17 +111,49 @@ table 50291 "Workflow Header"
         {
             Caption = 'On Hold';
         }
+        field(52; "Comment Exists"; Boolean)
+        {
+            Caption = 'Comment Exists';
+            FieldClass = FlowField;
+            CalcFormula = Exist("Workflow Comment Line" where("No." = field("No.")));
+
+        }
+        //Kwota zero
+        field(59; "Amount Zero"; Boolean)
+        {
+            Caption = 'Amount Zero';
+
+            trigger OnValidate()
+            begin
+                if "Amount Zero" then begin
+                    Amount := 0;
+                    "Amount Including VAT" := 0;
+                end;
+            end;
+        }
         field(60; Amount; Decimal)
         {
             AutoFormatExpression = Rec."Currency Code";
             AutoFormatType = 1;
             Caption = 'Amount';
+
+            trigger OnValidate()
+            begin
+                if Amount <> 0 then
+                    "Amount Zero" := false;
+            end;
         }
         field(61; "Amount Including VAT"; Decimal)
         {
             AutoFormatExpression = Rec."Currency Code";
             AutoFormatType = 1;
             Caption = 'Amount Including VAT';
+
+            trigger OnValidate()
+            begin
+                if "Amount Including VAT" <> 0 then
+                    "Amount Zero" := false;
+            end;
         }
         field(68; "Vendor Document No."; Code[35])
         {
@@ -350,7 +390,7 @@ table 50291 "Workflow Header"
         if IsHandled then
             exit;
 
-
+        InitInsert();
     end;
 
     trigger OnRename()
@@ -454,7 +494,7 @@ table 50291 "Workflow Header"
                 "No." := NoSeries.GetNextNo("No. Series", workdate());
                 WorkflowHeader2.ReadIsolation(IsolationLevel::ReadUncommitted);
                 WorkflowHeader2.SetLoadFields("No.");
-                while WorkflowHeader2.Get("Document Type", "No.") do
+                while WorkflowHeader2.Get("No.") do
                     "No." := NoSeries.GetNextNo("No. Series", workdate());
             end;
 

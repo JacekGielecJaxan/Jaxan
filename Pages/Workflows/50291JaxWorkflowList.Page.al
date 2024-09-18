@@ -46,6 +46,7 @@ page 50291 "Workflow List"
                 {
                     ApplicationArea = Basic, Suite;
                     ToolTip = 'Specifies the name of the contact person at the vendor who delivered the items.';
+                    Visible = false;
                 }
                 field(Description; rec.Description)
                 {
@@ -61,6 +62,18 @@ page 50291 "Workflow List"
                     ApplicationArea = Basic, Suite;
                     ToolTip = 'Specifies the code of the currency of the amounts on the purchase lines.';
                     Visible = false;
+                }
+                field("Amount Including VAT"; rec."Amount Including VAT")
+                {
+                    ApplicationArea = basic, suite;
+                }
+                field("Due Date"; rec."Due Date")
+                {
+                    ApplicationArea = basic, suite;
+                }
+                field("Comment Exists"; rec."Comment Exists")
+                {
+                    ApplicationArea = suite;
                 }
             }
         }

@@ -35,65 +35,56 @@ page 50292 "Workflow Card"
                 {
                     ApplicationArea = all;
                 }
-                field("Buy-from Vendor No."; Rec."Buy-from Vendor No.")
+
+                field("Receipt Date"; Rec."Receipt Date")
                 {
-                    ApplicationArea = All;
-                    Caption = 'Vendor No.';
+                    ApplicationArea = Basic, Suite;
                     Importance = Additional;
-                    NotBlank = true;
-                    //ToolTip = 'Specifies the number of the vendor who delivers the products.';
-
-                    trigger OnValidate()
-                    begin
-                        CurrPage.Update();
-                    end;
+                    //ToolTip = 'Specifies the date when the related document was received.';
                 }
-                field("Buy-from Vendor Name"; Rec."Buy-from Vendor Name")
-                {
-                    ApplicationArea = All;
-                    Caption = 'Vendor Name';
-                    Importance = Promoted;
-                    ShowMandatory = true;
-                    //ToolTip = 'Specifies the name of the vendor who delivers the products.';
 
-                    trigger OnValidate()
-                    begin
-
-                        CurrPage.Update();
-                    end;
-
-                    trigger OnLookup(var Text: Text): Boolean
-                    begin
-                        exit(Rec.LookupBuyFromVendorName(Text));
-                    end;
-                }
                 group("Buy-from")
                 {
-                    Caption = 'Buy-from';
-                    field("Buy-from Address"; Rec."Buy-from Address")
+                    ShowCaption = false;
+                    field("Responsibility Center"; Rec."Responsibility Center")
+                    {
+                        ApplicationArea = Suite;
+                        Importance = Additional;
+                        ToolTip = 'Specifies the code of the responsibility center, such as a distribution hub, that is associated with the involved user, company, customer, or vendor.';
+                    }
+                    field("Assigned User ID"; Rec."Assigned User ID")
                     {
                         ApplicationArea = Basic, Suite;
-                        Caption = 'Address';
                         Importance = Additional;
-                        QuickEntry = false;
-                        //ToolTip = 'Specifies the address of the vendor who ships the items.';
+                        ToolTip = 'Specifies the ID of the user who is responsible for the document.';
                     }
-                    field("Buy-from Address 2"; Rec."Buy-from Address 2")
+
+
+                    field(Description; Rec.Description)
                     {
-                        ApplicationArea = Basic, Suite;
-                        Caption = 'Address 2';
-                        Importance = Additional;
-                        QuickEntry = false;
-                        //ToolTip = 'Specifies additional address information.';
+                        ApplicationArea = basic, suite;
                     }
-                    field("Buy-from City"; Rec."Buy-from City")
+                    field(Status; Rec.Status)
                     {
-                        ApplicationArea = Basic, Suite;
-                        Caption = 'City';
-                        Importance = Additional;
-                        QuickEntry = false;
-                        //ToolTip = 'Specifies the city of the vendor on the purchase document.';
+                        ApplicationArea = Suite;
+                        Importance = Promoted;
+                        StyleExpr = StatusStyleTxt;
+                        ToolTip = 'Specifies whether the record is open, waiting to be approved, invoiced for prepayment, or released to the next stage of processing.';
                     }
+                }
+
+                field("Comment Exists"; rec."Comment Exists")
+                {
+                    ApplicationArea = suite;
+                }
+            }
+            group("Contractor Details")
+            {
+                Caption = 'Contractor Details';
+
+                group(contact)
+                {
+                    ShowCaption = false;
                     field("Buy-from Contact No."; Rec."Buy-from Contact No.")
                     {
                         ApplicationArea = Basic, Suite;
@@ -116,6 +107,7 @@ page 50292 "Workflow Card"
                                 CurrPage.Update();
                         end;
                     }
+
                     field(BuyFromContactPhoneNo; BuyFromContact."Phone No.")
                     {
                         ApplicationArea = Suite;
@@ -143,19 +135,90 @@ page 50292 "Workflow Card"
                         ExtendedDatatype = EMail;
                         //ToolTip = 'Specifies the email address of the vendor contact person.';
                     }
+
+                    field("Buy-from Contact"; Rec."Buy-from Contact")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        Caption = 'Contact';
+                        Editable = Rec."Buy-from Vendor No." <> '';
+                        //ToolTip = 'Specifies the name of the person to contact about shipment of the item from this vendor.';
+
+                        trigger OnLookup(var Text: Text): Boolean
+                        begin
+                            Rec.LookupBuyFromContact();
+                            CurrPage.Update();
+                        end;
+                    }
                 }
-                field("Buy-from Contact"; Rec."Buy-from Contact")
+                group(contractor)
+                {
+                    ShowCaption = false;
+
+                    field("Buy-from Vendor No."; Rec."Buy-from Vendor No.")
+                    {
+                        ApplicationArea = All;
+                        Caption = 'Vendor No.';
+                        Importance = Additional;
+                        NotBlank = true;
+                        //ToolTip = 'Specifies the number of the vendor who delivers the products.';
+
+                        trigger OnValidate()
+                        begin
+                            CurrPage.Update();
+                        end;
+                    }
+                    field("Buy-from Vendor Name"; Rec."Buy-from Vendor Name")
+                    {
+                        ApplicationArea = All;
+                        Caption = 'Vendor Name';
+                        Importance = Promoted;
+                        ShowMandatory = true;
+                        //ToolTip = 'Specifies the name of the vendor who delivers the products.';
+
+                        trigger OnValidate()
+                        begin
+
+                            CurrPage.Update();
+                        end;
+
+                        trigger OnLookup(var Text: Text): Boolean
+                        begin
+                            exit(Rec.LookupBuyFromVendorName(Text));
+                        end;
+                    }
+                    field("Buy-from Address"; Rec."Buy-from Address")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        Caption = 'Address';
+                        Importance = Additional;
+                        QuickEntry = false;
+                        //ToolTip = 'Specifies the address of the vendor who ships the items.';
+                    }
+                    field("Buy-from Address 2"; Rec."Buy-from Address 2")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        Caption = 'Address 2';
+                        Importance = Additional;
+                        QuickEntry = false;
+                        //ToolTip = 'Specifies additional address information.';
+                    }
+                    field("Buy-from City"; Rec."Buy-from City")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        Caption = 'City';
+                        Importance = Additional;
+                        QuickEntry = false;
+                        //ToolTip = 'Specifies the city of the vendor on the purchase document.';
+                    }
+                }
+            }
+            group("Document Details")
+            {
+                field("Vendor Document No."; Rec."Vendor Document No.")
                 {
                     ApplicationArea = Basic, Suite;
-                    Caption = 'Contact';
-                    Editable = Rec."Buy-from Vendor No." <> '';
-                    //ToolTip = 'Specifies the name of the person to contact about shipment of the item from this vendor.';
-
-                    trigger OnLookup(var Text: Text): Boolean
-                    begin
-                        Rec.LookupBuyFromContact();
-                        CurrPage.Update();
-                    end;
+                    ShowMandatory = VendorInvoiceNoMandatory;
+                    //ToolTip = 'Specifies the document number of the original document you received from the vendor. You can require the document number for posting, or let it be optional. By default, it''s required, so that this document references the original. Making document numbers optional removes a step from the posting process. For example, if you attach the original invoice as a PDF, you might not need to enter the document number. To specify whether document numbers are required, in the Purchases & Payables Setup window, select or clear the Ext. Doc. No. Mandatory field.';
                 }
                 field("Document Date"; Rec."Document Date")
                 {
@@ -163,73 +226,45 @@ page 50292 "Workflow Card"
                     Importance = Promoted;
                     //ToolTip = 'Specifies the date when the related document was created.';
                 }
-                field("Receipt Date"; Rec."Receipt Date")
-                {
-                    ApplicationArea = Basic, Suite;
-                    Importance = Additional;
-                    //ToolTip = 'Specifies the date when the related document was received.';
-                }
+
                 field("Due Date"; Rec."Due Date")
                 {
                     ApplicationArea = Basic, Suite;
                     Importance = Promoted;
                     ToolTip = 'Specifies when the invoice is due. The program calculates the date using the Payment Terms Code and Document Date fields.';
                 }
-                field("Vendor Document No."; Rec."Vendor Document No.")
+
+                group("Amount Dtld")
                 {
-                    ApplicationArea = Basic, Suite;
-                    ShowMandatory = VendorInvoiceNoMandatory;
-                    //ToolTip = 'Specifies the document number of the original document you received from the vendor. You can require the document number for posting, or let it be optional. By default, it''s required, so that this document references the original. Making document numbers optional removes a step from the posting process. For example, if you attach the original invoice as a PDF, you might not need to enter the document number. To specify whether document numbers are required, in the Purchases & Payables Setup window, select or clear the Ext. Doc. No. Mandatory field.';
-                }
-                field("Responsibility Center"; Rec."Responsibility Center")
-                {
-                    ApplicationArea = Suite;
-                    Importance = Additional;
-                    ToolTip = 'Specifies the code of the responsibility center, such as a distribution hub, that is associated with the involved user, company, customer, or vendor.';
-                }
-                field("Assigned User ID"; Rec."Assigned User ID")
-                {
-                    ApplicationArea = Basic, Suite;
-                    Importance = Additional;
-                    ToolTip = 'Specifies the ID of the user who is responsible for the document.';
-                }
-                field(Amount; Rec.Amount)
-                {
-                    ApplicationArea = basic, suite;
-                }
-                field("Amount Including VAT"; Rec."Amount Including VAT")
-                {
-                    ApplicationArea = basic, suite;
-                }
-                field(Description; Rec.Description)
-                {
-                    ApplicationArea = basic, suite;
-                }
-                field(Status; Rec.Status)
-                {
-                    ApplicationArea = Suite;
-                    Importance = Promoted;
-                    StyleExpr = StatusStyleTxt;
-                    ToolTip = 'Specifies whether the record is open, waiting to be approved, invoiced for prepayment, or released to the next stage of processing.';
-                }
-            }
-            group("Invoice Details")
-            {
-                Caption = 'Invoice Details';
-                field("Currency Code"; Rec."Currency Code")
-                {
-                    ApplicationArea = Suite;
-                    Importance = Promoted;
-                    ToolTip = 'Specifies the currency code for amounts on the purchase lines.';
+                    ShowCaption = false;
+
+                    field("Currency Code"; Rec."Currency Code")
+                    {
+                        ApplicationArea = Suite;
+                        Importance = Promoted;
+                        ToolTip = 'Specifies the currency code for amounts on the purchase lines.';
 
 
+                    }
+                    field(Amount; Rec.Amount)
+                    {
+                        ApplicationArea = basic, suite;
+                    }
+                    field("Amount Including VAT"; Rec."Amount Including VAT")
+                    {
+                        ApplicationArea = basic, suite;
+                    }
+
+                    field("Payment Method Code"; Rec."Payment Method Code")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        Importance = Additional;
+                        ToolTip = 'Specifies how to make payment, such as with bank transfer, cash, or check.';
+                    }
                 }
-                field("Payment Method Code"; Rec."Payment Method Code")
-                {
-                    ApplicationArea = Basic, Suite;
-                    Importance = Additional;
-                    ToolTip = 'Specifies how to make payment, such as with bank transfer, cash, or check.';
-                }
+
+
+
                 field("Reason Code"; Rec."Reason Code")
                 {
                     ApplicationArea = Basic, Suite;
@@ -244,6 +279,7 @@ page 50292 "Workflow Card"
                     ToolTip = 'Specifies that the related entry represents an unpaid invoice for which either a payment suggestion, a reminder, or a finance charge memo exists.';
                 }
             }
+
         }
         area(factboxes)
         {
