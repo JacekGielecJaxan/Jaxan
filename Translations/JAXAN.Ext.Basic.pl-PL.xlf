@@ -7533,6 +7533,16 @@
           <target state="translated">Nr wpisu</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Header - Field Entry No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 813405560 - Field 3749788842 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Important</source>
+          <target state="translated">Ważny</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Header - Field Important - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 813405560 - Field 1692297362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Kind of Document</source>
+          <target state="translated">Rodzaj dokumentu</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Header - Field Kind of Document - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 813405560 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No.</source>
           <target state="translated">Nr</target>
@@ -7597,6 +7607,26 @@
           <source>Your Reference</source>
           <target state="translated">Referencje</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Header - Field Your Reference - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2335627655 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Workflow Kind of Document</source>
+          <target state="translated">Obieg - Rodzaj dokumentu</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Kind of Document - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2335627655 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <target state="translated">Identyfikator</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Kind of Document - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2335627655 - Field 2173647922 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Opis</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Kind of Document - Field Descripiton - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2335627655 - Field 3749788842 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Important</source>
+          <target state="translated">Ważny</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Workflow Kind of Document - Field Important - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3807047648 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Workflow Setup</source>
@@ -8280,6 +8310,11 @@
           <source></source>
           <target state="needs-translation"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Page Instituties List - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4106336951 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Planning</source>
+          <target state="needs-translation"></target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Planning - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 524226767 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
           <source>About contract details</source>
@@ -14644,6 +14679,31 @@
           <target state="translated">Problemy</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Doc. Check Factbox - Control Control2 - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 681724017 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Workflow Kind Of Document List</source>
+          <target state="translated">Obieg - Rodzaj dokumentu</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Kind Of Document List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 681724017 - Control 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="translated">Identyfikator</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Kind Of Document List - Control Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 681724017 - Control 3749788842 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="translated">Nazwa</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Kind Of Document List - Control Important - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 681724017 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="translated">Ważny</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Kind Of Document List - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2567700947 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>About Vehicles</source>
+          <target state="translated">Informacje o pojazdach</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Workflow List - Property AboutTitle</note>
+        </trans-unit>
         <trans-unit id="Page 2567700947 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Workflow List</source>
           <target state="translated">Lista obiegu dokumentów</target>
@@ -14698,6 +14758,26 @@
           <source>Specifies the code for the number series that will be used to assign numbers to workflows.</source>
           <target state="translated">Określa kod serii numerów, który będzie używany do przypisywania numerów do obiegu dokumentów.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Setup - Control Workflow Nos. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1508153829 - Control 1320169784 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the end date for the shuttle</source>
+          <target state="needs-translation"></target>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Task Lines Subform Ext - Control Shuttle End Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1508153829 - Control 1342922197 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the start date for the shuttle</source>
+          <target state="needs-translation"></target>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Task Lines Subform Ext - Control Shuttle Start Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3460779221 - Field 1320169784 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shuttle End Date</source>
+          <target state="needs-translation"></target>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Job Task Ext - Field Shuttle End Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3460779221 - Field 1342922197 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shuttle Start Date</source>
+          <target state="needs-translation"></target>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Job Task Ext - Field Shuttle Start Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3768307499 - Field 2163916938 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contract Nos.</source>
