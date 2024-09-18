@@ -11,6 +11,15 @@ table 50290 "Workflow Setup"
         {
             Caption = 'Primary Key';
         }
+        //Centrum kompetencyjne wymagane
+        field(2; "Respons. Center Mandatory"; Boolean)
+        {
+            Caption = 'Responsibility Center Mandatory';
+        }
+        field(3; "Description Mandatory"; Boolean)
+        {
+            Caption = 'Description Mandatory';
+        }
         field(12; "Workflow Nos."; Code[20])
         {
             Caption = 'Workflow Nos.';

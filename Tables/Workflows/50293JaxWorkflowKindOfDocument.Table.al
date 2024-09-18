@@ -26,6 +26,21 @@ table 50293 "Workflow Kind of Document"
             DataClassification = ToBeClassified;
             Caption = 'Important';
         }
+        // wymagany numer odkumenty zewnetrznego
+        field(4; "Ext. Document No. Mandatory"; Boolean)
+        {
+            Caption = 'Ext. Document No. Mandatory';
+        }
+        //wymagana kwota
+        field(5; "Amount Mandatory"; Boolean)
+        {
+            Caption = 'Amount Mandatory';
+        }
+        //wymagany numer kontrahenta, czyli klient musi istniec w bazie
+        field(6; "Contractor No. Mandatory"; Boolean)
+        {
+            Caption = 'Contractor No. Mandatory';
+        }
     }
 
     keys

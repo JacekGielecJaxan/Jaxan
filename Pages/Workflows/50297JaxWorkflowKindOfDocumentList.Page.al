@@ -29,6 +29,18 @@ page 50297 "Workflow Kind Of Document List"
                     ApplicationArea = all;
                     ToolTip = '';
                 }
+                field("Contractor No. Mandatory"; rec."Contractor No. Mandatory")
+                {
+                    ApplicationArea = all;
+                }
+                field("Ext. Document No. Mandatory"; rec."Ext. Document No. Mandatory")
+                {
+                    ApplicationArea = all;
+                }
+                field("Amount Mandatory"; rec."Amount Mandatory")
+                {
+                    ApplicationArea = all;
+                }
             }
         }
     }

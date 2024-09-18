@@ -33,7 +33,8 @@ codeunit 50004 "Release Workflow Document"
         if IsHandled then
             exit;
 
-        WorkflowHeader.TestField("Buy-from Vendor No.");
+        if not SkipCheckReleaseRestrictions then
+            Check(WorkflowHeader);
 
         IsHandled := false;
         OnCodeOnAfterCheckWorkflowReleaseRestrictions(WorkflowHeader, IsHandled);
@@ -56,6 +57,38 @@ codeunit 50004 "Release Workflow Document"
 
 
         OnAfterReleaseWorkflowDoc(WorkflowHeader, PreviewMode);
+    end;
+
+    local procedure Check(WorkflowHeader: Record "Workflow Header")
+    var
+        WorkflowSetup: Record "Workflow Setup";
+        KindOf: Record "Workflow Kind of Document";
+    begin
+        WorkflowSetup.Get();
+        WorkflowHeader.TestField("Kind of Document");
+        WorkflowHeader.TestField("No.");
+        WorkflowHeader.Testfield("Receipt Date");
+        WorkflowHeader.TestField("Document Date");
+
+        if WorkflowSetup."Description Mandatory" then
+            WorkflowHeader.TestField(Description);
+
+        if WorkflowSetup."Respons. Center Mandatory" then
+            WorkflowHeader.TestField("Responsibility Center");
+
+        KindOf.Get(WorkflowHeader."Kind of Document");
+
+        if KindOf."Amount Mandatory" and (not WorkflowHeader."Amount Zero") then begin
+            WorkflowHeader.TestField(Amount);
+            WorkflowHeader.TestField("Amount Including VAT");
+        end;
+
+        if KindOf."Contractor No. Mandatory" then
+            WorkflowHeader.TestField("Buy-from Contact No.");
+
+        if KindOf."Ext. Document No. Mandatory" then
+            WorkflowHeader.TestField("Vendor Document No.");
+
     end;
 
     procedure Reopen(var WorkflowHeader: Record "Workflow Header")
