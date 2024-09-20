@@ -97,8 +97,8 @@ codeunit 50004 "Release Workflow Document"
     var
         ApprovalsMgt: Codeunit "Jax Approvals Mgmt.";
     begin
-        if not ApprovalsMgt.CheckWorkflowApprovalSendPossible(WorkflowHeader) then
-            exit;
+        //if not ApprovalsMgt.CheckWorkflowApprovalSendPossible(WorkflowHeader) then
+        //    exit;
 
         ApprovalsMgt.AddNewApprovalRequest(WorkflowHeader);
     end;
@@ -106,6 +106,7 @@ codeunit 50004 "Release Workflow Document"
     procedure Reopen(var WorkflowHeader: Record "Workflow Header")
     var
         IsHandled: Boolean;
+        ApprovalMgt: Codeunit "Jax Approvals Mgmt.";
     begin
         IsHandled := false;
         OnBeforeReopenWorkflowDoc(WorkflowHeader, PreviewMode, IsHandled);
@@ -114,6 +115,10 @@ codeunit 50004 "Release Workflow Document"
 
         if WorkflowHeader.Status = WorkflowHeader.Status::Open then
             exit;
+
+        ApprovalMgt.Delete(WorkflowHeader);
+
+
 
         WorkflowHeader.Status := WorkflowHeader.Status::Open;
         OnReopenOnBeforeWorkflowHeaderModify(WorkflowHeader);

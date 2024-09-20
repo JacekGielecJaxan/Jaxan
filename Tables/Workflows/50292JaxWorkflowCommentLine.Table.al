@@ -1,16 +1,12 @@
 table 50292 "Workflow Comment Line"
 {
-Caption = 'Workflow Comment Line';
+    Caption = 'Workflow Comment Line';
     DrillDownPageID = "Workflow Comment List";
     LookupPageID = "Workflow Comment List";
     DataClassification = CustomerContent;
 
     fields
     {
-        field(1; "Document Type"; Enum "Purchase Comment Document Type")
-        {
-            Caption = 'Document Type';
-        }
         field(2; "No."; Code[20])
         {
             Caption = 'No.';
@@ -29,17 +25,13 @@ Caption = 'Workflow Comment Line';
         }
         field(6; Comment; Text[80])
         {
-Caption = 'Comment';
-        }
-        field(7; "Document Line No."; Integer)
-        {
-            Caption = 'Document Line No.';
+            Caption = 'Comment';
         }
     }
 
     keys
     {
-        key(Key1; "Document Type", "No.", "Document Line No.", "Line No.")
+        key(Key1; "No.", "Line No.")
         {
             Clustered = true;
         }
@@ -53,9 +45,7 @@ Caption = 'Comment';
     var
         CommentLine: Record "Workflow Comment Line";
     begin
-        CommentLine.SetRange("Document Type", "Document Type");
         CommentLine.SetRange("No.", "No.");
-        CommentLine.SetRange("Document Line No.", "Document Line No.");
         CommentLine.SetRange(Date, WorkDate());
         OnSetUpNewLineOnAfterSetFilter(Rec, CommentLine);
         if not CommentLine.FindFirst() then
@@ -75,12 +65,10 @@ Caption = 'Comment';
         if IsHandled then
             exit;
 
-        CommentLine.SetRange("Document Type", FromDocumentType);
         CommentLine.SetRange("No.", FromNumber);
         if CommentLine.FindSet() then
             repeat
                 CommentLine2 := CommentLine;
-                CommentLine2."Document Type" := Enum::"Purchase Comment Document Type".FromInteger(ToDocumentType);
                 CommentLine2."No." := ToNumber;
                 OnBeforeCopyCommentsOnBeforeInsert(CommentLine2, CommentLine);
                 CommentLine2.Insert();
@@ -99,15 +87,11 @@ Caption = 'Comment';
         if IsHandled then
             exit;
 
-        CommentLineSource.SetRange("Document Type", FromDocumentType);
         CommentLineSource.SetRange("No.", FromNumber);
-        CommentLineSource.SetRange("Document Line No.", FromDocumentLineNo);
         if CommentLineSource.FindSet() then
             repeat
                 CommentLineTarget := CommentLineSource;
-                CommentLineTarget."Document Type" := Enum::"Purchase Comment Document Type".FromInteger(ToDocumentType);
                 CommentLineTarget."No." := ToNumber;
-                CommentLineTarget."Document Line No." := ToDocumentLineNo;
                 CommentLineTarget.Insert();
             until CommentLineSource.Next() = 0;
     end;
@@ -123,13 +107,10 @@ Caption = 'Comment';
         if IsHandled then
             exit;
 
-        CommentLineSource.SetRange("Document Type", FromDocumentType);
         CommentLineSource.SetRange("No.", FromNumber);
-        CommentLineSource.SetRange("Document Line No.", 0);
         if CommentLineSource.FindSet() then
             repeat
                 CommentLineTarget := CommentLineSource;
-                CommentLineTarget."Document Type" := Enum::"Purchase Comment Document Type".FromInteger(ToDocumentType);
                 CommentLineTarget."No." := ToNumber;
                 CommentLineTarget.Insert();
             until CommentLineSource.Next() = 0;
@@ -137,7 +118,6 @@ Caption = 'Comment';
 
     procedure DeleteComments(DocType: Option; No: Code[20])
     begin
-        SetRange("Document Type", DocType);
         SetRange("No.", No);
         if not IsEmpty() then
             DeleteAll();
@@ -147,9 +127,7 @@ Caption = 'Comment';
     var
         CommentSheet: Page "Workflow Comment Sheet";
     begin
-        SetRange("Document Type", DocType);
         SetRange("No.", No);
-        SetRange("Document Line No.", DocLineNo);
         Clear(CommentSheet);
         CommentSheet.SetTableView(Rec);
         CommentSheet.RunModal();

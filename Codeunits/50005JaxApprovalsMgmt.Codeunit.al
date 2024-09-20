@@ -40,6 +40,8 @@ codeunit 50005 "Jax Approvals Mgmt."
         PendingJournalBatchApprovalExistsErr: Label 'An approval request already exists.', Comment = '%1 is the Document No. of the journal line';
         ApprovedJournalBatchApprovalExistsMsg: Label 'An approval request for this batch has already been sent and approved. Do you want to send another approval request?';
         ApporvalChainIsUnsupportedMsg: Label 'Only Direct Approver is supported as Approver Limit Type option for %1. The approval request will be approved automatically.', Comment = 'Only Direct Approver is supported as Approver Limit Type option for Gen. Journal Batch DEFAULT, CASH. The approval request will be approved automatically.';
+        Err001: Label 'Document can be reopened when the approval has Created or Open status';
+
         RecHasBeenApprovedMsg: Label '%1 has been approved.', Comment = '%1 = Record Id';
         NoPermissionToDelegateErr: Label 'You do not have permission to delegate one or more of the selected approval requests.';
         NothingToApproveErr: Label 'There is nothing to approve.';
@@ -393,13 +395,18 @@ codeunit 50005 "Jax Approvals Mgmt."
     end;
 
     internal procedure AddNewApprovalRequest(WorkflowHeader: Record "Workflow Header")
+    begin
+        CopyWorkflowHeaderToApprovalEntry(WorkflowHeader);
+        CopyWorkflowHeaderCommentToApprovalEntryComment(WorkflowHeader);
+    end;
+
+    procedure CopyWorkflowHeaderToApprovalEntry(WorkflowHeader: Record "Workflow Header")
     var
         WorkflowSetup: Record "Workflow Setup";
         KindOf: Record "Workflow Kind of Document";
         ApprovalEntry: Record "Approval Entry";
         PendingDays: DateFormula;
         NextEntryNo: Integer;
-
     begin
         WorkflowSetup.GetRecordOnce();
         KindOf.Get(WorkflowHeader."Kind of Document");
@@ -413,6 +420,7 @@ codeunit 50005 "Jax Approvals Mgmt."
             PendingDays := WorkflowSetup."Def. No. of Days For Approve";
 
         ApprovalEntry.Init();
+        ApprovalEntry."Approval Type" := ApprovalEntry."Approval Type"::Approver;
         ApprovalEntry.Amount := WorkflowHeader.Amount;
         ApprovalEntry."Currency Code" := WorkflowHeader."Currency Code";
         ApprovalEntry."Date-Time Sent for Approval" := CurrentDateTime;
@@ -422,10 +430,66 @@ codeunit 50005 "Jax Approvals Mgmt."
         ApprovalEntry.Important := WorkflowHeader.Important;
         ApprovalEntry."Kind of Document" := WorkflowHeader."Kind of Document";
         ApprovalEntry."Limit Type" := ApprovalEntry."Limit Type"::"Approval Limits";
+        ApprovalEntry."Buy-from Contact No." := WorkflowHeader."Buy-from Contact No.";
+        ApprovalEntry."Buy-from Contact Name" := WorkflowHeader."Buy-from Contact";
+        ApprovalEntry."External Doc. No." := WorkflowHeader."Vendor Document No.";
+        ApprovalEntry.Status := ApprovalEntry.Status::Open;
         ApprovalEntry."Sender ID" := UserId;
+        ApprovalEntry."Last Date-Time Modified" := CurrentDateTime;
+        ApprovalEntry."Last Modified By User ID" := UserId;
         ApprovalEntry."Table ID" := database::"Workflow Header";
         ApprovalEntry."Record ID to Approve" := WorkflowHeader.RecordId;
         ApprovalEntry.Insert(true);
+
+    end;
+
+    procedure CopyWorkflowHeaderCommentToApprovalEntryComment(WorkflowHeader: Record "Workflow Header")
+    var
+        WorkflowCommentLine: Record "Workflow Comment Line";
+        ApprovalCommentLine: Record "Approval Comment Line";
+    begin
+        WorkflowCommentLine.SetRange("No.", WorkflowHeader."No.");
+
+        ApprovalCommentLine.SetRange("Table ID", database::"Workflow Header");
+        ApprovalCommentLine.SetRange("Record ID to Approve", WorkflowHeader.RecordId);
+
+        if WorkflowCommentLine.FindSet() then
+            repeat
+                ApprovalCommentLine.Init();
+                ApprovalCommentLine."Table ID" := database::"Workflow Header";
+                ApprovalCommentLine."Document No." := WorkflowHeader."No.";
+                ApprovalCommentLine."Record ID to Approve" := WorkflowHeader.RecordId;
+                ApprovalCommentLine.Comment := WorkflowCommentLine.Comment;
+                ApprovalCommentLine.Insert(true);
+            until WorkflowHeader.Next() = 0;
+    end;
+
+
+    internal procedure Delete(var WorkflowHeader: Record "Workflow Header")
+    var
+        ApprovalEntry: Record "Approval Entry";
+        ApprovalEntryComment: Record "Approval Comment Line";
+    begin
+        ApprovalEntry.SetCurrentKey("Document No.");
+        ApprovalEntry.SetRange("Document No.", WorkflowHeader."No.");
+        if ApprovalEntry.FindSet() then begin
+            if (ApprovalEntry.Status <> ApprovalEntry.Status::" ") and
+               (ApprovalEntry.Status <> ApprovalEntry.Status::Created) and
+               (ApprovalEntry.Status <> ApprovalEntry.Status::Open) then
+                Error(Err001);
+
+            ApprovalEntryComment.LockTable();
+
+            //"Table ID", "Document Type", "Document No.", "Record ID to Approve"
+            ApprovalEntryComment.SetRange("Table ID", ApprovalEntry."Table ID");
+            ApprovalEntryComment.SetRange("Document Type", ApprovalEntry."Document Type");
+            ApprovalEntryComment.SetRange("Document No.", ApprovalEntry."Document No.");
+            ApprovalEntryComment.SetRange("Record ID to Approve", ApprovalEntry."Record ID to Approve");
+            ApprovalEntryComment.DeleteAll();
+
+            ApprovalEntry.LockTable();
+            ApprovalEntry.Delete(true);
+        end;
     end;
 
     local procedure IsBackground(): Boolean
@@ -434,6 +498,7 @@ codeunit 50005 "Jax Approvals Mgmt."
     begin
         exit(ClientTypeManagement.GetCurrentClientType() in [ClientType::Background]);
     end;
+
 
     [IntegrationEvent(false, false)]
     local procedure OnAfterCheckWorkflowApprovalPossible(var WorkflowHeader: Record "Workflow Header")
@@ -517,6 +582,7 @@ codeunit 50005 "Jax Approvals Mgmt."
 
     var
         ApprovalsMgt: Codeunit "Approvals Mgmt.";
+
 
 }
 

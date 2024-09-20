@@ -399,5 +399,7 @@ permissionset 50000 GeneratedPermission
         page "Workflow Doc. Check Factbox" = X,
         page "Workflow Kind Of Document List" = X,
         page "Workflow List" = X,
-        page "Workflow Setup" = X;
+        page "Workflow Setup" = X,
+        tabledata "Job Setup" = RIMD,
+        table "Job Setup" = X;
 }

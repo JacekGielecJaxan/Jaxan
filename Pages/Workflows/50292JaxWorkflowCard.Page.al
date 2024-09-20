@@ -383,9 +383,7 @@ page 50292 "Workflow Card"
                     Caption = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page "Workflow Comment Sheet";
-                    RunPageLink = "Document Type" = field("Document Type"),
-                                  "No." = field("No."),
-                                  "Document Line No." = const(0);
+                    RunPageLink = "No." = field("No.");
                     ToolTip = 'View or add comments for the record.';
                 }
                 action(DocAttach)

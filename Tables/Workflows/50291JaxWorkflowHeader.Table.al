@@ -96,9 +96,7 @@ table 50291 "Workflow Header"
         }
         field(46; Comment; Boolean)
         {
-            CalcFormula = exist("Workflow Comment Line" where("Document Type" = field("Document Type"),
-                                                             "No." = field("No."),
-                                                             "Document Line No." = const(0)));
+            CalcFormula = exist("Workflow Comment Line" where("No." = field("No.")));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
@@ -370,8 +368,6 @@ table 50291 "Workflow Header"
         if IsHandled then
             exit;
 
-
-        CommentLine.SetRange("Document Type", "Document Type");
         CommentLine.SetRange("No.", "No.");
         CommentLine.DeleteAll();
 
@@ -921,6 +917,7 @@ table 50291 "Workflow Header"
             exit(Result);
         exit(true)
     end;
+
 
     [IntegrationEvent(false, false)]
     local procedure OnBeforeConfirmCloseUnrealisted(var WorkflowHeader: Record "Workflow Header"; var Result: Boolean; var IsHandled: Boolean)

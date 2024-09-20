@@ -193,8 +193,8 @@ codeunit 50006 "Jax Workflow Event Handling"
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Release Workflow Document", 'OnAfterReleaseWorkflowDoc', '', false, false)]
     procedure RunWorkflowOnAfterReleaseWorkflowDoc(var WorkflowHeader: Record "Workflow Header"; PreviewMode: Boolean)
     begin
-        if not PreviewMode then
-            WorkflowManagement.HandleEvent(RunWorkflowOnAfterReleaseWorkflowDocCode(), WorkflowHeader);
+        //if not PreviewMode then
+        //    WorkflowManagement.HandleEvent(RunWorkflowOnAfterReleaseWorkflowDocCode(), WorkflowHeader);
     end;
 
 
