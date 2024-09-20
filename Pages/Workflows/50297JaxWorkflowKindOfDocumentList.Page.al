@@ -41,6 +41,10 @@ page 50297 "Workflow Kind Of Document List"
                 {
                     ApplicationArea = all;
                 }
+                field("Def. No. of Days For Approve"; rec."Def. No. of Days For Approve")
+                {
+                    ApplicationArea = basic, suite;
+                }
             }
         }
     }

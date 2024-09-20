@@ -1,4 +1,4 @@
-page 50327 "R/D Vehicle Entries"
+page 50328 "Pick And Drop Vehicle Entries"
 {
     ApplicationArea = Basic, Suite;
     Caption = 'Receipt and Delivery Vehicle Entries';
@@ -6,8 +6,8 @@ page 50327 "R/D Vehicle Entries"
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    Permissions = TableData "R/D Vehicle Entry" = m;
-    SourceTable = "R/D Vehicle Entry";
+    Permissions = TableData "Pick And Drop Vehicle Entry" = m;
+    SourceTable = "Pick And Drop Vehicle Entry";
     SourceTableView = sorting("Vehicle No.", "Date") order(descending);
     UsageCategory = History;
 

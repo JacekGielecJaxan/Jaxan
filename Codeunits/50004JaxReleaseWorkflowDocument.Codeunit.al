@@ -25,7 +25,7 @@ codeunit 50004 "Release Workflow Document"
     var
         IsHandled: Boolean;
     begin
-        if WorkflowHeader.Status = WorkflowHeader.Status::Released then
+        if WorkflowHeader.Status = WorkflowHeader.Status::"Pending Approval" then
             exit;
 
         IsHandled := false;
@@ -49,7 +49,9 @@ codeunit 50004 "Release Workflow Document"
         OnBeforeModifyWorkflowDoc(WorkflowHeader, PreviewMode, IsHandled);
         if IsHandled then
             exit;
-        WorkflowHeader.Status := WorkflowHeader.Status::Released;
+        WorkflowHeader.Status := WorkflowHeader.Status::"Pending Approval";
+
+        SendApprovalRequest(WorkflowHeader);
 
         OnCodeOnBeforeModifyHeader(WorkflowHeader, PreviewMode);
 
@@ -89,6 +91,16 @@ codeunit 50004 "Release Workflow Document"
         if KindOf."Ext. Document No. Mandatory" then
             WorkflowHeader.TestField("Vendor Document No.");
 
+    end;
+
+    local procedure SendApprovalRequest(WorkflowHeader: Record "Workflow Header")
+    var
+        ApprovalsMgt: Codeunit "Jax Approvals Mgmt.";
+    begin
+        if not ApprovalsMgt.CheckWorkflowApprovalSendPossible(WorkflowHeader) then
+            exit;
+
+        ApprovalsMgt.AddNewApprovalRequest(WorkflowHeader);
     end;
 
     procedure Reopen(var WorkflowHeader: Record "Workflow Header")

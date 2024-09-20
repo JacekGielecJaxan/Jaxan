@@ -39,6 +39,22 @@ page 50310 "Vehicle List"
                     ApplicationArea = all;
                     ToolTip = '';
                 }
+                field("M/L"; rec."M/L")
+                {
+                    ApplicationArea = all;
+                }
+                field("S/E"; rec."S/E")
+                {
+                    ApplicationArea = all;
+                }
+                field(ETCS; rec.ETCS)
+                {
+                    ApplicationArea = all;
+                }
+                field(GSMR; rec.GSMR)
+                {
+                    ApplicationArea = all;
+                }
                 field("No. 2"; Rec."No. 2")
                 {
                     ApplicationArea = All;
@@ -87,10 +103,6 @@ page 50310 "Vehicle List"
                     ApplicationArea = all;
                 }
                 field(ECM; Rec.ECM)
-                {
-                    ApplicationArea = all;
-                }
-                field(Cycle; Rec.Cycle)
                 {
                     ApplicationArea = all;
                 }
@@ -144,7 +156,7 @@ page 50310 "Vehicle List"
                 {
                     ApplicationArea = all;
                 }
-                field("Institute Code"; Rec."Institute Code")
+                field("Service Location Code"; Rec."Service Location Code")
                 {
                     ApplicationArea = all;
                 }
@@ -340,12 +352,12 @@ page 50310 "Vehicle List"
                     RunPageView = sorting("Vehicle No.");
                     ToolTip = '';
                 }
-                action("&R/D Entries")
+                action("&Pick And Drop Entries")
                 {
                     ApplicationArea = Suite;
                     Caption = '&Receipt and Delivery Vehicle Entries';
                     Image = BinLedger;
-                    RunObject = Page "r/d vehicle entries";
+                    RunObject = Page "Pick And Drop vehicle entries";
                     RunPageLink = "Vehicle No." = field("No.");
                     RunPageView = sorting("Vehicle No.");
                     ToolTip = '';

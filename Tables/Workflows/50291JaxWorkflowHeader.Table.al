@@ -7,10 +7,6 @@ table 50291 "Workflow Header"
 
     fields
     {
-        field(1; "Entry No."; integer)
-        {
-            editable = false;
-        }
         field(2; "Document Type"; Enum "Purchase Document Type")
         {
             Caption = 'Document Type';
@@ -268,7 +264,7 @@ table 50291 "Workflow Header"
             Editable = false;
             TableRelation = "No. Series";
         }
-        field(120; Status; Enum "Purchase Document Status")
+        field(120; Status; Enum "Workflow Document Status")
         {
             Caption = 'Status';
             Editable = false;
@@ -327,7 +323,6 @@ table 50291 "Workflow Header"
         field(9001; "Pending Approvals"; Integer)
         {
             CalcFormula = count("Approval Entry" where("Table ID" = const(50291),
-                                                        "Document Type" = field("Document Type"),
                                                         "Document No." = field("No."),
                                                         Status = filter(Open | Created)));
             Caption = 'Pending Approvals';
@@ -391,6 +386,7 @@ table 50291 "Workflow Header"
             exit;
 
         InitInsert();
+
     end;
 
     trigger OnRename()
@@ -408,70 +404,18 @@ table 50291 "Workflow Header"
     var
         Text003: Label 'You cannot rename a %1.';
         ConfirmChangeQst: Label 'Do you want to change %1?', Comment = '%1 = a Field Caption like Currency Code';
-        Text005: Label 'You cannot reset %1 because the document still has one or more lines.';
-        YouCannotChangeFieldErr: Label 'You cannot change %1 because the order is associated with one or more sales orders.', Comment = '%1 - fieldcaption';
-        Text009: Label 'Deleting this document will cause a gap in the number series for receipts. An empty receipt %1 will be created to fill this gap in the number series.\\Do you want to continue?', Comment = '%1 = Document No.';
-        Text012: Label 'Deleting this document will cause a gap in the number series for posted invoices. An empty posted invoice %1 will be created to fill this gap in the number series.\\Do you want to continue?', Comment = '%1 = Document No.';
-        Text014: Label 'Deleting this document will cause a gap in the number series for posted credit memos. An empty posted credit memo %1 will be created to fill this gap in the number series.\\Do you want to continue?', Comment = '%1 = Document No.';
-        RecreatePurchLinesMsg: Label 'If you change %1, the existing purchase lines will be deleted and new purchase lines based on the new information in the header will be created.\\Do you want to continue?', Comment = '%1: FieldCaption';
-        ResetItemChargeAssignMsg: Label 'If you change %1, the existing purchase lines will be deleted and new purchase lines based on the new information in the header will be created.\The amount of the item charge assignment will be reset to 0.\\Do you want to continue?', Comment = '%1: FieldCaption';
-        LinesNotUpdatedMsg: Label 'You have changed %1 on the purchase header, but it has not been changed on the existing purchase lines.', Comment = 'You have changed Posting Date on the purchase header, but it has not been changed on the existing purchase lines.';
-        LinesNotUpdatedDateMsg: Label 'You have changed the %1 on the purchase order, which might affect the prices and discounts on the purchase order lines.', Comment = '%1: OrderDate';
-        Text020: Label 'You must update the existing purchase lines manually.';
-        AffectExchangeRateMsg: Label 'The change may affect the exchange rate that is used for price calculation on the purchase lines.';
-        Text022: Label 'Do you want to update the exchange rate?';
-        Text029: Label 'Deleting this document will cause a gap in the number series for return shipments. An empty return shipment %1 will be created to fill this gap in the number series.\\Do you want to continue?', Comment = '%1 = Document No.';
-        DoYouWantToKeepExistingDimensionsQst: Label 'This will change the dimension specified on the document. Do you want to recalculate/update dimensions?';
-        Text032: Label 'You have modified %1.\\Do you want to update the lines?', Comment = 'You have modified Currency Factor.\\Do you want to update the lines?';
-        ReviewLinesManuallyMsg: Label 'You should review the lines and manually update prices and discounts if needed.';
-        UpdateLinesOrderDateAutomaticallyQst: Label 'Do you want to update the order date for existing lines?';
         GLSetup: Record "General Ledger Setup";
         WorkflowSetup: record "Workflow Setup";
         Vend: Record Vendor;
         SkipBuyFromContact: Boolean;
-        CompanyInfo: Record "Company Information";
-        PostCode: Record "Post Code";
-        GlobalNoSeries: Record "No. Series";
-        SalespersonPurchaser: Record "Salesperson/Purchaser";
         NoSeries: Codeunit "No. Series";
         UserSetupMgt: Codeunit "User Setup Management";
-        StandardCodesMgtGlobal: Codeunit "Standard Codes Mgt.";
-        CurrencyDate: Date;
         Confirmed: Boolean;
         Text037: Label 'Contact %1 %2 is not related to vendor %3.';
         Text038: Label 'Contact %1 %2 is related to a different company than vendor %3.';
         Text039: Label 'Contact %1 %2 is not related to a vendor.';
-        Text040: Label 'You can not change the %1 field because %2 %3 has %4 = %5 and the %6 has already been assigned %7 %8.';
-        Text045: Label 'Deleting this document will cause a gap in the number series for prepayment invoices. An empty prepayment invoice %1 will be created to fill this gap in the number series.\\Do you want to continue?';
-        Text046: Label 'Deleting this document will cause a gap in the number series for prepayment credit memos. An empty prepayment credit memo %1 will be created to fill this gap in the number series.\\Do you want to continue?';
-        Text050: Label 'Reservations exist for this order. These reservations will be canceled if a date conflict is caused by this change.\\Do you want to continue?';
-        Text051: Label 'You may have changed a dimension.\\Do you want to update the lines?';
-        Text052: Label 'The %1 field on the purchase order %2 must be the same as on sales order %3.';
-        ReplaceDocumentDate: Boolean;
-        PrepaymentInvoicesNotPaidErr: Label 'You cannot post the document of type %1 with the number %2 before all related prepayment invoices are posted.', Comment = 'You cannot post the document of type Order with the number 1001 before all related prepayment invoices are posted.';
-        StatisticsInsuffucientPermissionsErr: Label 'You don''t have permission to view statistics.';
-        Text054: Label 'There are unpaid prepayment invoices that are related to the document of type %1 with the number %2.';
-        DeferralLineQst: Label 'You have changed the %1 on the purchase header, do you want to update the deferral schedules for the lines with this date?', Comment = '%1=The posting date on the document.';
         BuyFromVendorTxt: Label 'Buy-from Vendor';
-        DocumentNotPostedClosePageQst: Label 'The document has been saved but is not yet posted.\\Are you sure you want to exit?';
         SelectNoSeriesAllowed: Boolean;
-        MixedDropshipmentErr: Label 'You cannot print the purchase order because it contains one or more lines for drop shipment in addition to regular purchase lines.';
-        ModifyVendorAddressNotificationLbl: Label 'Update the address';
-        DontShowAgainActionLbl: Label 'Don''t show again';
-        ModifyVendorAddressNotificationMsg: Label 'The address you entered for %1 is different from the Vendor''s existing address.', Comment = '%1=Vendor name';
-        ModifyBuyFromVendorAddressNotificationNameTxt: Label 'Update Buy-from Vendor Address';
-        ModifyBuyFromVendorAddressNotificationDescriptionTxt: Label 'Warn if the Buy-from address on purchase documents is different from the Vendor''s existing address.';
-        ModifyPayToVendorAddressNotificationNameTxt: Label 'Update Pay-to Vendor Address';
-        ModifyPayToVendorAddressNotificationDescriptionTxt: Label 'Warn if the Pay-to address on purchase documents is different from the Vendor''s existing address.';
-        PurchaseAlreadyExistsTxt: Label 'Purchase %1 %2 already exists for this vendor.', Comment = '%1 = Document Type; %2 = Document No.';
-        ShowVendLedgEntryTxt: Label 'Show the vendor ledger entry.';
-        ShowDocAlreadyExistNotificationNameTxt: Label 'Purchase document with same external document number already exists.';
-        ShowDocAlreadyExistNotificationDescriptionTxt: Label 'Warn if purchase document with same external document number already exists.';
-        DuplicatedCaptionsNotAllowedErr: Label 'Field captions must not be duplicated when using this method. Use UpdatePurchLinesByFieldNo instead.';
-        SplitMessageTxt: Label '%1\%2', Comment = 'Some message text 1.\Some message text 2.';
-        FullPurchaseTypesTxt: Label 'Purchase Quote,Purchase Order,Purchase Invoice,Purchase Credit Memo,Purchase Blanket Order,Purchase Return Order';
-        WarnZeroQuantityPostingTxt: Label 'Warn before posting Purchase lines with 0 quantity';
-        WarnZeroQuantityPostingDescriptionTxt: Label 'Warn before posting lines on Purchase documents where quantity is 0.';
 
         HideValidationDialog: Boolean;
         StatusCheckSuspended: Boolean;
@@ -624,7 +568,7 @@ table 50291 "Workflow Header"
 
     procedure SetStatus(NewStatus: Option)
     begin
-        Status := Enum::"Purchase Document Status".FromInteger(NewStatus);
+        Status := Enum::"Workflow Document Status".FromInteger(NewStatus);
         Modify();
     end;
 
@@ -790,7 +734,7 @@ table 50291 "Workflow Header"
 
     procedure TestStatusIsNotReleased() NotReleased: Boolean;
     begin
-        NotReleased := Status <> Status::Released;
+        NotReleased := Status <> Status::"Pending Approval";
 
         OnTestStatusIsNotReleased(Rec, NotReleased);
     end;

@@ -41,6 +41,11 @@ table 50293 "Workflow Kind of Document"
         {
             Caption = 'Contractor No. Mandatory';
         }
+        field(7; "Def. No. of Days For Approve"; DateFormula)
+        {
+            Caption = 'Default No. od Days To Wait For Approval';
+
+        }
     }
 
     keys

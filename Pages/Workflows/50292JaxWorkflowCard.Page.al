@@ -542,8 +542,8 @@ page 50292 "Workflow Card"
                     var
                         ApprovalsMgmt: Codeunit "Jax Approvals Mgmt.";
                     begin
-                        if ApprovalsMgmt.CheckWorkflowApprovalPossible(Rec) then
-                            ApprovalsMgmt.OnSendWorkflowDocForApproval(Rec);
+                        //if ApprovalsMgmt.CheckWorkflowApprovalPossible(Rec) then
+                        ApprovalsMgmt.OnSendWorkflowDocForApproval(Rec);
                     end;
                 }
                 action(CancelApprovalRequest)

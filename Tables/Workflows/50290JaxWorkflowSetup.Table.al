@@ -20,6 +20,12 @@ table 50290 "Workflow Setup"
         {
             Caption = 'Description Mandatory';
         }
+        //domyslna ilosc dni oczekiwania na akceptacje
+        field(4; "Def. No. of Days For Approve"; DateFormula)
+        {
+            Caption = 'Default No. od Days To Wait For Approval';
+
+        }
         field(12; "Workflow Nos."; Code[20])
         {
             Caption = 'Workflow Nos.';

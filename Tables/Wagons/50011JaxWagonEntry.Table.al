@@ -89,6 +89,14 @@ table 50011 "Wagon Entry"
         {
             Caption = 'User Id';
         }
+        field(505; Latitude; Integer)
+        {
+            Caption = 'Latitude';
+        }
+        field(506; Longitude; Integer)
+        {
+            Caption = 'Longitude';
+        }
     }
 
     keys

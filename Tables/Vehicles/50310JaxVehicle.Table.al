@@ -75,7 +75,7 @@ table 50310 Vehicle
             TableRelation = "Job Task";
         }
         /// <summary>
-        /// Kod stacji na ktorej znajduje sie wagon
+        /// Kod stacji na ktorej znajduje sie pojazd
         /// </summary>
         field(8; "Station Code"; code[20])
         {
@@ -218,24 +218,15 @@ table 50310 Vehicle
             DataClassification = ToBeClassified;
             Caption = 'Serial Number';
         }
-        /// <summary>
-        /// Cykl
-        /// </summary>
-        field(21; "Cycle"; Integer)
-        {
-            DataClassification = ToBeClassified;
-            Caption = 'Cycle';
-            BlankNumbers = BlankZero;
-        }
 
         /// <summary>
-        /// Zaklad
+        /// Przydzial serwisu
         /// </summary>
-        field(22; "Institute Code"; Code[10])
+        field(22; "Service Location Code"; Code[10])
         {
             DataClassification = ToBeClassified;
             Caption = 'Institute Code';
-            TableRelation = Institute;
+            TableRelation = "Vehicle Service Location";
         }
         /// <summary>
         /// Numer iążący jeden wago z różnymi EVNami
@@ -385,6 +376,22 @@ table 50310 Vehicle
             TableRelation = "Vehicle Setter Type";
         }
 
+        field(57; "M/L"; Enum "Vehicle M/L")
+        {
+            Caption = 'M/L';
+        }
+        field(58; "S/E"; enum "Vehicle S/E")
+        {
+            Caption = 'S/E';
+        }
+        field(59; "ETCS"; enum "Vehicle ETCS")
+        {
+            Caption = 'ETCS';
+        }
+        field(60; "GSMR"; enum "Vehicle GSMR")
+        {
+            Caption = 'GSMR';
+        }
 
         field(64; "Date Filter"; Date)
         {

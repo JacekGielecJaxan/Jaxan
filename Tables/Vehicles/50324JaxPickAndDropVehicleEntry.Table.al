@@ -1,11 +1,11 @@
 /// <summary>
 /// Zapisy przyjec i zdan pojazdow
 /// </summary>
-table 50324 "R/D Vehicle Entry"
+table 50324 "Pick And Drop Vehicle Entry"
 {
-    Caption = 'Receipt and Delivery Vehicle Entry';
-    DrillDownPageID = "R/D Vehicle Entries";
-    LookupPageID = "R/D Vehicle Entries";
+    Caption = 'Pick And Drop Vehicle Entry';
+    DrillDownPageID = "Pick And Drop Vehicle Entries";
+    LookupPageID = "Pick And Drop Vehicle Entries";
     DataClassification = CustomerContent;
 
     fields
@@ -118,6 +118,10 @@ table 50324 "R/D Vehicle Entry"
             Caption = 'Oil Level of Pivot Pin';
         }
 
+        field(300; Type; enum "Vehicle Pick And Drop Type")
+        {
+            Caption = 'Type';
+        }
         field(500; Description; Text[150])
         {
             Caption = 'Description';
@@ -130,6 +134,23 @@ table 50324 "R/D Vehicle Entry"
         field(502; "Document No."; code[20])
         {
             Caption = 'Document No.';
+        }
+        field(503; "Station Code"; code[20])
+        {
+            Caption = 'Station Code';
+            TableRelation = Station;
+        }
+        field(504; "Track No."; code[5])
+        {
+            Caption = 'Track No.';
+        }
+        field(505; Latitude; Integer)
+        {
+            Caption = 'Latitude';
+        }
+        field(506; Longitude; Integer)
+        {
+            Caption = 'Longitude';
         }
     }
 

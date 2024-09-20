@@ -25,7 +25,10 @@ page 50290 "Workflow Setup"
                 {
                     ApplicationArea = basic, suite;
                 }
-
+                field("Def. No. of Days For Approve"; rec."Def. No. of Days For Approve")
+                {
+                    ApplicationArea = basic, suite;
+                }
             }
             group("Number Series")
             {

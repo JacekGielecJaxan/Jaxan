@@ -155,6 +155,14 @@ table 50336 "Vehicle Exclusion Entry"
         {
             Caption = 'Admission No.';
         }
+        field(505; Latitude; Integer)
+        {
+            Caption = 'Latitude';
+        }
+        field(506; Longitude; Integer)
+        {
+            Caption = 'Longitude';
+        }
     }
 
     keys

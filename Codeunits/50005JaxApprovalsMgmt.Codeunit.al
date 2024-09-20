@@ -106,13 +106,10 @@ codeunit 50005 "Jax Approvals Mgmt."
         WorkflowHeader.Find();
 
         case WorkflowHeader.Status of
-            WorkflowHeader.Status::Released:
-                Message(DocStatusChangedMsg, WorkflowHeader."Document Type", WorkflowHeader."No.", WorkflowHeader.Status);
             WorkflowHeader.Status::"Pending Approval":
-                if ApprovalsMgt.HasOpenOrPendingApprovalEntries(WorkflowHeader.RecordId) then
-                    Message(PendingApprovalMsg);
-            WorkflowHeader.Status::"Pending Prepayment":
                 Message(DocStatusChangedMsg, WorkflowHeader."Document Type", WorkflowHeader."No.", WorkflowHeader.Status);
+        //WorkflowHeader.Status::Cancelled:
+        //    Message(DocStatusChangedMsg, WorkflowHeader."Document Type", WorkflowHeader."No.", WorkflowHeader.Status);
         end;
     end;
 
@@ -385,6 +382,50 @@ codeunit 50005 "Jax Approvals Mgmt."
     begin
         ApprovalsMgt.RunWorkflowEntriesPage(
             WorkflowHeader.RecordId(), DATABASE::"Workflow Header", WorkflowHeader."Document Type", WorkflowHeader."No.");
+    end;
+
+    internal procedure CheckWorkflowApprovalSendPossible(WorkflowHeader: Record "Workflow Header"): Boolean
+    var
+        ApprovalEntry: Record "Approval Entry";
+    begin
+        ApprovalEntry.SetRange("Document No.", WorkflowHeader."No.");
+        exit(not ApprovalEntry.IsEmpty);
+    end;
+
+    internal procedure AddNewApprovalRequest(WorkflowHeader: Record "Workflow Header")
+    var
+        WorkflowSetup: Record "Workflow Setup";
+        KindOf: Record "Workflow Kind of Document";
+        ApprovalEntry: Record "Approval Entry";
+        PendingDays: DateFormula;
+        NextEntryNo: Integer;
+
+    begin
+        WorkflowSetup.GetRecordOnce();
+        KindOf.Get(WorkflowHeader."Kind of Document");
+
+        ApprovalEntry.LockTable();
+        NextEntryNo := ApprovalEntry.GetLastEntryNo() + 1;
+
+        PendingDays := KindOf."Def. No. of Days For Approve";
+
+        if (Format(PendingDays) = '') or (Format(PendingDays) = '0D') then
+            PendingDays := WorkflowSetup."Def. No. of Days For Approve";
+
+        ApprovalEntry.Init();
+        ApprovalEntry.Amount := WorkflowHeader.Amount;
+        ApprovalEntry."Currency Code" := WorkflowHeader."Currency Code";
+        ApprovalEntry."Date-Time Sent for Approval" := CurrentDateTime;
+        ApprovalEntry."Document No." := WorkflowHeader."No.";
+        ApprovalEntry."Due Date" := CalcDate(PendingDays, Today);
+        ApprovalEntry."Entry No." := NextEntryNo;
+        ApprovalEntry.Important := WorkflowHeader.Important;
+        ApprovalEntry."Kind of Document" := WorkflowHeader."Kind of Document";
+        ApprovalEntry."Limit Type" := ApprovalEntry."Limit Type"::"Approval Limits";
+        ApprovalEntry."Sender ID" := UserId;
+        ApprovalEntry."Table ID" := database::"Workflow Header";
+        ApprovalEntry."Record ID to Approve" := WorkflowHeader.RecordId;
+        ApprovalEntry.Insert(true);
     end;
 
     local procedure IsBackground(): Boolean

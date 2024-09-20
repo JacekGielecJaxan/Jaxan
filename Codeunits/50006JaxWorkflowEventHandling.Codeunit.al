@@ -126,7 +126,7 @@ codeunit 50006 "Jax Workflow Event Handling"
 
     procedure RunWorkflowOnSendWorkflowDocForApprovalCode(): Code[128]
     begin
-        exit('RUNWORKFLOWONSENDWORKFLOWDOCFORAPPROVAL');
+        exit('RUNWORKFLOWONSENDPURCHASEDOCFORAPPROVAL');
     end;
 
 

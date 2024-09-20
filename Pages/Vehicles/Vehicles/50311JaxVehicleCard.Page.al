@@ -60,6 +60,22 @@ page 50311 "Vehicle Card"
                 {
                     ApplicationArea = Basic, Suite;
                 }
+                field("M/L"; rec."M/L")
+                {
+                    ApplicationArea = all;
+                }
+                field("S/E"; rec."S/E")
+                {
+                    ApplicationArea = all;
+                }
+                field(ETCS; rec.ETCS)
+                {
+                    ApplicationArea = all;
+                }
+                field(GSMR; rec.GSMR)
+                {
+                    ApplicationArea = all;
+                }
                 field("Resource No."; Rec."Resource No.")
                 {
                     ApplicationArea = basic, suite;
@@ -138,6 +154,11 @@ page 50311 "Vehicle Card"
                     {
                         ApplicationArea = all;
                     }
+
+                    field("Service Location Code"; rec."Service Location Code")
+                    {
+                        ApplicationArea = all;
+                    }
                 }
 
                 group(LeasingDetail)
@@ -178,14 +199,10 @@ page 50311 "Vehicle Card"
                 {
                     ApplicationArea = basic, suite;
                 }
-                group(mass)
+                field("Mh.P"; Rec."Mh. P")
                 {
-                    field("Mh.P"; Rec."Mh. P")
-                    {
-                        ApplicationArea = basic, suite;
-                    }
+                    ApplicationArea = basic, suite;
                 }
-
             }
             group(components)
             {
@@ -222,11 +239,6 @@ page 50311 "Vehicle Card"
                 {
                     ApplicationArea = DSU, Planning;
                     Caption = 'DSU Code';
-                }
-
-                field(Cycle; Rec.Cycle)
-                {
-                    ApplicationArea = basic, suite;
                 }
             }
             group(Statistics)
@@ -360,12 +372,12 @@ page 50311 "Vehicle Card"
                     RunPageView = sorting("Vehicle No.");
                     ToolTip = '';
                 }
-                action("&R/D Entries")
+                action("&Pick And Drop Entries")
                 {
                     ApplicationArea = Suite;
-                    Caption = '&Receipt and Delivery Vehicle Entries';
+                    Caption = '&Pick And Drop Vehicle Entries';
                     Image = BinLedger;
-                    RunObject = Page "r/d vehicle entries";
+                    RunObject = Page "Pick And Drop vehicle entries";
                     RunPageLink = "Vehicle No." = field("No.");
                     RunPageView = sorting("Vehicle No.");
                     ToolTip = '';

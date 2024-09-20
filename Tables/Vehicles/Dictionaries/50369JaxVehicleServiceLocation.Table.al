@@ -1,17 +1,17 @@
 /// <summary>
-/// Typ wagonu
+/// Lokalizacje serwisow
 /// </summary>
-table 50350 "Vehicle Type"
+table 50369 "Vehicle Service Location"
 {
-    Caption = 'Vehicle Type';
+    Caption = 'Vehicle Service Location';
     DataCaptionFields = "Code", Name;
-    DrillDownPageID = "Vehicle Types";
-    LookupPageID = "Vehicle Types";
+    DrillDownPageID = "Vehicle Service Locations";
+    LookupPageID = "Vehicle Service Locations";
     DataClassification = CustomerContent;
 
     fields
     {
-        field(1; Code; Text[20])
+        field(1; Code; Text[10])
         {
             DataClassification = ToBeClassified;
             Caption = 'Code';
