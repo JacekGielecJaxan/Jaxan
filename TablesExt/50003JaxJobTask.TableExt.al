@@ -2,6 +2,7 @@ tableextension 50003 "Job Task Ext" extends "Job Task"
 {
     fields
     {
+
         // Na potrzeby modułu Planning
         field(50000; "Shuttle Start Date"; Date)
         {
@@ -41,5 +42,107 @@ tableextension 50003 "Job Task Ext" extends "Job Task"
         {
             Caption = 'Usage (Number of Wagons)';
         }
+        field(50008; "Object No. From"; Integer)
+        {
+            Caption = 'Object No. From';
+        }
+        field(50009; "Object Name From"; Text[100])
+        {
+            Caption = 'Object Name From';
+        }
+        field(50010; "Object No. To"; Integer)
+        {
+            Caption = 'Object No. To';
+        }
+        field(50011; "Object Name To"; Text[100])
+        {
+            Caption = 'Object Name To';
+        }
+        field(50012; "No. Series"; code[10])
+        {
+            Caption = 'No. Series';
+        }
+        field(50013; "Shuttle Start Time"; time)
+        {
+            Caption = 'Shuttle Start Time';
+            FieldClass = Normal;
+        }
+        // Na potrzeby modułu Planning
+        field(50014; "Shuttle End Time"; Time)
+        {
+            Caption = 'Shuttle End Time';
+            FieldClass = Normal;
+        }
+
     }
+
+
+    procedure InitJobTaskNo()
+    var
+        Job2: Record Job;
+        JobTask2: Record "Job Task";
+        IsHandled: Boolean;
+        JobsSetup: Record "Jobs Setup";
+        NoSeriesMgt: Codeunit NoSeriesManagement;
+        NoSeries: Codeunit "No. Series";
+    begin
+        IsHandled := false;
+        OnBeforeInitJobTaskNo(Rec, xRec, IsHandled);
+        if IsHandled then
+            exit;
+        JobsSetup.Get();
+        Job2.Get("Job No.");
+        if "job task No." = '' then begin
+            JobsSetup.TestField("Job Task Serie No. Suffix");
+            "No. Series" := "Job No." + JobsSetup."Job Task Serie No. Suffix";
+
+            OnInitJobTaskNoOnCheckSeries("Job No.", job2.Description, JobsSetup."Job Task Serie No. Suffix", IsHandled);
+            if IsHandled then
+                exit;
+#if not CLEAN24
+            NoSeriesMgt.RaiseObsoleteOnBeforeInitSeries("No. Series", xRec."No. Series", 0D, "job task No.", "No. Series", IsHandled);
+            if not IsHandled then begin
+#endif
+                if NoSeries.AreRelated("No. Series", xRec."No. Series") then
+                    "No. Series" := xRec."No. Series";
+                "Job Task No." := NoSeries.GetNextNo("No. Series");
+                JobTask2.ReadIsolation(IsolationLevel::ReadUncommitted);
+                JobTask2.SetLoadFields("Job Task No.");
+                while JobTask2.Get("Job No.", "job task No.") do
+                    "job task No." := NoSeries.GetNextNo("No. Series");
+#if not CLEAN24
+                NoSeriesMgt.RaiseObsoleteOnAfterInitSeries("No. Series", "No. Series", 0D, "Job Task No.");
+            end;
+#endif
+
+            "Contract (Number of Wagons)" := Job2."Def. Number of Wagons";
+        end;
+    end;
+
+    procedure GetShuttleStartDateTime(): DateTime
+    begin
+        if Format("Shuttle Start Date") <> '' then
+            EXIT(CreateDateTime("Shuttle Start Date", "Shuttle Start Time"))
+        else
+            exit(0DT);
+    end;
+
+    procedure GetShuttleEndDateTime(): DateTime
+    begin
+        if format("Shuttle End Date") <> '' then
+            EXIT(CreateDateTime("Shuttle End Date", "Shuttle End Time"))
+        else
+            exit(0DT);
+    end;
+
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeInitJobTaskNo(var JobTask: Record "Job Task"; var xJobTask: Record "Job Task"; var IsHandled: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnInitJobTaskNoOnCheckSeries(JobNo: Code[20]; JobName: Text[100]; Suffix: Code[10]; var IsHandled: Boolean)
+    begin
+    end;
 }

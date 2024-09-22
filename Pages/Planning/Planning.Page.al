@@ -78,6 +78,8 @@ page 50699 "Planning"
 
     local procedure JobAsJson(JobRec: Record Job): JsonObject
     var
+        stratdate: Date;
+        enddate: Date;
         jobtask: Record "Job Task";
         out: JsonObject;
         project: JsonObject;
@@ -89,27 +91,56 @@ page 50699 "Planning"
         null.SetValueToNull();
 
         repeat
+
+            jobtask.SetRange("Job No.", JobRec."No.");
+            //jobtask.SetFilter("Shuttle Start Date", '<>0D');
+
             // Dodawanie job do gantta
             Clear(project);
             project.Add('id', JobRec."No.");
             project.Add('text', JobRec.Description);
+
+            //if jobtask.FindFirst() then begin
+            stratdate := jobtask."Shuttle Start Date";
             project.Add('start_date', null);
+            project.Add('start_time', null);
+            //end;
+
+            //if jobtask.FindLast() then begin
+            enddate := jobtask."Shuttle End Date";
+            if format(enddate) = '' then
+                enddate := Today;
+            project.Add('end_date', null);
+            project.Add('end_time', null);
+            //end;
+
             project.Add('duration', null);
             project.Add('parent', 0);
             //project.Add('hide_bar', true);
             tasks.Add(project);
 
             // Dodawanie job task do gantta
-            jobtask.SetRange("Job No.", JobRec."No.");
-            if jobtask.FindSet() then
+            if jobtask.FindFirst() then
                 repeat
+
                     Clear(task);
                     task.add('id', jobtask."Job Task No.");
-                    task.add('text', jobtask.Description);
+                    task.add('text', jobtask."Job Task No." + ' / (' +
+                      jobtask."Contract (Vehicle Type)" + ' * ' +
+                      jobtask."Schedule (Vehicle Type)" + ' * ' +
+                      jobtask."Usage (Vehicle Type)" + ') / (' +
+                      format(jobtask."Contract (Number of Wagons)") + ' * ' +
+                      format(jobtask."Schedule (Number of Wagons)") + ' * ' +
+                      format(jobtask."Usage (Number of Wagons)") + ')');
                     task.add('start_date', jobtask."Shuttle Start Date");
+                    task.Add('end_date', jobtask."Shuttle End Date");
+                    task.Add('strat_time', jobtask."Shuttle Start Time");
+                    task.Add('end_time', jobtask."Shuttle End Time");
                     task.add('duration', jobtask."Shuttle End Date" - jobtask."Shuttle Start Date" + 1);
                     task.add('parent', JobRec."No.");
-                    tasks.Add(task);
+
+                    if format(jobtask."Shuttle Start Date") <> '' then
+                        tasks.Add(task);
                 until jobtask.Next() = 0;
         until JobRec.Next() = 0;
 
@@ -151,12 +182,12 @@ page 50699 "Planning"
     procedure AssignValueToFieldRecord(JsonKeyValue: JsonValue; JsonKey: Text; JobTask: Record "Job Task")
     begin
         case JsonKey of
-            // 'id':
-            //     JobTask."Job Task No." := Format(JsonKeyValue);
+            //'id':
+            //    JobTask."Job Task No." := Format(JsonKeyValue);
             'text':
                 begin
-                    JobTask.Description := 'tata';
-                    JobTask.Modify();
+                    //JobTask.Description := 'tata';
+                    //JobTask.Modify();
                 end;
             'start_date':
                 begin

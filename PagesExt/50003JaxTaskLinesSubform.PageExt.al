@@ -5,13 +5,13 @@ pageextension 50003 "Task Lines Subform Ext" extends "Job Task Lines Subform"
         addafter(Description)
         {
             // Na potrzeby modułu Planning
-            field("Shuttle Start Date"; Rec."Shuttle Start Date")
+            field("Shuttle Start Date"; Rec.GetShuttleStartDateTime())
             {
                 ApplicationArea = Basic, Suite, Jobs;
                 ToolTip = 'Specifies the start date for the shuttle';
             }
             // Na potrzeby modułu Planning
-            field("Shuttle End Date"; Rec."Shuttle End Date")
+            field("Shuttle End Date"; Rec.GetShuttleEndDateTime())
             {
                 ApplicationArea = Basic, Suite, Jobs;
                 ToolTip = 'Specifies the end date for the shuttle';
@@ -36,12 +36,21 @@ pageextension 50003 "Task Lines Subform Ext" extends "Job Task Lines Subform"
             {
                 ApplicationArea = basic, suite, jobs;
             }
+            field("Sell-to Customer Name"; rec."Sell-to Customer Name")
+            {
+                ApplicationArea = basic, suite, jobs;
+            }
             field("Ship-to Code"; rec."Ship-to Code")
             {
                 ApplicationArea = basic, suite, jobs;
             }
 
         }
+        modify("Sell-to Customer No.")
+        {
+            Visible = true;
+        }
+
         modify("Job Task Type")
         {
             Visible = false;

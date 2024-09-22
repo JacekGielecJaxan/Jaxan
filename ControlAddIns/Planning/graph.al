@@ -6,6 +6,7 @@ controladdin graph
     VerticalStretch = true;
     HorizontalStretch = true;
 
+
     event ControlReady();
     event TaskClicked(TaskParentId: Code[20]);
     event TaskDragged(TaskObject: JsonObject; TaskId: Code[20]);
