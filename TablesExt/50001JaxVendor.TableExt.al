@@ -1,7 +1,9 @@
 tableextension 50001 "Vendor Ext" extends Vendor
 {
+
     fields
     {
+
         field(50000; "Vendor Type"; code[10])
         {
             Caption = 'Vendor Type';
@@ -15,7 +17,9 @@ tableextension 50001 "Vendor Ext" extends Vendor
             CalcFormula = lookup("Purchase Contract Header"."No."
                 where("Vendor No." = field("No."), Status = const("Contract Status"::Active)));
         }
+
     }
+
 
     /// <summary>
     /// Pobranie daty zakonczenia umowy

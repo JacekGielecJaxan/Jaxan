@@ -89,7 +89,6 @@ page 50292 "Workflow Card"
                     {
                         ApplicationArea = Basic, Suite;
                         Caption = 'Contact No.';
-                        Importance = Additional;
                         //ToolTip = 'Specifies the number of your contact at the vendor.';
 
                         trigger OnLookup(var Text: Text): Boolean
@@ -148,6 +147,10 @@ page 50292 "Workflow Card"
                             Rec.LookupBuyFromContact();
                             CurrPage.Update();
                         end;
+                    }
+                    field("VAT Registration No."; rec."VAT Registration No.")
+                    {
+                        ApplicationArea = all;
                     }
                 }
                 group(contractor)

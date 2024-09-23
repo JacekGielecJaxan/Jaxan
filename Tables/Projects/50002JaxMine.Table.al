@@ -1,23 +1,30 @@
 /// <summary>
-/// Table Job Setup (ID 50400).
-/// Ustawienia pracy w kontekscie wykonywanych zadan przez pracownikow
+/// Table Mine (ID 50002).
+/// Kopalnie
 /// </summary>
-table 50400 "Job Setup"
+table 50002 "Mine"
 {
-    Caption = 'Job Setup';
+    Caption = 'Mine';
+    DataCaptionFields = "Code", Name;
+    DrillDownPageID = "Mine List";
+    LookupPageID = "Mine List";
     DataClassification = CustomerContent;
 
     fields
     {
-        field(1; "Primary Key"; Code[10])
+        field(1; Code; Code[20])
         {
-            Caption = 'Primary Key';
+            Caption = 'Code';
+        }
+        field(2; Name; Text[100])
+        {
+            Caption = 'Name';
         }
     }
 
     keys
     {
-        key(Key1; "Primary Key")
+        key(Key1; Code)
         {
             Clustered = true;
         }

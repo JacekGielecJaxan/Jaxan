@@ -2,6 +2,14 @@ pageextension 50001 "Vendor List Ext" extends "Vendor List"
 {
     layout
     {
+
+        addafter(Name)
+        {
+            field("VAT Registration No."; rec."VAT Registration No.")
+            {
+                ApplicationArea = all;
+            }
+        }
         addafter("Search Name")
         {
             field("Vendor Type"; Rec."Vendor Type")

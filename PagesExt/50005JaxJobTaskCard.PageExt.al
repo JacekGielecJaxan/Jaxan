@@ -51,7 +51,28 @@ pageextension 50005 "Job Task Card Ext" extends "Job Task Card"
             {
                 ApplicationArea = basic, suite, jobs;
             }
+            field("Mine Code"; rec."Mine Code")
+            {
+                ApplicationArea = basic, suite, jobs;
+            }
+            field(Status; rec.Status)
+            {
+                ApplicationArea = basic, suite, jobs;
+            }
 
+        }
+
+        modify(Totaling)
+        {
+            Visible = false;
+        }
+        modify("New Page")
+        {
+            Visible = false;
+        }
+        modify("No. of Blank Lines")
+        {
+            Visible = false;
         }
 
         modify("Job Task Type")
@@ -81,7 +102,6 @@ pageextension 50005 "Job Task Card Ext" extends "Job Task Card"
         if GuiAllowed() then begin
             if rec."job task No." = '' then begin
                 rec.InitJobTaskNo();
-                rec.Insert(true);
             end;
         end;
     end;

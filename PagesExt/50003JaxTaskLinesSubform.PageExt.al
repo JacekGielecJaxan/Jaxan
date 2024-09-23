@@ -16,6 +16,10 @@ pageextension 50003 "Task Lines Subform Ext" extends "Job Task Lines Subform"
                 ApplicationArea = Basic, Suite, Jobs;
                 ToolTip = 'Specifies the end date for the shuttle';
             }
+            field(Status; rec.Status)
+            {
+                ApplicationArea = basic, suite, jobs;
+            }
             field("Contract (Vehicle Type)"; rec."Contract (Vehicle Type)")
             {
                 ApplicationArea = basic, suite, jobs;
@@ -37,6 +41,10 @@ pageextension 50003 "Task Lines Subform Ext" extends "Job Task Lines Subform"
                 ApplicationArea = basic, suite, jobs;
             }
             field("Sell-to Customer Name"; rec."Sell-to Customer Name")
+            {
+                ApplicationArea = basic, suite, jobs;
+            }
+            field("Mine Code"; rec."Mine Code")
             {
                 ApplicationArea = basic, suite, jobs;
             }

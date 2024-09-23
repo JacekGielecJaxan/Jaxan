@@ -14333,7 +14333,7 @@
         </trans-unit>
         <trans-unit id="Page 3081673281 - Control 3390995943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contractor Details</source>
-          <target state="translated">Szczegóły wykonawcy</target>
+          <target state="translated">Szczegóły kontrahenta</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page Workflow Card - Control Contractor Details - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3081673281 - Control 1750733095 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">

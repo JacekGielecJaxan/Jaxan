@@ -8,6 +8,24 @@ tableextension 50003 "Job Task Ext" extends "Job Task"
         {
             Caption = 'Shuttle Start Date';
             FieldClass = Normal;
+
+            trigger OnValidate()
+            var
+                dt: DateTime;
+            begin
+                JobsSetup.Get();
+
+                "Shuttle End Date" := "Shuttle Start Date";
+
+                if format(JobsSetup."Def. No. Days For Shuttle") <> '' then
+                    "Shuttle End Date" := CalcDate(JobsSetup."Def. No. Days For Shuttle", "Shuttle Start Date");
+
+                if JobsSetup."Default Start Hour" <> 0T then
+                    "Shuttle Start Time" := JobsSetup."Default Start Hour";
+
+                dt := CreateDateTime("Shuttle Start Date", "Shuttle Start Time") - 1;
+                "Shuttle End Time" := DT2Time(dt);
+            end;
         }
         // Na potrzeby modułu Planning
         field(50001; "Shuttle End Date"; Date)
@@ -66,12 +84,29 @@ tableextension 50003 "Job Task Ext" extends "Job Task"
         {
             Caption = 'Shuttle Start Time';
             FieldClass = Normal;
+
+            trigger OnValidate()
+            var
+                dt: DateTime;
+            begin
+                dt := CreateDateTime("Shuttle Start Date", "Shuttle Start Time") - 1;
+                "Shuttle End Time" := DT2Time(dt);
+            end;
         }
         // Na potrzeby modułu Planning
         field(50014; "Shuttle End Time"; Time)
         {
             Caption = 'Shuttle End Time';
             FieldClass = Normal;
+        }
+        field(50015; Status; enum "Job Task Status")
+        {
+            Caption = 'Status';
+        }
+        field(50016; "Mine Code"; code[20])
+        {
+            Caption = 'Mine Code';
+            TableRelation = Mine;
         }
 
     }
@@ -135,6 +170,8 @@ tableextension 50003 "Job Task Ext" extends "Job Task"
             exit(0DT);
     end;
 
+    var
+        JobsSetup: Record "Jobs Setup";
 
     [IntegrationEvent(false, false)]
     local procedure OnBeforeInitJobTaskNo(var JobTask: Record "Job Task"; var xJobTask: Record "Job Task"; var IsHandled: Boolean)

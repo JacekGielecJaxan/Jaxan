@@ -4,12 +4,19 @@ codeunit 50007 "Jax NoSeriesManagement"
     begin
 
     end;
-
+    /// <summary>
+    /// AddNewSeries.
+    /// Gdy jest dopisywane pierwsze zadanie do projektu system sprawdza, czy jest odpowiednia seria numeracji dla zadan.
+    /// Przy braku serii numeracji numeracja jest dopisywana
+    /// </summary>
+    /// <param name="Code">code[10].</param>
+    /// <param name="JobNo">Code[10].</param>
+    /// <param name="Desc">Text[100].</param>
     procedure AddNewSeries(Code: code[10]; JobNo: Code[10]; Desc: Text[100])
     var
         NoSeries: Record "No. Series";
         NoSeriesLine: Record "No. Series Line";
-        Year, i, LineNo : Integer;
+        Year, Year2, i, LineNo : Integer;
     begin
         NoSeries.Init();
         NoSeries.Code := Code;
@@ -17,10 +24,10 @@ codeunit 50007 "Jax NoSeriesManagement"
         NoSeries."Default Nos." := true;
         NoSeries.Insert(true);
 
-        Year := Date2DMY(WorkDate(), 3);
+        Year2 := Date2DMY(WorkDate(), 3);
         LineNo := 10000;
         for i := 0 to 5 do begin
-            Year := Year + i;
+            Year := Year2 + i;
 
 
             NoSeriesLine.Init();
