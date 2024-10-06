@@ -89,7 +89,7 @@ tableextension 50003 "Job Task Ext" extends "Job Task"
             var
                 dt: DateTime;
             begin
-                dt := CreateDateTime("Shuttle Start Date", "Shuttle Start Time") - 1;
+                dt := CreateDateTime("Shuttle Start Date", "Shuttle Start Time");
                 "Shuttle End Time" := DT2Time(dt);
             end;
         }
@@ -120,6 +120,7 @@ tableextension 50003 "Job Task Ext" extends "Job Task"
         JobsSetup: Record "Jobs Setup";
         NoSeriesMgt: Codeunit NoSeriesManagement;
         NoSeries: Codeunit "No. Series";
+        dt: DateTime;
     begin
         IsHandled := false;
         OnBeforeInitJobTaskNo(Rec, xRec, IsHandled);
@@ -151,6 +152,16 @@ tableextension 50003 "Job Task Ext" extends "Job Task"
 #endif
 
             "Contract (Number of Wagons)" := Job2."Def. Number of Wagons";
+
+            JobTask2.SetRange("Job No.", "Job No.");
+            if JobTask2.FindLast() then begin
+                if JobTask2."Shuttle End Date" <> 0D then begin
+                    dt := RoundDateTime(CreateDateTime(JobTask2."Shuttle End Date", JobTask2."Shuttle End Time"), 360000L);
+                    Validate("Shuttle Start Date", DT2Date(dt));
+                    Validate("Shuttle Start Time", dt2time(dt));
+                end;
+            end;
+
         end;
     end;
 
