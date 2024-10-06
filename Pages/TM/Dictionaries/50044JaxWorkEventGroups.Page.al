@@ -1,9 +1,9 @@
-page 50401 "Job Types"
+page 50044 "Work Event Groups"
 {
-    Caption = 'Job Types';
+    Caption = 'Work Event Groups';
     DataCaptionFields = "Code", Name;
     PageType = List;
-    SourceTable = "Job Type";
+    SourceTable = "Work Event Group";
     ApplicationArea = Basic, Suite;
     UsageCategory = Administration;
 
@@ -23,10 +23,6 @@ page 50401 "Job Types"
                 {
                     ApplicationArea = all;
                     ToolTip = '';
-                }
-                field("Work Register Mandatory"; rec."Work Register Mandatory")
-                {
-                    ApplicationArea = all;
                 }
             }
         }

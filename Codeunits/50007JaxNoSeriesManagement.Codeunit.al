@@ -38,4 +38,30 @@ codeunit 50007 "Jax NoSeriesManagement"
             NoSeriesLine.Insert(true);
         end;
     end;
+
+    procedure CheckWorkRegisterSerie(Code: code[10]; Prefix: code[5]; Date: Date)
+    var
+        DateMgt: Codeunit "Date Management";
+        NoSeriesLine: Record "No. Series Line";
+        LineNo: Integer;
+    begin
+        NoSeriesLine.SetRange("Series Code", Code);
+        NoSeriesLine.SetRange("Starting Date", Date);
+
+        if NoSeriesLine.FindSet() then
+            exit;
+
+        NoSeriesLine.SetRange("Starting Date");
+        if NoSeriesLine.FindLast() then
+            LineNo := NoSeriesLine."Line No."
+        else
+            LineNo := 0;
+
+        NoSeriesLine.Init();
+        NoSeriesLine."Line No." := LineNo + 10000;
+        NoSeriesLine."Series Code" := Code;
+        NoSeriesLine."Starting Date" := Date;
+        NoSeriesLine."Starting No." := Prefix + '/' + DateMgt.Date2YYYYMMDD(Date) + '/' + '0001';
+        NoSeriesLine.Insert(true);
+    end;
 }

@@ -1,13 +1,13 @@
 /// <summary>
-/// Table Job Type (ID 50401).
-/// Rodzaje dzialan wykonywanych przez pracownikow (maszynistow/rewidentow)
+/// Work Event
+/// Zdarzenia pracy
 /// </summary>
-table 50401 "Job Type"
+table 50037 "Work Event"
 {
-    Caption = 'Job Type';
+    Caption = 'Work Event';
     DataCaptionFields = "Code", Name;
-    DrillDownPageID = "Job Types";
-    LookupPageID = "Job Types";
+    DrillDownPageID = "Work Events";
+    LookupPageID = "Work Events";
     DataClassification = CustomerContent;
 
     fields
@@ -20,13 +20,9 @@ table 50401 "Job Type"
         {
             Caption = 'Name';
         }
-        /// <summary>
-        /// Wymagany wykaz. Gdy zostanie wybrany kod z ta wymagalnoscia system sprawdzi czy istnieje juz na dany dzien wykaz,
-        /// jezeli wykazu nie bedzie zostanie utworzony z odpowiednia data rozpoczecia
-        /// </summary>
-        field(3; "Work Register Mandatory"; Boolean)
+        field(3; "Work Event Group"; code[10])
         {
-            Caption = 'Work Register Mandatory';
+            Caption = 'Work Event Group';
         }
     }
 
