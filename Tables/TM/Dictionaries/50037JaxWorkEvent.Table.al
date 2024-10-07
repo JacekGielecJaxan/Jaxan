@@ -23,6 +23,7 @@ table 50037 "Work Event"
         field(3; "Work Event Group"; code[10])
         {
             Caption = 'Work Event Group';
+            TableRelation = "Work Event Group";
         }
     }
 

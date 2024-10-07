@@ -92,6 +92,20 @@ page 50403 "Work Register Lines"
                     ApplicationArea = Basic, Suite;
                     Visible = false;
                 }
+
+                field(Longitude; rec.Longitude)
+                {
+                    ApplicationArea = basic, suite;
+                    Editable = false;
+                    Visible = false;
+                }
+                field(Latitude; rec.Latitude)
+                {
+                    ApplicationArea = basic, suite;
+                    Editable = false;
+                    Visible = false;
+                }
+
             }
         }
     }

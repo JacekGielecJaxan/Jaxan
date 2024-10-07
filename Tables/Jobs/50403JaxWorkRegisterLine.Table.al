@@ -124,6 +124,14 @@ table 50403 "Work Register Line"
             Caption = 'Creation User Id';
             Editable = false;
         }
+        field(505; Latitude; Integer)
+        {
+            Caption = 'Latitude';
+        }
+        field(506; Longitude; Integer)
+        {
+            Caption = 'Longitude';
+        }
 
     }
 

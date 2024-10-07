@@ -1,13 +1,12 @@
-page 50043 "Work Event Entries"
+page 50045 "Readiness Declaration Entries"
 {
     ApplicationArea = Basic, Suite;
-    Caption = 'Work Event Entries';
-    //DataCaptionFields = "Wheelset No.";
+    Caption = 'Readiness Declaration Entries';
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    Permissions = TableData "Work Event Entry" = m;
-    SourceTable = "Work Event Entry";
+    Permissions = TableData "readiness declaration Entry" = m;
+    SourceTable = "readiness declaration Entry";
     //SourceTableView = sorting("Wheelset No.", "Date") order(descending);
     UsageCategory = History;
 
@@ -28,17 +27,10 @@ page 50043 "Work Event Entries"
                     ApplicationArea = basic, suite;
                     Editable = false;
                 }
-                field("Work Event Code"; rec."Work Event Code")
+                field("Who Was Reported"; rec."Who Was Reported")
                 {
                     ApplicationArea = basic, suite;
-                }
-                field("Work Event Name"; rec."Work Event Name")
-                {
-                    ApplicationArea = basic, suite;
-                }
-                field("Work Event Group"; rec."Work Event Group")
-                {
-                    ApplicationArea = basic, suite;
+                    Editable = false;
                 }
                 field("Job No."; Rec."Job No.")
                 {
@@ -73,22 +65,21 @@ page 50043 "Work Event Entries"
                     ApplicationArea = basic, suite;
                     Editable = false;
                 }
-                field("Order No."; Rec."Sales Order No.")
-                {
-                    ApplicationArea = basic, suite;
-                    Editable = false;
-                    Visible = false;
-                }
                 field("Train No."; Rec."Train No.")
                 {
                     ApplicationArea = basic, suite;
                     Editable = false;
                 }
-                field("Notification Place"; rec."Notification Place")
+                field("Object No."; rec."Object No.")
                 {
                     ApplicationArea = basic, suite;
                     Editable = false;
                     Visible = false;
+                }
+                field("Object Name"; rec."Object Name")
+                {
+                    ApplicationArea = basic, suite;
+                    Editable = false;
                 }
 
                 field(Longitude; rec.Longitude)
