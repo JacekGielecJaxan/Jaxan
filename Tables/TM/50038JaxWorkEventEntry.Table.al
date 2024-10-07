@@ -91,6 +91,14 @@ table 50038 "Work Event Entry"
         {
             Caption = 'User Id';
         }
+        field(505; Latitude; Integer)
+        {
+            Caption = 'Latitude';
+        }
+        field(506; Longitude; Integer)
+        {
+            Caption = 'Longitude';
+        }
     }
 
     keys
