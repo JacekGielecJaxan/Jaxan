@@ -128,6 +128,12 @@ table 50313 "Vehicle Review Entry"
         }
 
     }
+    trigger OnInsert()
+    begin
+        "Entry No." := GetLastEntryNo() + 1;
+
+    end;
+
     procedure GetLastEntryNo(): Integer;
     var
         FindRecordManagement: Codeunit "Find Record Management";

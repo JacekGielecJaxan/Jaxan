@@ -137,6 +137,7 @@ table 50012 "Wagon Approval Entry"
 
     trigger OnInsert()
     begin
+        "Entry No." := GetLastEntryNo() + 1;
 
     end;
 

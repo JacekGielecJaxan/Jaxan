@@ -193,6 +193,7 @@ table 50336 "Vehicle Exclusion Entry"
 
     trigger OnInsert()
     begin
+        "Entry No." := GetLastEntryNo() + 1;
 
     end;
 

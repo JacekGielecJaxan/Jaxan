@@ -143,6 +143,7 @@ table 50315 "Vehicle Km Entry"
 
     trigger OnInsert()
     begin
+        "Entry No." := GetLastEntryNo() + 1;
 
     end;
 

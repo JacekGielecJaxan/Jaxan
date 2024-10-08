@@ -130,7 +130,7 @@ table 50311 "Vehicle Entry"
 
     trigger OnInsert()
     begin
-
+        "Entry No." := GetLastEntryNo() + 1;
     end;
 
     trigger OnModify()

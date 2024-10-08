@@ -166,6 +166,7 @@ table 50017 "Wagon Fault Entry"
 
     trigger OnInsert()
     begin
+        "Entry No." := GetLastEntryNo() + 1;
 
     end;
 

@@ -96,6 +96,12 @@ table 50321 "Vehicle Status Entry"
 
     }
 
+    trigger OnInsert()
+    begin
+        "Entry No." := GetLastEntryNo() + 1;
+
+    end;
+
     procedure GetLastEntryNo(): Integer;
     var
         FindRecordManagement: Codeunit "Find Record Management";

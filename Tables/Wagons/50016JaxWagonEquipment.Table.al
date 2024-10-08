@@ -32,6 +32,7 @@ table 50016 "Wagon Equipment"
 
     trigger OnInsert()
     begin
+        //"Entry No." := GetLastEntryNo() + 1;
 
     end;
 
@@ -50,5 +51,10 @@ table 50016 "Wagon Equipment"
 
     end;
 
-
+    procedure GetLastEntryNo(): Integer;
+    var
+        FindRecordManagement: Codeunit "Find Record Management";
+    begin
+        //exit(FindRecordManagement.GetLastEntryIntFieldValue(Rec, FieldNo("Entry No.")))
+    end;
 }

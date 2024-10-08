@@ -111,6 +111,7 @@ table 50021 "Wagon Status Entry"
 
     trigger OnInsert()
     begin
+        "Entry No." := GetLastEntryNo() + 1;
 
     end;
 

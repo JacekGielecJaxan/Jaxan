@@ -173,6 +173,11 @@ table 50319 "Vehicle Post Fault Entry"
 
     }
 
+    trigger OnInsert()
+    begin
+        "Entry No." := GetLastEntryNo() + 1;
+
+    end;
 
     procedure GetLastEntryNo(): Integer;
     var

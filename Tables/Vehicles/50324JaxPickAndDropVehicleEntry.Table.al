@@ -215,7 +215,7 @@ table 50324 "Pick And Drop Vehicle Entry"
         TestField(Time);
         TestField("Vehicle No.");
 
-        "Entry No." := GetLastEntryNo();
+        "Entry No." := GetLastEntryNo() + 1;
 
         if Type = type::Pick then begin
             if HasOpen("User ID", "Vehicle No.", Date) then

@@ -157,6 +157,7 @@ table 50314 "Vehicle Plan Review Entry"
 
     trigger OnInsert()
     begin
+        "Entry No." := GetLastEntryNo() + 1;
 
     end;
 

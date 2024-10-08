@@ -49,7 +49,11 @@ table 50318 "Vehicle Fault Attachment Entry"
         {
         }
     }
+    trigger OnInsert()
+    begin
+        "Entry No." := GetLastEntryNo() + 1;
 
+    end;
 
     procedure GetLastEntryNo(): Integer;
     var

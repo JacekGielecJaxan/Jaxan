@@ -60,6 +60,7 @@ table 50018 "Wagon Fault Attachment Entry"
 
     trigger OnInsert()
     begin
+        "Entry No." := GetLastEntryNo() + 1;
 
     end;
 

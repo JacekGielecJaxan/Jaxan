@@ -123,6 +123,11 @@ table 50323 "Vehicle Prorogation Entry"
 
 
     }
+    trigger OnInsert()
+    begin
+        "Entry No." := GetLastEntryNo() + 1;
+
+    end;
 
     procedure GetLastEntryNo(): Integer;
     var

@@ -183,6 +183,7 @@ table 50019 "Wagon Post Fault Entry"
 
     trigger OnInsert()
     begin
+        "Entry No." := GetLastEntryNo() + 1;
 
     end;
 
