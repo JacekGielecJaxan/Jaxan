@@ -3,8 +3,8 @@ page 50328 "Pick And Drop Vehicle Entries"
     ApplicationArea = Basic, Suite;
     Caption = 'Pick And Drop Vehicle Entries';
     DataCaptionFields = "Vehicle No.";
-    DeleteAllowed = false;
-    InsertAllowed = false;
+    //DeleteAllowed = false;
+    //InsertAllowed = false;
     PageType = List;
     Permissions = TableData "Pick And Drop Vehicle Entry" = m;
     SourceTable = "Pick And Drop Vehicle Entry";
@@ -32,6 +32,8 @@ page 50328 "Pick And Drop Vehicle Entries"
                 {
                     ApplicationArea = Basic, Suite;
                     Editable = false;
+
+
                 }
                 field("Vehicle No. 2"; Rec."Vehicle No. 2")
                 {

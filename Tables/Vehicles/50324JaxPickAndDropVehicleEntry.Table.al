@@ -18,6 +18,14 @@ table 50324 "Pick And Drop Vehicle Entry"
         {
             Caption = 'Vehicle No.';
             TableRelation = Vehicle;
+
+            trigger OnValidate()
+            var
+                vehicle: Record Vehicle;
+            begin
+                vehicle.Get(rec."Vehicle No.");
+                rec."Vehicle No. 2" := vehicle."No. 2";
+            end;
         }
 
         field(3; "Vehicle No. 2"; Code[12])
@@ -202,6 +210,11 @@ table 50324 "Pick And Drop Vehicle Entry"
     var
 
     begin
+        TestField(Date);
+        TestField("User ID");
+        TestField(Time);
+        TestField("Vehicle No.");
+
         "Entry No." := FindLastEntryNo();
 
         if Type = type::Pick then begin
