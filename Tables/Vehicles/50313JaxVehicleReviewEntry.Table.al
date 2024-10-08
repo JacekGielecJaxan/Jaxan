@@ -101,7 +101,7 @@ table 50313 "Vehicle Review Entry"
         {
             Caption = 'Prorogation Doc. Date';
         }
-        field(500; "Transaction No."; BigInteger)
+        field(500; "Transaction No."; Integer)
         {
             Caption = 'Transaction No.';
         }

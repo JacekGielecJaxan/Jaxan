@@ -10,7 +10,7 @@ table 50311 "Vehicle Entry"
 
     fields
     {
-        field(1; "Entry No."; BigInteger)
+        field(1; "Entry No."; Integer)
         {
             Caption = 'Entry No.';
         }
