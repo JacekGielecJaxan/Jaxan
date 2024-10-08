@@ -28,12 +28,12 @@ page 50332 "Vehicle Exclusion Entries"
                     ApplicationArea = Basic, Suite;
                     Editable = false;
                 }
-                field("Wagon No."; Rec."Vehicle No.")
+                field("Vehicle No."; Rec."Vehicle No.")
                 {
                     ApplicationArea = Basic, Suite;
                     Editable = false;
                 }
-                field("Wagon No. 2"; Rec."Vehicle No. 2")
+                field("Vehicle No. 2"; Rec."Vehicle No. 2")
                 {
                     ApplicationArea = Basic, Suite;
                     Editable = false;
@@ -220,7 +220,7 @@ page 50332 "Vehicle Exclusion Entries"
                 Caption = 'Ent&ry';
                 Image = Entry;
 
-                action(Wagon)
+                action(Vehicle)
                 {
                     ApplicationArea = Basic, Suite;
                     Caption = 'Vehicle';
@@ -271,7 +271,7 @@ page 50332 "Vehicle Exclusion Entries"
             {
                 Caption = 'Entry', Comment = 'Generated from the PromotedActionCategories property index 4.';
 
-                actionref(Wagon_Promoted; Wagon)
+                actionref(Vehicle_Promoted; Vehicle)
                 {
                 }
             }

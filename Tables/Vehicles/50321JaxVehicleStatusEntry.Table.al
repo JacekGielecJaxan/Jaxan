@@ -3,14 +3,14 @@
 /// </summary>
 table 50321 "Vehicle Status Entry"
 {
-    Caption = 'Vehicle Entry';
-    DrillDownPageID = "Vehicle Entries";
-    LookupPageID = "Vehicle Entries";
+    Caption = 'Vehicle Status Entry';
+    DrillDownPageID = "Vehicle Status Entries";
+    LookupPageID = "Vehicle Status Entries";
     DataClassification = CustomerContent;
 
     fields
     {
-        field(1; "Entry No."; BigInteger)
+        field(1; "Entry No."; Integer)
         {
             Caption = 'Entry No.';
         }
