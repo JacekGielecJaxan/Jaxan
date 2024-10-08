@@ -215,7 +215,7 @@ table 50324 "Pick And Drop Vehicle Entry"
         TestField(Time);
         TestField("Vehicle No.");
 
-        "Entry No." := FindLastEntryNo();
+        "Entry No." := GetLastEntryNo();
 
         if Type = type::Pick then begin
             if HasOpen("User ID", "Vehicle No.", Date) then
@@ -231,12 +231,13 @@ table 50324 "Pick And Drop Vehicle Entry"
     var
         Err01: Label 'The vehicle is already received';
 
-    local procedure FindLastEntryNo(): Integer
+
+
+    procedure GetLastEntryNo(): Integer;
     var
-        pick: Record "Pick And Drop Vehicle Entry";
+        FindRecordManagement: Codeunit "Find Record Management";
     begin
-        if pick.FindLast() then
-            exit(pick."Entry No.");
+        exit(FindRecordManagement.GetLastEntryIntFieldValue(Rec, FieldNo("Entry No.")))
     end;
 
     local procedure CloseEntry()
