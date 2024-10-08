@@ -1,11 +1,11 @@
 /// <summary>
-/// Zapisy zadarzen pracy
+/// Zapisy zadarzen pracy (raport z jazdy)
 /// </summary>
-table 50038 "Work Event Entry"
+table 50038 "Driving Report Entry"
 {
-    Caption = 'Work Event Entry';
-    DrillDownPageID = "Work Event Entries";
-    LookupPageID = "Work Event Entries";
+    Caption = 'Driving Report Entry';
+    DrillDownPageID = "Driving Report Entries";
+    LookupPageID = "Driving Report Entries";
     DataClassification = CustomerContent;
 
     fields

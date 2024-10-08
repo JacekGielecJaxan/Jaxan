@@ -1,13 +1,13 @@
-page 50043 "Work Event Entries"
+page 50043 "Driving Report Entries"
 {
     ApplicationArea = Basic, Suite;
-    Caption = 'Work Event Entries';
+    Caption = 'Driving Report Entries';
     //DataCaptionFields = "Wheelset No.";
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    Permissions = TableData "Work Event Entry" = m;
-    SourceTable = "Work Event Entry";
+    Permissions = TableData "Driving Report Entry" = m;
+    SourceTable = "Driving Report Entry";
     //SourceTableView = sorting("Wheelset No.", "Date") order(descending);
     UsageCategory = History;
 
