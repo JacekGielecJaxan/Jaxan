@@ -253,7 +253,13 @@ table 50324 "Pick And Drop Vehicle Entry"
             ModifyAll("Dropped By", "User ID");
         end;
     end;
-
+    /// <summary>
+    /// Sprawdza czy na danym uzytkowniku dany pojazd jest przyjety a nie zdany
+    /// </summary>
+    /// <param name="userid"></param>
+    /// <param name="vehicleno"></param>
+    /// <param name="date"></param>
+    /// <returns></returns>
     procedure HasOpen(userid: code[50]; vehicleno: code[20]; date: date): Boolean
     var
         pick: Record "Pick And Drop Vehicle Entry";
@@ -265,6 +271,25 @@ table 50324 "Pick And Drop Vehicle Entry"
         pick.SetRange(Open, true);
         pick.SetRange(Date, date);
         EXIT(not pick.IsEmpty);
+
+    end;
+
+    /// <summary>
+    /// Zwraca nr zapisu jezeli dany pojazd jest przyjety przez kogos i nie zdany
+    /// </summary>
+    /// <param name="vehicleno"></param>
+    /// <returns></returns>
+    procedure CheckIfOpen(vehicleno: code[20]): Integer
+    var
+        pick: Record "Pick And Drop Vehicle Entry";
+
+    begin
+        pick.SetCurrentKey("Vehicle No.", Open);
+        pick.SetRange("Vehicle No.", "Vehicle No.");
+        pick.SetRange(Open, true);
+
+        if pick.FindSet() then
+            EXIT(pick."Entry No.");
 
     end;
 }
