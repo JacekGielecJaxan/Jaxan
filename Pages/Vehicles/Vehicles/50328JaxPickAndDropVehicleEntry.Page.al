@@ -1,7 +1,7 @@
 page 50328 "Pick And Drop Vehicle Entries"
 {
     ApplicationArea = Basic, Suite;
-    Caption = 'Receipt and Delivery Vehicle Entries';
+    Caption = 'Pick And Drop Vehicle Entries';
     DataCaptionFields = "Vehicle No.";
     DeleteAllowed = false;
     InsertAllowed = false;

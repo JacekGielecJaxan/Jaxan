@@ -117,6 +117,31 @@ table 50324 "Pick And Drop Vehicle Entry"
         {
             Caption = 'Oil Level of Pivot Pin';
         }
+        field(23; Open; Boolean)
+        {
+            Caption = 'Open';
+        }
+        /// <summary>
+        /// Data zdania
+        /// </summary>
+        field(24; "Drop Date"; date)
+        {
+            Caption = 'Drop Date';
+        }
+        /// <summary>
+        /// Godzina zdania
+        /// </summary>
+        field(25; "Drop Time"; Time)
+        {
+            Caption = 'Drop Time';
+        }
+        /// <summary>
+        /// Przez kogo zdany pojazd
+        /// </summary>
+        field(26; "Dropped By"; Code[50])
+        {
+            Caption = 'Dropped By';
+        }
 
         field(300; Type; enum "Vehicle Pick And Drop Type")
         {
@@ -169,7 +194,63 @@ table 50324 "Pick And Drop Vehicle Entry"
         key(Key4; "Vehicle No. 2", Date)
         {
         }
+        key(Key5; "User ID", Open, "Vehicle No.") { }
+        key(Key6; "User ID", "Vehicle No.", Open, Date) { }
     }
 
+    trigger OnInsert()
+    var
 
+    begin
+        "Entry No." := FindLastEntryNo();
+
+        if Type = type::Pick then begin
+            if HasOpen("User ID", "Vehicle No.", Date) then
+                error(Err01);
+            CloseEntry();
+            Open := true
+        end else begin
+            CloseEntry();
+        end;
+
+    end;
+
+    var
+        Err01: Label 'The vehicle is already received';
+
+    local procedure FindLastEntryNo(): Integer
+    var
+        pick: Record "Pick And Drop Vehicle Entry";
+    begin
+        if pick.FindLast() then
+            exit(pick."Entry No.");
+    end;
+
+    local procedure CloseEntry()
+    var
+        pick: Record "Pick And Drop Vehicle Entry";
+
+    begin
+        pick.SetRange("Vehicle No.", "Vehicle No.");
+        if not pick.IsEmpty then begin
+            ModifyAll(open, false);
+            ModifyAll("Drop Date", Date);
+            ModifyAll("Drop Time", Time);
+            ModifyAll("Dropped By", "User ID");
+        end;
+    end;
+
+    procedure HasOpen(userid: code[50]; vehicleno: code[20]; date: date): Boolean
+    var
+        pick: Record "Pick And Drop Vehicle Entry";
+
+    begin
+        pick.SetCurrentKey("User ID", "Vehicle No.", Open, Date);
+        pick.SetRange("User ID", userid);
+        pick.SetRange("Vehicle No.", "Vehicle No.");
+        pick.SetRange(Open, true);
+        pick.SetRange(Date, date);
+        EXIT(not pick.IsEmpty);
+
+    end;
 }
